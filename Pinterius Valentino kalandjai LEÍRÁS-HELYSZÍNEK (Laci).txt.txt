@@ -1,0 +1,88 @@
+Horgászbolt (Down-kóros Delfin Horgászbolt):
+	SZITUÁCIÓ: Bemész a horgászboltba, ahol egy szakállas alkoholista üdvözöl; Szájszaga még a tiédnél is rosszabb (-10 életkedv)
+	LEHETŐSÉGEK:
+		1. Veszel egy horgászbotot (-20 krajcár, maxra viszi a vérszomjot)
+		2. Ha van, eladod neki a tengeri gyöngyöt -lásd: Tó- (+50 krajcár) (meglepő módon csak egy alkalommal történhet ez meg)
+		3. Köszönés nélkül elhagyod a horgászboltot
+Kovács (Varázslatos Kalapács Vasaló):
+	SZITUÁCIÓ: A kovácsműhelyben találod magad, nagy a kínálat (2 tárgy)
+	LEHETŐSÉGEK:
+		1. Veszel egy fegyvert (-70 krajcár, maximum vérszomj +20)
+		2. Veszel egy páncéldarabot (-100 krajcár, maximum életkedv +20)
+		3. Az árak láttán öklendezve kifutsz (-10 életkedv)
+Kocsma (Csévi Szilva):
+	SZITUÁCIÓ: Bemész a kocsmába és megünnepled, hogy nincs semmilyen ünnep, a szag szomorú gyerekkorodra emlékeztet (-5 életkedv)
+	LEHETŐSÉGEK:
+		1. Csapoltatsz magadnak egy sört és lehörpinted (-5 krajcár, +5 életkedv, -10 józanság)
+		2. Kéred a speciális italt (-30 krajcár, maxra viszi az életkedvet, minimumra a józanságot)
+		3. Kocsmai verekedést indítasz [max 40 józanság] (max egyszer lehet) =>
+			=> Szituáció: Csinos Tomi, aki Zoli utolsó megoldásként májon akar ütni
+			=> Lehetőségek:
+				3.1. Hátrébbugrasz {nekiesel a falusi keménygyereknek, aki agyonver, elvesz némi pénzt és kidob az utcára} (-20 krajcár, -40 életkedv)
+				3.2. Megpróbálod kivédeni az ütést {3 kezet láttál, de valamennyire kitérült a keze}
+				3.3. Megmondod neki, hogy az erőszak nem megoldás {de az, földre kerülsz} (-30 életkedv)
+		4. Kimész az utcára
+Erdő (Sárguló Sörerdő):
+	SZITUÁCIÓ: Az erdőbe érve rossz démonok hívását hallod (ha józanság <=20, akkor bekerülsz egy démon dimenzióba)
+	LEHETŐSÉGEK:
+		1. Megeszel egy furcsa gombát (+10 vérszomj, +5 életkedv)
+		2. Megiszod egy sárga fa gyantáját, -ez Rákóczi sör- (-10 józanság, +10 életkedv)
+		3. Bemész a bányába
+		4. Elmész a tóhoz
+		5. Bemész a vadászházba
+Erdei Démon Dimenzió:
+	SZITUÁCIÓ: A démonok hívásának nem tudtál ellen állni, egy rossz rémálomba estél és megtámadott egy démon
+	LEHETŐSÉGEK:
+		1. Elfutsz előle [min 15 józanság, ha nincs, megöl]
+		2. Rátámadsz [min 80 vérszomj, ha nincs, megöl]
+		Ha túléled, otthon ébredsz fel
+Vadászház (Gyulakolbász lakhely):
+	SZITUÁCIÓ: Hívatlan vendég vagy, vigyázz nehogy észrevegyen a vadász (csak egy alkalommal elérhető a terület)
+	LEHETŐSÉGEK:
+		1. Elbújsz a szekrényben {találsz egy fura kulcsot}
+		2. Megmagyarázod a vadásznak, hogy eltévedtél, és elhagyod a területet
+Tó (Falvi Zalán):
+	SZITUÁCIÓ: Egy békés kis erdei tóhoz érkezel; Itt meglátsz egy nagyon szexi tündérlányt, akit Szerencsés Edíníának hívnak
+	LEHETŐSÉGEK:
+		1. Titokban kukkolod (+30 életkedv)
+		2. Odamész és flörtölsz vele [min józanság 70] (+10 életkedv +ad egy tengeri gyöngyöt)
+		3. Visszamész az erdőbe
+Bánya (Gyémántcsákány Bánya):
+	SZITUÁCIÓ: Bemész a bányába, ahol megcsap a munka gondolata (-10 életkedv)
+	LEHETŐSÉGEK:
+		1. Rágyújtasz egy cigire {berobban a metángáz, meghalsz}
+		2. Odamész az "Omlásveszély" táblához =>
+			=> Lehetőségek:
+				2.1. Eltolod a tartóoszlopot {titkos út nyílik meg} (egyszer lehetséges)
+				2.2. Meggondolod magad
+		3. Elutazol a Purgatóriumba, ahonnan nincs visszaút
+		4. Visszamész az erdőbe
+		5. Átmész a titkos alagúton (alapból rejtett lehetőség, unlockolni kell)
+Purgatórium:
+	SZITUÁCIÓ: A tisztítótűzben találod magad, ahol ítéletet kérhetsz az Úrtól
+	BEFEJEZÉSEK (statok, tárgyak stb befolyásolják):
+		1. Pokol = rossz ending
+		2. Mennyország = jó ending
+Temető (Ingyen Protein Temető):
+	SZITUÁCIÓ: Nekrofil hajlamaid a temetőbe vittek téged; A halottak hívását hallod (ha józanság <=30 és életkedv <=50, akkor bekerülsz egy démon dimenzióba)
+	LEHETŐSÉGEK:
+		1. Meggyalázol egy sírt [max 40 józanság] (+10 életkedv, börtönbe kerülsz)
+		2. Megeszel egy koszorút (VEGÁN trófea)
+		3. Visszamész a főútra
+Temetői Démon Dimenzió:
+	SZITUÁCIÓ: Egy francia-szobalányruhában lévő kísértet áll előtted, és azzal fenyeget, hogy elvesz mindent, ami fontos neked; Mi fontos neked?
+	LEHETŐSÉGEK:
+		1. A bukszád (nullázódik a pénzed)
+		2. A daliás páncélod (maximum életkedv -50)
+		3. Az enyhén kellemetlenül balra hajló kardod (maximum vérszomj -50)
+		4. A család {megpróbálsz hazudni} =>
+			=> Szituáció: A kísértet nem hisz neked, ezért bizonyítékot kér
+			=> Lehetőségek:
+				4.1. Ha megtaláltad, megmutatod neki valaki elvesztett jegygyűrűjét {impotenssé tesz} (csak egyszer lehet) (lásd: Ösvény)
+				4.2. Megesküszöl, hogy igazat mondasz {ideges lesz és saját ágyéki szőrzeteddel megfojt}
+
+		
+	
+
+	
+		
