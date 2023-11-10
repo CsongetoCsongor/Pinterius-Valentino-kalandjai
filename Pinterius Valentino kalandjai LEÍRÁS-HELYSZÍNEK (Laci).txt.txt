@@ -7,23 +7,25 @@ Horgászbolt (Down-kóros Delfin Horgászbolt):
 Kovács (Varázslatos Kalapács Vasaló):
 	SZITUÁCIÓ: A kovácsműhelyben találod magad, nagy a kínálat (2 tárgy)
 	LEHETŐSÉGEK:
-		1. Veszel egy fegyvert (-70 krajcár, maximum vérszomj +20)
-		2. Veszel egy páncéldarabot (-100 krajcár, maximum életkedv +20)
+		1. Veszel egy fegyvert (-70 krajcár, +40 vérszomj)
+		2. Veszel egy páncéldarabot (-100 krajcár, +40 életkedv)
 		3. Az árak láttán öklendezve kifutsz (-10 életkedv)
 Kocsma (Csévi Szilva):
 	SZITUÁCIÓ: Bemész a kocsmába és megünnepled, hogy nincs semmilyen ünnep, a szag szomorú gyerekkorodra emlékeztet (-5 életkedv)
 	LEHETŐSÉGEK:
 		1. Csapoltatsz magadnak egy sört és lehörpinted (-5 krajcár, +5 életkedv, -10 józanság)
-		2. Kéred a speciális italt (-30 krajcár, maxra viszi az életkedvet, minimumra a józanságot)
+		2. Kéred a speciális italt (-30 krajcár, maxra viszi az életkedvet, -70 józanság)
 		3. Kocsmai verekedést indítasz [max 40 józanság] (max egyszer lehet) =>
 			=> Szituáció: Csinos Tomi, aki Zoli utolsó megoldásként májon akar ütni
 			=> Lehetőségek:
 				3.1. Hátrébbugrasz {nekiesel a falusi keménygyereknek, aki agyonver, elvesz némi pénzt és kidob az utcára} (-20 krajcár, -40 életkedv)
-				3.2. Megpróbálod kivédeni az ütést {3 kezet láttál, de valamennyire kitérült a keze}
+				3.2. Megpróbálod kivédeni az ütést [min. 50 vérszomj] {3 kezet láttál, de valamennyire kitérült a keze}
 				3.3. Megmondod neki, hogy az erőszak nem megoldás {de az, földre kerülsz} (-30 életkedv)
+				3.4 Fogsz egy sörösüveget és megölöd vele Rostás Brájent - Rostás Amedeusz fiát [min 100 vérszomj] (max életkedvre visz)
 		4. Kimész az utcára
 Erdő (Sárguló Sörerdő):
-	SZITUÁCIÓ: Az erdőbe érve rossz démonok hívását hallod (ha józanság <=20, akkor bekerülsz egy démon dimenzióba)
+	(ha józanság <=20, akkor bekerülsz egy démon dimenzióba)
+	SZITUÁCIÓ: Az erdőbe érve rossz démonok hívását hallod 
 	LEHETŐSÉGEK:
 		1. Megeszel egy furcsa gombát (+10 vérszomj, +5 életkedv)
 		2. Megiszod egy sárga fa gyantáját, -ez Rákóczi sör- (-10 józanság, +10 életkedv)
@@ -33,19 +35,19 @@ Erdő (Sárguló Sörerdő):
 Erdei Démon Dimenzió:
 	SZITUÁCIÓ: A démonok hívásának nem tudtál ellen állni, egy rossz rémálomba estél és megtámadott egy démon
 	LEHETŐSÉGEK:
-		1. Elfutsz előle [min 15 józanság, ha nincs, megöl]
-		2. Rátámadsz [min 80 vérszomj, ha nincs, megöl]
+		1. Elfutsz előle [min 15 józanság, ha nincs annyi józanságod, megöl]
+		2. Rátámadsz [min 100 vérszomj, ha nincs annyi vérszomjad, megöl]
 		Ha túléled, otthon ébredsz fel
 Vadászház (Gyulakolbász lakhely):
 	SZITUÁCIÓ: Hívatlan vendég vagy, vigyázz nehogy észrevegyen a vadász (csak egy alkalommal elérhető a terület)
 	LEHETŐSÉGEK:
-		1. Elbújsz a szekrényben {találsz egy fura kulcsot}
+		1. Elbújsz a szekrényben, ha tiszta a terep elmész {találsz egy fura kulcsot}
 		2. Megmagyarázod a vadásznak, hogy eltévedtél, és elhagyod a területet
 Tó (Falvi Zalán):
 	SZITUÁCIÓ: Egy békés kis erdei tóhoz érkezel; Itt meglátsz egy nagyon szexi tündérlányt, akit Szerencsés Edíníának hívnak
 	LEHETŐSÉGEK:
 		1. Titokban kukkolod (+30 életkedv)
-		2. Odamész és flörtölsz vele [min józanság 70] (+10 életkedv +ad egy tengeri gyöngyöt)
+		2. Odamész és flörtölsz vele [max józanság 50] (+10 életkedv +ad egy tengeri gyöngyöt)
 		3. Visszamész az erdőbe
 Bánya (Gyémántcsákány Bánya):
 	SZITUÁCIÓ: Bemész a bányába, ahol megcsap a munka gondolata (-10 életkedv)
@@ -54,10 +56,11 @@ Bánya (Gyémántcsákány Bánya):
 		2. Odamész az "Omlásveszély" táblához =>
 			=> Lehetőségek:
 				2.1. Eltolod a tartóoszlopot {titkos út nyílik meg} (egyszer lehetséges)
-				2.2. Meggondolod magad
+				2.2 Átmész a titkos alagúton (alapból rejtett lehetőség, unlockolni kell)
+				2.3. Meggondolod magad
 		3. Elutazol a Purgatóriumba, ahonnan nincs visszaút
 		4. Visszamész az erdőbe
-		5. Átmész a titkos alagúton (alapból rejtett lehetőség, unlockolni kell)
+		
 Purgatórium:
 	SZITUÁCIÓ: A tisztítótűzben találod magad, ahol ítéletet kérhetsz az Úrtól
 	BEFEJEZÉSEK (statok, tárgyak stb befolyásolják):
@@ -73,16 +76,107 @@ Temetői Démon Dimenzió:
 	SZITUÁCIÓ: Egy francia-szobalányruhában lévő kísértet áll előtted, és azzal fenyeget, hogy elvesz mindent, ami fontos neked; Mi fontos neked?
 	LEHETŐSÉGEK:
 		1. A bukszád (nullázódik a pénzed)
-		2. A daliás páncélod (maximum életkedv -50)
-		3. Az enyhén kellemetlenül balra hajló kardod (maximum vérszomj -50)
+		2. A daliás páncélod (életkedv -50)
+		3. Az enyhén kellemetlenül balra hajló kardod (vérszomj -50)
 		4. A család {megpróbálsz hazudni} =>
 			=> Szituáció: A kísértet nem hisz neked, ezért bizonyítékot kér
 			=> Lehetőségek:
 				4.1. Ha megtaláltad, megmutatod neki valaki elvesztett jegygyűrűjét {impotenssé tesz} (csak egyszer lehet) (lásd: Ösvény)
 				4.2. Megesküszöl, hogy igazat mondasz {ideges lesz és saját ágyéki szőrzeteddel megfojt}
 
-		
+Étterem (Retek Taverna):
+	SZITUÁCIÓ: Megcsap a püfűthús és szalmakrumpli illata és megjön az étvágyad (+10 életkedv, +5 vérszomj)
+	LEHETŐSÉGEK:
+		1. Eszel (-30 krajcár, maxolja az életkedved)
+		2. Az egyik asztalra ürítesz [ max 50 józanság ]{börtönbe kerülsz}
+		3. Kimész a Főútra
+
+Ösvény (Cserkészlány Csodaösvény):
+	SZITUÁCIÓ: Kimész a természetbe - sokkolóan hat rád a tapasztalat
+	LEHETŐSÉGEK:
+		1. Elmész a hegyekbe (Kárpátok) [csak egyszer választható]
+		2. Kimész a főútra
+	
+Hegy (Kárpátok):
+	SZITUÁCIÓ: Megpillantod a Kárpátok szent bérceit (+50 életkedv)
+	LEHETŐSÉGEK:
+		1. Elkezdessz Kárpátiát dalolni - Pálinka dal [max 60 józanság] (+10 életkedv)
+		2. Továbbmész a vízeséshez (Nedves Combok Vízesés)
 	
 
-	
-		
+VÍzesés (Nedves Combok Vízesés):
+	SZITUÁCIÓ: A vízesés látványa lenyűgöz, de nedvesek lesznek a combjaid
+	LEHETŐSÉGEK:
+		1. Belefojtod magad a vízbe {Pokolra jutsz - VÉGE}
+		2. Iszol a tiszta vízből (maxra megy a józanság)
+		3. Völgy (Nem Nem Soha! Völgy)
+
+Völgy (Nem Nem Soha! Völgy):
+	SZITUÁCIÓ: Eszedbe jut Trianon (-5 életkedv)
+	LEHETŐSÉGEK:
+		1. Elüvöltöd magad, hogy "VESSZEN TRIANON!" [min 50 vérszomj] (+10 életkedv)
+		2. Elkezdessz legelni [max 40 józanság] {Bolondgombát eszel} (-15 józanság)
+		3. Visszamész az Ösvényre (Cserkészlány Csodaösvény)
+
+Detoxikáló (Második Esély Klinika):
+	--Ha 0-ra esik a józanságod automatikusan a Detoxikálóba kerülsz
+	--Matekfeladatot kell megoldanon, hogy lássák, hogy józan vagy
+	--Ha sikeresen megoldottada  feladatot akkor kiraknak a Főútra
+
+Bank (Zsebtolvajok Világuralma Bank):
+	(ha a józansági szint 50 alatt van, bedob a bankrablásba)
+	SZITUÁCIÓ: Bemész a banka és megpillantassz egy csomó nagyorrú kalapos ogrét (-10 életkedv)
+	LEHETŐSÉG:
+		1. Leveszel a számládról pénzt (+100 krajcár)
+		2. Antiogreista megjegyzéseket teszel (+10 életkedv)
+		3. Megnézed mi van az egyik gobre zsebében {ARANYKULCS hozzáadódik az Inventoryhoz}
+		4. Kimész a Főútra
+
+Bankrabkás
+	SZITUÁCIÓ: Az alkoholtól kedved támad megdönteni az ismert világrendet és kárt tenni az ogrék vagyonában, szóval úgy döntessz,
+				hogy kirabolod a bankot.
+	LEHETŐSÉGEK:
+		1. Túszokat ejtessz {a túszok kiszabadulnak, megvernek és börtönbe kerülsz}
+		2. Megölsz mindenkit [min 100 vérszomj] (+100 életkedv, +300 krajcár) {a rendőröket is megölöd, szóval büntetés nélkül megúszod,
+		   visszakerülsz a Főútra}
+
+
+Vár (Világuralom Vár):
+	SZITUÁCIÓ: Bementél a várba, az őrök nem mernek szólni mert azt hitték, te vagy az Antikrisztus és megijedtek
+	LEHETŐSÉGEK:
+		1. Lemész a Borospincébe
+		2. Bemész a börtönbe (Elveszett Lélek Börtön)
+		3. Kimész a Főútra
+
+
+Borospince:
+	SZITUÁCIÓ: Bent vagy a borospincében, megcsapott a borszag (+15 életkedv)
+	LEHETŐSÉGEK:
+		1. Nekiállsz fékezetlenül vedelni (levisz 0 józanságra, nyilván detox)
+		2. Bemész a Kincseskamrába [ARANYKULCS kell hozzá]
+		3. Visszamész a várba
+
+Kincseskamra:
+	SZITUÁCIÓ: Meglátod a kincsket (+5 életkedv)
+	LEHETŐSÉGEK:
+		1. Elkezdessz kutakodni {SZENT KORONA az Inventoryba kerül}
+		2. Elveszel 500 krajcárt (+500 krajcár)
+		3. Lemész a Borospincébe
+
+Börtön (Elveszett Lélek Börtön)
+	SZITUÁCIÓ: Meglátod az elveszett lelkeket (+10 életkedv)
+	LEHETŐSÉGEK:
+		1. Belerúgsz egy rabba (+30 életkedv) [min 60 vérszomj, egyszer lehetséges]
+		2. Bemész a Kínzókamrába
+		3. Visszamész a Várba
+
+Kínzókamra (A Pokol Hetedik Bugyra):
+	SZITUÁCIÓ: Minden tiszta vér és levágott végtagok vannak elszórva mindenfele, ez nagyon tetszik neked (+10 életkedv)
+	LEHETŐSÉGEK:
+		1. Kihúzod egy rab fogát [min 80 vérszomj]
+		2. Visszamész a Börtönbe
+
+
+Börtön (Játékmechanikai börtön)
+	--Valamit elkövettél, szóval ide kerülsz
+	--Kérdésekre kell válaszolnod, hogy kiengedjenek
