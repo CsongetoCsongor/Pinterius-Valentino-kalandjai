@@ -16,13 +16,13 @@ Főút (Zarándok Út):
     LEHETŐSÉGEK:
         1. Bemész a kocsmába
         2. Bemész a kovácshoz
-        3. Temető
-        4. Étterem
-        5. Erdő
-        6. Ösvény
-        7. Bank
-        8. Vár
-        9. Kikötő
+        3. Bemész a temetőbe
+        4. Bemész az étterembe
+        5. Bemész az erdőbe
+        6. Bemész az ösvénybe
+        7. Bemész a bankba
+        8. Bemész a várba
+        9. Bemész a kikötőbe
 
 Kikötő ():
     SZITUÁCIÓ: Kimész a kikötőbe, megcsap a döglött halszag (-5 életkedv)
