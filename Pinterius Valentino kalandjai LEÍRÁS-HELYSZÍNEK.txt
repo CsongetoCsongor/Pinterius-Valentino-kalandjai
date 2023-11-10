@@ -23,15 +23,13 @@ Főút (Zarándok Út):
         7. Bemész a bankba
         8. Bemész a várba
         9. Bemész a kikötőbe
-
-Kikötő ():
+Kikötő (Tenger Haragja Kikötő):
     SZITUÁCIÓ: Kimész a kikötőbe, megcsap a döglött halszag (-5 életkedv)
     LEHETŐSÉGEK:
         1. Belevizelsz a tengerbe (+5józanság, +10 életkedv) [20% esély, hogy letartóztatnak közszeméremsértésért -> BÖRTÖN]
         2. Bemész a Horgászboltba
         3. Felszállsz a hajóra
-
-Hajó:
+Hajó (Pipanic):
     SZITUÁCIÓ: Felszálltál a hajóra teli előkelő utasokkal
     LEHETŐSÉGEK:
         1. Megijeszted a gyerekeket [min. 70 vérszomj, max 50 józanság] (+30 életkedv)
