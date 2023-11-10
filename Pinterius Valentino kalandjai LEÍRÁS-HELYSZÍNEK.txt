@@ -1,41 +1,49 @@
 Otthon (itt kezdődik a játék):
-    SZITUÁCIÓ: P. Val. felébred rettentően másnaposan és mérsékelten vérszomjasan
+    SZITUÁCIÓ: Pinterius Valentino felébred rettentően másnaposan és mérsékelten vérszomjasan
     LEHETŐSÉGEK:
-        1. Összeokádod a WC-t (+10 életkedv ; + 10 józanság)
-        2. Tömsz egyet (+10 életkedv ; -10 józanság; +10 vérszomj)
+        1. Összeokádod a WC-t (+10 életkedv, +10 józanság)
+        2. Tömsz egyet (+10 életkedv, -10 józanság; +10 vérszomj)
         3. Kimész a kertbe
-        4. Kimész a Főútra
+        4. Kimész a főútra
+
 Kert:
     SZITUÁCIÓ: Kimész és megcsíp egy méhe (-20 életkedv)
     LEHETŐSÉGEK:
         1. Megölöd a méhét [legalább 70-es vérszomj] (+20 életkedv)
         2. Odamész a virágágyáshoz {Megtalálod a bukszád} [csak egyszer, ha buksza_birtoklása változó: False] (+10 krajcár)
         3. Visszamész a házba
+
 Főút (Zarándok Út):
     SZITUÁCIÓ: 20% esély, hogy hallod ahogyan goblinok kiabálnak (-10 életkedv), vagy semmi nem történik
     LEHETŐSÉGEK:
         1. Bemész a kocsmába
         2. Bemész a kovácshoz
-        3. Temető
-        4. Étterem
-        5. Erdő
-        6. Ösvény
-        7. Bank
-        8. Vár
-        9. Kikötő
+        3. Bemész a temetőbe
+        4. Bemész az étterembe
+        5. Bemész az erdőbe
+        6. Bemész az ösvénybe
+        7. Bemész a bankba
+        8. Bemész a várba
+        9. Bemész a kikötőbe
 
-Kikötő ():
+Kikötő (Tenger Haragja Kikötő):
     SZITUÁCIÓ: Kimész a kikötőbe, megcsap a döglött halszag (-5 életkedv)
     LEHETŐSÉGEK:
         1. Belevizelsz a tengerbe (+5józanság, +10 életkedv) [20% esély, hogy letartóztatnak közszeméremsértésért -> BÖRTÖN]
         2. Bemész a Horgászboltba
         3. Felszállsz a hajóra
+	4. Visszamész a főútra
 
-Hajó:
+Hajó (Pipanic):
     SZITUÁCIÓ: Felszálltál a hajóra teli előkelő utasokkal
     LEHETŐSÉGEK:
         1. Megijeszted a gyerekeket [min. 70 vérszomj, max 50 józanság] (+30 életkedv)
         2. Leokádod az utasokat {Megvernek} [max. 20 józanság] (-30 életkedv)
-        3. Bemész a vezérfülkébe [Kell a hajókulcs]
+        3. Bemész a vezérfülkébe [Kell a hajókulcs] =>
+		Szituáció: Eldöntehted, hogy elmész-e Bikini Fenékre
+		Lehetőségek:
+			3.1. Elmegyek {Sziget ending, ha nem süllyedsz el; ha elsüllyedsz, a Purgatóriumba}
+			3.2 Nem megyek {Vissza a hajóra}
+	4. Elhagyod a hajót
         
 
