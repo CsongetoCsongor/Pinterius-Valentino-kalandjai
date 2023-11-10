@@ -5,12 +5,14 @@ Otthon (itt kezdődik a játék):
         2. Tömsz egyet (+10 életkedv, -10 józanság; +10 vérszomj)
         3. Kimész a kertbe
         4. Kimész a főútra
+
 Kert:
     SZITUÁCIÓ: Kimész és megcsíp egy méhe (-20 életkedv)
     LEHETŐSÉGEK:
         1. Megölöd a méhét [legalább 70-es vérszomj] (+20 életkedv)
         2. Odamész a virágágyáshoz {Megtalálod a bukszád} [csak egyszer, ha buksza_birtoklása változó: False] (+10 krajcár)
         3. Visszamész a házba
+
 Főút (Zarándok Út):
     SZITUÁCIÓ: 20% esély, hogy hallod ahogyan goblinok kiabálnak (-10 életkedv), vagy semmi nem történik
     LEHETŐSÉGEK:
@@ -30,6 +32,7 @@ Kikötő (Tenger Haragja Kikötő):
         1. Belevizelsz a tengerbe (+5józanság, +10 életkedv) [20% esély, hogy letartóztatnak közszeméremsértésért -> BÖRTÖN]
         2. Bemész a Horgászboltba
         3. Felszállsz a hajóra
+	4. Visszamész a főútra
 
 Hajó (Pipanic):
     SZITUÁCIÓ: Felszálltál a hajóra teli előkelő utasokkal
@@ -41,5 +44,6 @@ Hajó (Pipanic):
 		Lehetőségek:
 			3.1. Elmegyek {Sziget ending, ha nem süllyedsz el; ha elsüllyedsz, a Purgatóriumba}
 			3.2 Nem megyek {Vissza a hajóra}
+	4. Elhagyod a hajót
         
 
