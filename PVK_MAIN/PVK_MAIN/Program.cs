@@ -4,6 +4,14 @@
     {
 
 
+        public static string helyszin = "";
+        
+        public static string elozo_helyszin = "";
+
+        public static string elozo_hely_uzenete = "";
+
+        public static string szituacio = "";
+
         public static int jozansag = 100;
 
         public static int eletkedv = 50;
@@ -38,11 +46,27 @@
 
         public static bool rab_megrugva = false;
 
-        public static string camefrom_message = "";
 
         static void Main(string[] args)
         {
-            
+
+            Console.WriteLine("Pinterius Valentino kalandjai, avagy az örök alkoholizmus útja");
+
+            Console.WriteLine("---------------------------------------------------------------");
+
+            Console.WriteLine($"Előző helyszín: {elozo_helyszin}");
+            Console.WriteLine();
+            Console.WriteLine($"Helyszín: {helyszin}");
+            Console.WriteLine();
+            Console.WriteLine($"Életkedv: {eletkedv}\t Józanság: {jozansag}\t Vérszomj: {verszomj}");
+            Console.WriteLine($"Személyes vagyon: {penz} krajcár");
+            Console.WriteLine("---------------------------------------------------------------");
+            Console.WriteLine(elozo_hely_uzenete);
+            Console.WriteLine();
+            Console.WriteLine(szituacio);
+
+
+
         }
     }
 }
