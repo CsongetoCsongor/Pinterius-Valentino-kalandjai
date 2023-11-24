@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PVK_MAIN
 {
-    internal partial class Kikoto_Horgaszbolt
+    internal partial class Program
     {
         static void Kikoto()
         {
