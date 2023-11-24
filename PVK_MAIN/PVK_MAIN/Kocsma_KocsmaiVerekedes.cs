@@ -10,9 +10,11 @@ namespace PVK_MAIN
     {
         static void Kocsma()
         {
+            Console.Clear();
             Console.WriteLine("Bemész a kocsmába és megünnepled, hogy nincs semmilyen ünnep, a szag szomorú gyerekkorodra emlékeztet");
             Console.WriteLine();
             eletkedv -= 5;
+            NagyobbVagyEgyenloNulla(eletkedv);
 
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. - Csapoltatsz magadnak egy sört 5 krajcárért és lehörpinted");
@@ -30,9 +32,12 @@ namespace PVK_MAIN
             {
                 if (penz >= 5)
                 {
-                    eletkedv += 5;
+                    eletkedv += 10;
                     jozansag -= 10;
                     penz -= 5;
+                    NagyobbVagyEgyenloNulla(eletkedv);
+                    NagyobbVagyEgyenloNulla(jozansag);
+                    NagyobbVagyEgyenloNulla(penz);
 
                     Console.WriteLine("A sör finom volt, jó nagyot böfögtél");
                 }
@@ -43,7 +48,6 @@ namespace PVK_MAIN
                 }
 
                 Console.ReadKey();
-                Console.Clear();
                 Kocsma();
             }
 
@@ -54,6 +58,9 @@ namespace PVK_MAIN
                     eletkedv = 100;
                     jozansag -= 70;
                     penz -= 30;
+                    NagyobbVagyEgyenloNulla(eletkedv);
+                    NagyobbVagyEgyenloNulla(jozansag);
+                    NagyobbVagyEgyenloNulla(penz);
 
                     Console.WriteLine("A speciális ital speciális állapotba helyezett, az amúgy ott egy sárkány mögötted?");
                 }
@@ -64,7 +71,6 @@ namespace PVK_MAIN
                 }
 
                 Console.ReadKey();
-                Console.Clear();
                 Kocsma();
             }
 
@@ -75,7 +81,6 @@ namespace PVK_MAIN
                     volt_e_verekedes_kocsmaban = true;
 
                     Console.ReadKey();
-                    Console.Clear();
                     KocsmaiVerekedes();
                 }
 
@@ -85,7 +90,6 @@ namespace PVK_MAIN
                 }
 
                 Console.ReadKey();
-                Console.Clear();
                 Kocsma();
             }
 
@@ -97,7 +101,9 @@ namespace PVK_MAIN
 
         static void KocsmaiVerekedes()
         {
-            Console.WriteLine("A kocsmai verekedés nagyon zűrös, a harc mindjárt véget ér");
+            Console.ReadKey();
+            Console.WriteLine("A kocsmai verekedés már lecsengőben van, a harc mindjárt véget ér");
+            Console.ReadKey();
             Console.WriteLine("Csinos Tomi, aki Zoli utolsó megoldásként májon akar ütni");
             Console.WriteLine();
 
@@ -105,23 +111,35 @@ namespace PVK_MAIN
             Console.WriteLine("\t1. - Hátrébbugrasz");
             Console.WriteLine("\t2. - Megpróbálod kivédeni az ütést [min. 50 vérszomj]");
             Console.WriteLine("\t3. - Megmondod neki, hogy az erőszak nem megoldás");
-            Console.WriteLine("\t4. - Fogsz egy sörösüveget és megölöd vele Rostás Brájent - Rostás Amedeusz fiát [min. 100 vérszomj]");
 
             int x;
-            do
+
+            if (verszomj == 100) 
             {
-                x = Convert.ToInt32(Console.ReadLine());
-            } while (x < 1 && x > 4);
+                Console.WriteLine("\t4. - Fogsz egy sörösüveget és megölöd vele Rostás Brájent - Rostás Amedeusz fiát [min. 100 vérszomj]");
+                do
+                {
+                    x = Convert.ToInt32(Console.ReadLine());
+                } while (x < 1 && x > 4);
+            }
+
+            else
+            {
+                do
+                {
+                    x = Convert.ToInt32(Console.ReadLine());
+                } while (x < 1 && x > 3);
+            }
 
             if (x == 1)
             {
                 penz -= 20;
                 eletkedv -= 40;
+                NagyobbVagyEgyenloNulla(eletkedv);
+                NagyobbVagyEgyenloNulla(penz);
 
                 Console.WriteLine("Nekiestél a falusi keménygyereknek, aki agyonvert, elvett némi pénzt és kidobott az utcára");
-
                 Console.ReadKey();
-                Console.Clear();
                 //TODO utcára menés
             }
 
@@ -131,7 +149,7 @@ namespace PVK_MAIN
                 {
                     Console.WriteLine("3 kezet láttál, de valamennyire kitérült a keze");
                     Console.ReadKey();
-                    Console.WriteLine("A verekedés véget ért");
+                    Console.WriteLine("A verekedés véget ért, döntetlen lett");
 
                     Console.ReadKey();
                     Console.Clear();
@@ -143,9 +161,10 @@ namespace PVK_MAIN
                     eletkedv -= 5;
 
                     Console.WriteLine("Nincs benned annyi harci szellem, az ütés állcsúcson talált");
+                    Console.ReadKey();
+                    Console.WriteLine("A verekedés véget ért, vesztettél");
 
                     Console.ReadKey();
-                    Console.Clear();
                     Kocsma();
                 }
             }
@@ -153,20 +172,22 @@ namespace PVK_MAIN
             else if (x == 3)
             {
                 eletkedv -= 30;
+                NagyobbVagyEgyenloNulla(eletkedv);
 
                 Console.WriteLine("Az erőszak igenis megoldás, földre kerülsz");
 
                 Console.ReadKey();
-                Console.Clear();
                 Kocsma();
             }
 
             else
             {
-                if (verszomj == 100)
-                {
-                    Console.WriteLine("Rostás Brájen holtan");
-                }
+                eletkedv = 100;
+
+                Console.WriteLine("Rostás Brájen holtan fekszik a padlón, te pedig repülsz a böribe");
+
+                Console.ReadKey();
+                //TODO börtön
             }
         }
     }
