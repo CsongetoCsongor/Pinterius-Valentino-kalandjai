@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PVK_MAIN", "PVK_MAIN\PVK_MAIN.csproj", "{29C2C40F-95AF-455E-BE86-C05105A4C0AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29C2C40F-95AF-455E-BE86-C05105A4C0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C2C40F-95AF-455E-BE86-C05105A4C0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C2C40F-95AF-455E-BE86-C05105A4C0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C2C40F-95AF-455E-BE86-C05105A4C0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47CD0918-B734-415F-992C-4E9A63942A4E}
+	EndGlobalSection
+EndGlobal
