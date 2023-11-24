@@ -46,4 +46,3 @@ Hajó (Pipanic):
 			3.2 Nem megyek {Vissza a hajóra}
 	4. Elhagyod a hajót
         
-
