@@ -1,8 +1,18 @@
-﻿namespace PVK_MAIN
+﻿using System.Diagnostics.Metrics;
+
+namespace PVK_MAIN
 {
     internal partial class Program
     {
 
+
+        public static string helyszin = "";
+        
+        public static string elozo_helyszin = "";
+
+        public static string elozo_hely_uzenete = "";
+
+        public static string szituacio = "";
 
         public static int jozansag = 100;
 
@@ -36,13 +46,62 @@
 
         public static bool szent_korona_birtoklasa = false;
 
+        public static bool wc_osszeokadva = false;
+
         public static bool rab_megrugva = false;
 
-        public static string camefrom_message = "";
+        public static int BekerLehetosegek(int max_szam)
+        {
+            int input;
+
+
+            do
+            {
+                do
+                {
+                    Console.Write("Választás: ");
+
+                }
+                while (!int.TryParse(Console.ReadLine(), out input));
+            } while (input > max_szam);
+            
+            return input;
+        }
+
+        public static int NagyobbVagyEgyenloNulla(int szam)
+        {
+            if (szam >= 0) 
+            {
+                return szam;
+            }
+            else 
+            {
+                return 0; 
+            }
+        }
 
         static void Main(string[] args)
         {
-            
+
+            Console.WriteLine("Pinterius Valentino kalandjai, avagy az örök alkoholizmus útja");
+
+            Console.WriteLine("---------------------------------------------------------------");
+
+            Console.WriteLine($"Előző helyszín: {elozo_helyszin}");
+            Console.WriteLine();
+            Console.WriteLine($"Helyszín: {helyszin}");
+            Console.WriteLine();
+            Console.WriteLine($"Életkedv: {eletkedv}\t Józanság: {jozansag}\t Vérszomj: {verszomj}");
+            Console.WriteLine($"Személyes vagyon: {penz} krajcár");
+            Console.WriteLine("---------------------------------------------------------------");
+            Console.WriteLine(elozo_hely_uzenete);
+            Console.WriteLine();
+            Console.WriteLine(szituacio);
+
+            Otthon();
+
+
+
         }
     }
 }
