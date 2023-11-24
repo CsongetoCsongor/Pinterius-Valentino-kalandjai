@@ -10,6 +10,8 @@ namespace PVK_MAIN
     {
         static void Kikoto()
         {
+            
+
             Console.WriteLine("Kimész a kikötőbe, megcsap a döglött halszag");
             Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
@@ -17,12 +19,22 @@ namespace PVK_MAIN
             Console.WriteLine("\t2. Bemész a Horgászboltba");
             Console.WriteLine("\t3. Felszállsz a hajóra");
             Console.WriteLine("\t4. Visszamész a főútra");
-            int input = BekerLehetosegek();
+            int input = BekerLehetosegek(4);
             if (input == 1)
             {
-                eletkedv += 10;
-                jozansag += 5;
-                //TODO börtönbe kerülés
+                Random rand = new Random();
+                int szam = (rand.Next(1, 100));
+
+                if (szam <= 20) 
+                {
+                    Console.WriteLine("Vizelés közben elkaptak a rendőrök");
+                    //Borton();
+                }
+                else
+                {
+                    eletkedv += 10;
+                    jozansag += 5;
+                }
                 Kikoto();
             }
             else if (input == 2)
@@ -50,7 +62,7 @@ namespace PVK_MAIN
             Console.WriteLine("\t1. Veszel egy horgászbotot, ami 20 krajcárba kerül");
             Console.WriteLine("\t2. Ha van, eladod neki a tengeri gyöngyöt, amiért 50 krajcárt fizet");
             Console.WriteLine("\t3. Köszönés nélkül elhagyod a horgászboltot");
-            int input = BekerLehetosegek();
+            int input = BekerLehetosegek(3);
             if (input == 1)
             {
                 penz -= 20;
