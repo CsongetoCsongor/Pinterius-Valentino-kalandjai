@@ -23,7 +23,7 @@ namespace PVK_MAIN
             Console.WriteLine("             \\|_________|                                  \\|_________|                                               ");
             Console.WriteLine();
             eletkedv -= 5;
-            NagyobbVagyEgyenloNulla(eletkedv);
+            NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. - Csapoltatsz magadnak egy sört 5 krajcárért és lehörpinted");
@@ -44,9 +44,9 @@ namespace PVK_MAIN
                     eletkedv += 10;
                     jozansag -= 10;
                     penz -= 5;
-                    NagyobbVagyEgyenloNulla(eletkedv);
-                    NagyobbVagyEgyenloNulla(jozansag);
-                    NagyobbVagyEgyenloNulla(penz);
+                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(penz);
 
                     Console.WriteLine("A sör finom volt, jó nagyot böfögtél");
                 }
@@ -67,9 +67,9 @@ namespace PVK_MAIN
                     eletkedv = 100;
                     jozansag -= 70;
                     penz -= 30;
-                    NagyobbVagyEgyenloNulla(eletkedv);
-                    NagyobbVagyEgyenloNulla(jozansag);
-                    NagyobbVagyEgyenloNulla(penz);
+                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(penz);
 
                     Console.WriteLine("A speciális ital speciális állapotba helyezett, az amúgy ott egy sárkány mögötted?");
                 }
@@ -144,8 +144,8 @@ namespace PVK_MAIN
             {
                 penz -= 20;
                 eletkedv -= 40;
-                NagyobbVagyEgyenloNulla(eletkedv);
-                NagyobbVagyEgyenloNulla(penz);
+                NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(penz);
 
                 Console.WriteLine("Nekiestél a falusi keménygyereknek, aki agyonvert, elvett némi pénzt és kidobott az utcára");
                 Console.ReadKey();
@@ -181,7 +181,7 @@ namespace PVK_MAIN
             else if (x == 3)
             {
                 eletkedv -= 30;
-                NagyobbVagyEgyenloNulla(eletkedv);
+                NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
                 Console.WriteLine("Az erőszak igenis megoldás, földre kerülsz");
 

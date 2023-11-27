@@ -113,7 +113,7 @@ namespace PVK_MAIN
 
                 Console.ReadKey();
                 Console.Clear();
-                Otthon();
+                Kert();
             }
             else if (input == 3)
             {

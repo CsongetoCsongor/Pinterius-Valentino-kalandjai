@@ -65,7 +65,7 @@ namespace PVK_MAIN
 
                 }
                 while (!int.TryParse(Console.ReadLine(), out input));
-            } while (input > max_szam);
+            } while (input > max_szam || input < 1);
             
             return input;
         }
