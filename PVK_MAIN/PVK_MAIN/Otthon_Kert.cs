@@ -62,7 +62,7 @@ namespace PVK_MAIN
             else if (input == 4)
             {
                 Console.Clear();
-                //Fout();
+                Fout();
             }
 
         }
