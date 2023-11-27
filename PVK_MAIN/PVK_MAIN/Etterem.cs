@@ -10,12 +10,20 @@ namespace PVK_MAIN
     {
         static void Etterem()
         {
-            Console.WriteLine("Megcsap a püfűthús és szalmakrumpli illata és megjön az étvágyad");
-            Console.WriteLine();
+            eletkedv += 10;
+            eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            verszomj += 5;
+            verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+
+            helyszin = "Étterem";
+            IrjaKiAStatokat("Megcsap a püfűthús és szalmakrumpli illata és megjön az étvágyad");
+
+            Console.WriteLine("");
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. Eszel, ami 30 krajcárba kerül");
             Console.WriteLine("\t2. Az egyik asztalra ürítesz");
             Console.WriteLine("\t3. Kimész a Főútra");
+
             int input = BekerLehetosegek(3);
             if (input == 1)
             {

@@ -10,15 +10,17 @@ namespace PVK_MAIN
     {
         static void Kikoto()
         {
-            
 
-            Console.WriteLine("Kimész a kikötőbe, megcsap a döglött halszag");
-            Console.WriteLine();
+            helyszin = "Kikötő";
+            IrjaKiAStatokat("Kimész a kikötőbe, megcsap a döglött halszag");
+
+            Console.WriteLine("");
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. Belevizelsz a tengerbe");
             Console.WriteLine("\t2. Bemész a Horgászboltba");
             Console.WriteLine("\t3. Felszállsz a hajóra");
             Console.WriteLine("\t4. Visszamész a főútra");
+
             int input = BekerLehetosegek(4);
             if (input == 1)
             {
@@ -33,7 +35,9 @@ namespace PVK_MAIN
                 else
                 {
                     eletkedv += 10;
+                    eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     jozansag += 5;
+                    jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
                 }
                 Kikoto();
             }
@@ -56,12 +60,19 @@ namespace PVK_MAIN
 
         static void Horgaszbolt()
         {
-            Console.WriteLine("Bemész a horgászboltba, ahol egy szakállas alkoholista üdvözöl; Szájszaga még a tiédnél is rosszabb");
-            Console.WriteLine();
+            eletkedv -= 10;
+            eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+
+
+            helyszin = "Horgászbolt";
+            IrjaKiAStatokat("Bemész a horgászboltba, ahol egy szakállas alkoholista üdvözöl; Szájszaga még a tiédnél is rosszabb");
+
+            Console.WriteLine("");
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. Veszel egy horgászbotot, ami 20 krajcárba kerül");
             Console.WriteLine("\t2. Ha van, eladod neki a tengeri gyöngyöt, amiért 50 krajcárt fizet");
             Console.WriteLine("\t3. Köszönés nélkül elhagyod a horgászboltot");
+
             int input = BekerLehetosegek(3);
             if (input == 1)
             {
