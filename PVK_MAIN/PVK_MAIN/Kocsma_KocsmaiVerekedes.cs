@@ -110,7 +110,6 @@ namespace PVK_MAIN
 
         static void KocsmaiVerekedes()
         {
-            Console.ReadKey();
             Console.WriteLine("A kocsmai verekedés már lecsengőben van, a harc mindjárt véget ér");
             Console.ReadKey();
             Console.WriteLine("Csinos Tomi, aki Zoli utolsó megoldásként májon akar ütni");
@@ -161,7 +160,6 @@ namespace PVK_MAIN
                     Console.WriteLine("A verekedés véget ért, döntetlen lett");
 
                     Console.ReadKey();
-                    Console.Clear();
                     Kocsma();
                 }
 
