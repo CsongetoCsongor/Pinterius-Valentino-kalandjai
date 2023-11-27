@@ -23,7 +23,7 @@ namespace PVK_MAIN
             if (input == 1)
             {
                 Random rand = new Random();
-                int szam = (rand.Next(1, 100));
+                int szam = (rand.Next(1, 101));
 
                 if (szam <= 20) 
                 {
@@ -45,12 +45,12 @@ namespace PVK_MAIN
             else if (input == 3)
             {
                 Console.Clear();
-                //Hajo()
+                //Hajo();
             }
             else if (input == 4)
             {
                 Console.Clear();
-                //Fout()
+                //Fout();
             }
         }
 
@@ -70,7 +70,7 @@ namespace PVK_MAIN
             }
             else if (input == 2)
             {
-                if (tengeri_gyongy_birtoklasa = true)
+                if (tengeri_gyongy_birtoklasa == true)
                 {
                     penz += 50;
                     tengeri_gyongy_birtoklasa = false;
