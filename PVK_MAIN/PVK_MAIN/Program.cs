@@ -50,6 +50,8 @@ namespace PVK_MAIN
 
         public static bool rab_megrugva = false;
 
+        public static bool mehe_megolve = false;
+
         public static int BekerLehetosegek(int max_szam)
         {
             int input;
@@ -63,26 +65,29 @@ namespace PVK_MAIN
 
                 }
                 while (!int.TryParse(Console.ReadLine(), out input));
-            } while (input > max_szam);
+            } while (input > max_szam || input < 1);
             
             return input;
         }
 
-        public static int NagyobbVagyEgyenloNulla(int szam)
+        public static int NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(int szam)
         {
-            if (szam >= 0) 
+            if (szam >= 0 && szam <= 100) 
             {
                 return szam;
             }
-            else 
+            else if(szam < 0)
             {
                 return 0; 
             }
+            else
+            {
+                return 100;
+            }
         }
 
-        static void Main(string[] args)
+        public static void IrjaKiAStatokat(string szituacio)
         {
-
             Console.WriteLine("Pinterius Valentino kalandjai, avagy az örök alkoholizmus útja");
 
             Console.WriteLine("---------------------------------------------------------------");
@@ -97,6 +102,12 @@ namespace PVK_MAIN
             Console.WriteLine(elozo_hely_uzenete);
             Console.WriteLine();
             Console.WriteLine(szituacio);
+        }
+
+        static void Main(string[] args)
+        {
+
+           
 
             Otthon();
 
