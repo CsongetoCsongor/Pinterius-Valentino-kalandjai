@@ -13,7 +13,7 @@ namespace PVK_MAIN
             Console.Clear();
 
             eletkedv -= 5;
-            NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
             helyszin = "Kocsma (Csévi Szilva)";
             IrjaKiAStatokat("Bemész a kocsmába és megünnepled, hogy nincs semmilyen ünnep, a szag szomorú gyerekkorodra emlékeztet");
@@ -35,8 +35,8 @@ namespace PVK_MAIN
                     eletkedv += 5;
                     jozansag -= 10;
                     penz -= 5;
-                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                    eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
 
                     Console.WriteLine("A sör finom volt, jó nagyot böfögtél");
                 }
@@ -57,9 +57,9 @@ namespace PVK_MAIN
                     eletkedv = 100;
                     jozansag -= 70;
                     penz -= 30;
-                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
-                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(penz);
+                    eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                    
 
                     Console.WriteLine("A speciális ital speciális állapotba helyezett, az amúgy ott egy sárkány mögötted?");
                 }
@@ -103,7 +103,7 @@ namespace PVK_MAIN
             else
             {
                 elozo_helyszin = "Kocsma (Csévi Szilva)";
-                //Fout();
+                Fout();
             }
         }
 
@@ -139,8 +139,8 @@ namespace PVK_MAIN
             {
                 penz -= 20;
                 eletkedv -= 40;
-                NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-                NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(penz);
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                
 
                 Console.WriteLine("Nekiestél a falusi keménygyereknek, aki agyonvert, elvett némi pénzt és kidobott az utcára");
 
@@ -176,7 +176,7 @@ namespace PVK_MAIN
             else if (x == 3)
             {
                 eletkedv -= 30;
-                NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
                 Console.WriteLine("Az erőszak igenis megoldás, földre kerülsz");
 
