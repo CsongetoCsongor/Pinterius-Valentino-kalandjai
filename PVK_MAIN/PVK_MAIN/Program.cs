@@ -54,6 +54,10 @@ namespace PVK_MAIN
 
         public static bool mehe_megolve = false;
 
+        public static bool temto_demon_atverve = false;
+
+        public static bool koszoru_elfogyasztva = false;
+
         public static int BekerLehetosegek(int max_szam)
         {
             int input;
