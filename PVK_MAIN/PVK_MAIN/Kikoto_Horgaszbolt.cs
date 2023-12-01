@@ -10,8 +10,9 @@ namespace PVK_MAIN
     {
         static void Kikoto()
         {
+            Console.Clear();
 
-            helyszin = "Kikötő";
+            helyszin = "Tenger hangja kikötő";
             IrjaKiAStatokat("Kimész a kikötőbe, megcsap a döglött halszag");
 
             Console.WriteLine("");
@@ -29,7 +30,16 @@ namespace PVK_MAIN
 
                 if (szam <= 20) 
                 {
-                    Console.WriteLine("Vizelés közben elkaptak a rendőrök");
+                    eletkedv += 10;
+                    eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    jozansag += 5;
+                    jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+
+                    elozo_helyszin = "Tenger hangja kikötő";
+                    elozo_hely_uzenete = "Vizelés közben elkaptak a rendőrök és bevittek a börtönbe";
+
+                    Console.ReadKey();
+
                     //Borton();
                 }
                 else
@@ -38,33 +48,53 @@ namespace PVK_MAIN
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     jozansag += 5;
                     jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+
+                    elozo_helyszin = "Tenger hangja kikötő";
+                    elozo_hely_uzenete = "Megúsztad a vizelést, a rendőrök pont kávézgattak";
+
+                    Console.ReadKey();
+
+                    Kikoto();
                 }
-                Kikoto();
+                
             }
             else if (input == 2)
             {
-                Console.Clear();
+                elozo_helyszin = "Tenger hangja kikötő";
+                elozo_hely_uzenete = "Bementél a horgászboltba";
+
+                Console.ReadKey();
+
                 Horgaszbolt();
             }
             else if (input == 3)
             {
-                Console.Clear();
+                elozo_helyszin = "Tenger hangja kikötő";
+                elozo_hely_uzenete = "Felszálltál a hajóra";
+
+                Console.ReadKey();
+
                 //Hajo();
             }
             else if (input == 4)
             {
-                Console.Clear();
+                elozo_helyszin = "Tenger hangja kikötő";
+                elozo_hely_uzenete = "Visszamentél a főútra";
+
+                Console.ReadKey();
+
                 //Fout();
             }
         }
 
         static void Horgaszbolt()
         {
+            Console.Clear();
+
             eletkedv -= 10;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
-
-            helyszin = "Horgászbolt";
+            helyszin = "Down-kóros Delfin horgászbolt";
             IrjaKiAStatokat("Bemész a horgászboltba, ahol egy szakállas alkoholista üdvözöl; Szájszaga még a tiédnél is rosszabb");
 
             Console.WriteLine("");
@@ -77,6 +107,13 @@ namespace PVK_MAIN
             if (input == 1)
             {
                 penz -= 20;
+                verszomj = 100;
+
+                elozo_helyszin = "Down-kóros Delfin horgászbolt";
+                elozo_hely_uzenete = "Vettél egy profi hirgászbotod, megjött a kedved horgászni menni";
+
+                Console.ReadKey();
+
                 Horgaszbolt();
             }
             else if (input == 2)
@@ -85,16 +122,33 @@ namespace PVK_MAIN
                 {
                     penz += 50;
                     tengeri_gyongy_birtoklasa = false;
+
+                    elozo_helyszin = "Down-kóros Delfin horgászbolt";
+                    elozo_hely_uzenete = "Eladtad a gyöngyöt, meggazdagodtál";
+
+                    Console.ReadKey();
+
+                    Horgaszbolt();
                 }
                 else
                 {
-                    Console.WriteLine("Még nincsen nálad a tengeri gyöngy");
+                    Console.WriteLine();
+                    elozo_helyszin = "Down-kóros Delfin horgászbolt";
+                    elozo_hely_uzenete = "Még nincsen nálad a tengeri gyöngy";
+
+                    Console.ReadKey();
+
+                    Horgaszbolt();
                 }
-                Horgaszbolt();
+                
             }
             else if (input == 3)
             {
-                Console.Clear();
+                elozo_helyszin = "Down-kóros Delfin horgászbolt";
+                elozo_hely_uzenete = "Köszönés nélkül kimentél a boltból, az eladó csúnyán nézett utánad";
+
+                Console.ReadKey();
+
                 Kikoto();
 
             }
