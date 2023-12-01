@@ -57,7 +57,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz a temető felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Temetto();
+                Temeto();
             }
             else if (input == 4)
             {

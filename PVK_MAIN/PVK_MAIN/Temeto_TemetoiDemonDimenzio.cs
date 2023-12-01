@@ -82,7 +82,7 @@ namespace PVK_MAIN
                 elozo_hely_uzenete = "A kísértet megfosztott minden pénzedtől";
 
                 Console.ReadKey();
-                //Fout();
+                Fout();
             }
 
             else if (x == 2)
@@ -94,7 +94,7 @@ namespace PVK_MAIN
                 elozo_hely_uzenete = "A kísértet elvette a sörszagú páncélod és te szomorú lettél";
 
                 Console.ReadKey();
-                //Fout();
+                Fout();
             }
 
             else if (x == 3)
@@ -106,7 +106,7 @@ namespace PVK_MAIN
                 elozo_hely_uzenete = "A kísértet elvette a kardod és hirtelen nem vagy olyan vérszomjas";
 
                 Console.ReadKey();
-                //Fout();
+                Fout();
             }
 
             else
@@ -133,7 +133,7 @@ namespace PVK_MAIN
                         elozo_hely_uzenete = "A hazugság bevált, a főúton ébredtél";
 
                         Console.ReadKey();
-                        //Fout();
+                        Fout();
                     }
 
                     else
