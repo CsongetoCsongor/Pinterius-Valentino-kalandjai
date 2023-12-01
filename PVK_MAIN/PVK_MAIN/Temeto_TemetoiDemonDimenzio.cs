@@ -148,13 +148,11 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("A kísértet nem hisz neked, bizonyítékot kér");
 
-                Console.WriteLine("Lehetőségek:");
-
-
                 if (jegygyuru_birtoklasa == true)
                 {
                     int y = BekerLehetosegek(2);
 
+                    Console.WriteLine("Lehetőségek:");
                     Console.WriteLine("\t1. - Megmutatod neki a jeggyűrűt, amit találtál");
                     Console.WriteLine("\t2. - Megesküszöl, hogy igazat mondasz");
 
@@ -185,8 +183,8 @@ namespace PVK_MAIN
 
                 else
                 {
-                    int y = BekerLehetosegek(1);
-                    Console.WriteLine("\t1. - Megesküszöl, hogy igazat mondasz");
+                    Console.ReadKey();
+                    Console.WriteLine("Megesküszöl, hogy igazat mondasz");
 
                     Console.WriteLine("Hát testvér, szarul hazudsz");
 
