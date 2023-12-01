@@ -70,6 +70,7 @@ namespace PVK_MAIN
 
         static void Kert()
         {
+            Console.Clear();
             if (kert_meglatogatva == false)
             {
                 eletkedv -= 20;

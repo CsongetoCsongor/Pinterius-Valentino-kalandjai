@@ -16,7 +16,7 @@ namespace PVK_MAIN
 
             if (jozansag <= 30)
             {
-                elozo_hely_uzenete = "Nagyon be voltál ittasodva, ezért a Démon Dimenzióba kerültél.";
+                elozo_hely_uzenete = "";
                 ErdoDemonDimenzio();
             }
 
@@ -93,9 +93,55 @@ namespace PVK_MAIN
         static void ErdoDemonDimenzio()
         {
             Console.Clear();
-            Console.WriteLine("DÉMON DIMENZIÓ");
-            Console.ReadKey();
-            Fout();
+            helyszin = "DÉMON DIMENZIÓ";
+            IrjaKiAStatokat("A démonok hívásának nem tudtál ellen állni, egy alternatív valóságba estél és megtámadott egy démon.");
+
+            Console.WriteLine("BOGNÁR EXAEL VAGYOK, DÉMONOK URA, VILÁGOK PUSZTÍTÓJA ÉS C# PROGRAMOZÓ TANÁR!");
+            Console.WriteLine("MINDEM ÓRÁMAT MEGKESERÍTETTE, EZÉRT MOST BOSSZÚT ÁLLOK!");
+
+            Console.WriteLine();
+            Console.WriteLine("Lehetőségek:");
+            Console.WriteLine("\t1. Elfutsz a démon elől...");
+            Console.WriteLine("\t2. Rátámadsz a démonra...");
+            int input = BekerLehetosegek(2);
+
+            if (input == 1)
+            {
+
+                if (jozansag >= 20)
+                {
+                    Console.WriteLine("Szerencséd volt, elég józan voltál, hogy elfuss...");
+                    Console.ReadKey();
+                    elozo_hely_uzenete = "A DÉMON DIMENZIÓ nagyon kikészített...";
+                    Otthon();
+                }
+                else
+                {
+                    Console.WriteLine("Túl részeg voltál és megbotlottál egy igazságtáblában, a démon pedig kiszítta a lelkedet.");
+                    Console.ReadKey();
+                    
+                    //Pokol();
+                }
+
+                
+            }
+            else if(input == 2)
+            {
+                if (verszomj == 100)
+                {
+                    Console.WriteLine("A démont megragadtad a farkánál és földhöz vágtad, letépted a szárnyait majd a lehelleteddel megölted.");
+                    Console.ReadKey();
+                    elozo_hely_uzenete = "A DÉMON DIMENZIÓ kicsit kikészített, de örülsz győzelmednek.";
+                    Otthon();
+                }
+                else
+                {
+                    Console.WriteLine("Nem voltál elég vérszomjas, hogy megöld a démont, ezért elégetett a pokol tüzével, és elkobozta lelkedet.");
+                    Console.ReadKey();
+
+                    //Pokol();
+                }
+            }
         }
     }
 }
