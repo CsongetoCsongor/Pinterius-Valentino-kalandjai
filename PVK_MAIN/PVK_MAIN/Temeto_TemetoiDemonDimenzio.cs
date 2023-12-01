@@ -33,7 +33,7 @@ namespace PVK_MAIN
                 if (jozansag <= 40)
                 {
                     eletkedv += 10;
-                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
                     Console.WriteLine("A sírt meggyalázva nagyot röhögsz, de hátad mögött kék és piros villanásokat látsz");
 
@@ -54,6 +54,41 @@ namespace PVK_MAIN
                     Console.ReadKey();
                     Temeto();
                 }
+            }
+
+            else if (x == 2 && koszoru_elfogyasztva == false)
+            {
+                Console.WriteLine("Megettél egy koszorút, az íze egy bizonyos teáéra emlékeztet");
+
+                //acsíment
+
+                koszoru_elfogyasztva = true;
+
+                elozo_helyszin = "Temető";
+                elozo_hely_uzenete = "";
+
+                Console.ReadKey();
+                Temeto();
+            }
+
+            else if (x == 2 && koszoru_elfogyasztva)
+            {
+                Console.WriteLine("Elfogytak a koszorúk, valami gyökér megette őket");
+
+                elozo_helyszin = "Temető";
+                elozo_hely_uzenete = "";
+
+                Console.ReadKey();
+                Temeto();
+            }
+
+            else
+            {
+                elozo_helyszin = "Temető";
+                elozo_hely_uzenete = "Kimentél a temetőből";
+
+                Console.ReadKey();
+                Fout();
             }
         }
 
@@ -88,7 +123,7 @@ namespace PVK_MAIN
             else if (x == 2)
             {
                 eletkedv -= 50;
-                NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
                 elozo_helyszin = "Temetői Démon Dimenzió";
                 elozo_hely_uzenete = "A kísértet elvette a sörszagú páncélod és te szomorú lettél";
@@ -100,7 +135,7 @@ namespace PVK_MAIN
             else if (x == 3)
             {
                 verszomj -= 50;
-                NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+                verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
 
                 elozo_helyszin = "Temetői Démon Dimenzió";
                 elozo_hely_uzenete = "A kísértet elvette a kardod és hirtelen nem vagy olyan vérszomjas";
