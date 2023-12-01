@@ -62,6 +62,7 @@ namespace PVK_MAIN
             else if (input == 4)
             {
                 Console.Clear();
+                elozo_helyszin = "Otthon";
                 Fout();
             }
 
@@ -69,8 +70,13 @@ namespace PVK_MAIN
 
         static void Kert()
         {
-            eletkedv -= 20;
-            eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            if (kert_meglatogatva == false)
+            {
+                eletkedv -= 20;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                kert_meglatogatva = true;
+            }
+            
 
             helyszin = "Kert";
             IrjaKiAStatokat("Kimentél a kertbe. Megcsípett egy méhe (véleményed szerint a nagyorrú kalapos ogrék miatt van).");
@@ -86,13 +92,17 @@ namespace PVK_MAIN
             if (input == 1)
             {
 
-                if(mehe_megolve == false)
+                if(mehe_megolve == false && verszomj >= 60)
                 {
                     eletkedv += 20;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
                     Console.WriteLine("Megölted azt a fránya méhet, ami megcsípett. Ez melegséggel tölt el...");
                     mehe_megolve = true;
+                }
+                else if(mehe_megolve == false && verszomj < 60)
+                {
+                    Console.WriteLine("Nem vagy elég ideges, hogy elvedd a méhe életét.");
                 }
                 else
                 {
@@ -107,9 +117,17 @@ namespace PVK_MAIN
             else if (input == 2)
             {
 
-
-                penz += 30;
-                Console.WriteLine("Megtaláltad a bukszádat. Volt benne 30 krajcár és egy hamisított személyi is, Gipsz jakab névvel.");
+                if (buksza_birtoklasa == false)
+                {
+                    penz += 30;
+                    Console.WriteLine("Megtaláltad a bukszádat. Volt benne 30 krajcár és egy hamisított személyi is, Gipsz jakab névvel.");
+                    buksza_birtoklasa = true;
+                }
+                else
+                {
+                    Console.WriteLine("Nem találtál semmit.");
+                }
+                
 
                 Console.ReadKey();
                 Console.Clear();

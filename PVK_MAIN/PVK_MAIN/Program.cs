@@ -4,7 +4,7 @@ namespace PVK_MAIN
 {
     internal partial class Program
     {
-
+        
 
         public static string helyszin = "";
         
@@ -21,6 +21,8 @@ namespace PVK_MAIN
         public static int verszomj = 50;
 
         public static int penz = 0;
+
+        public static bool kert_meglatogatva = false;
 
         public static bool buksza_birtoklasa = false;
 

@@ -40,54 +40,64 @@ namespace PVK_MAIN
             if (input == 1) 
             {
                 Console.WriteLine("Elindulsz a kocsma felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
+                
                 Kocsma();
             }
             else if(input == 2)
             {
                 Console.WriteLine("Elindulsz a kovács felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
                 //Kovacs();
             }
             else if(input == 3)
             {
                 Console.WriteLine("Elindulsz a temető felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
                 //Temetto();
             }
             else if (input == 4)
             {
                 Console.WriteLine("Elindulsz az étterem felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
                 //Etterem();
             }
             else if(input == 5)
             {
                 Console.WriteLine("Elindulsz az erdő felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Erdo();
+                Erdo();
             }
             else if(input == 6)
             {
                 Console.WriteLine("Elindulsz az ösvény felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
                 //Osveny();
             }
             else if(input == 7)
             {
                 Console.WriteLine("Elindulsz a bank felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
                 //Bank();
             }
             else if(input == 8)
             {
                 Console.WriteLine("Elindulsz a vár felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
                 //Var();
             }
             else if(input == 9)
             {
                 Console.WriteLine("Elindulsz a kikötő felé...");
+                elozo_helyszin = "Főút";
                 Console.ReadKey();
                 //Kikoto();
             }
