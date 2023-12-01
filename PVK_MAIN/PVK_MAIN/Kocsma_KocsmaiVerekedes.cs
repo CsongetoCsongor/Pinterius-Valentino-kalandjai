@@ -11,19 +11,14 @@ namespace PVK_MAIN
         static void Kocsma()
         {
             Console.Clear();
-            Console.WriteLine("Bemész a kocsmába és megünnepled, hogy nincs semmilyen ünnep, a szag szomorú gyerekkorodra emlékeztet");
-            Console.WriteLine();
-            Console.WriteLine(" ________  ________  _______   ___      ___ ___          ________  ________  ___  ___       ___      ___ ________     ");
-            Console.WriteLine("|\\   ____\\|\\   ____\\|\\  ___ \\ |\\  \\    /  /|\\  \\        |\\   ____\\|\\_____  \\|\\  \\|\\  \\     |\\  \\    /  /|\\   __  \\    ");
-            Console.WriteLine("\\ \\  \\___|\\ \\  \\___|\\ \\   __/|\\ \\  \\  /  / | \\  \\       \\ \\  \\___|_\\|___/  /\\ \\  \\ \\  \\    \\ \\  \\  /  / | \\  \\|\\  \\   ");
-            Console.WriteLine(" \\ \\  \\    \\ \\_____  \\ \\  \\_|/_\\ \\  \\/  / / \\ \\  \\       \\ \\_____  \\   /  / /\\ \\  \\ \\  \\    \\ \\  \\/  / / \\ \\   __  \\  ");
-            Console.WriteLine("  \\ \\  \\____\\|____|\\  \\ \\  \\_|\\ \\ \\    / /   \\ \\  \\       \\|____|\\  \\ /  /_/__\\ \\  \\ \\  \\____\\ \\    / /   \\ \\  \\ \\  \\ ");
-            Console.WriteLine("   \\ \\_______\\____\\_\\  \\ \\_______\\ \\__/ /     \\ \\__\\        ____\\_\\  \\\\________\\ \\__\\ \\_______\\ \\__/ /     \\ \\__\\ \\__\\");
-            Console.WriteLine("    \\|_______|\\_________\\|_______|\\|__|/       \\|__|       |\\_________\\|_______|\\|__|\\|_______|\\|__|/       \\|__|\\|__|");
-            Console.WriteLine("             \\|_________|                                  \\|_________|                                               ");
-            Console.WriteLine();
+
             eletkedv -= 5;
             NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+
+            helyszin = "Kocsma (Csévi Szilva)";
+            IrjaKiAStatokat("Bemész a kocsmába és megünnepled, hogy nincs semmilyen ünnep, a szag szomorú gyerekkorodra emlékeztet");
+            Console.WriteLine();
+            
 
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. - Csapoltatsz magadnak egy sört 5 krajcárért és lehörpinted");
@@ -31,22 +26,17 @@ namespace PVK_MAIN
             Console.WriteLine("\t3. - Kocsmai verekedést indítasz [max]");
             Console.WriteLine("\t4. - Kimész az utcára");
 
-            int x;
-            do
-            {
-                 x = Convert.ToInt32(Console.ReadLine());
-            } while (x < 1 && x > 4);
+            int x = BekerLehetosegek(4);
 
             if (x == 1)
             {
                 if (penz >= 5)
                 {
-                    eletkedv += 10;
+                    eletkedv += 5;
                     jozansag -= 10;
                     penz -= 5;
                     NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
-                    NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(penz);
 
                     Console.WriteLine("A sör finom volt, jó nagyot böfögtél");
                 }
@@ -83,6 +73,14 @@ namespace PVK_MAIN
                 Kocsma();
             }
 
+            else if (x == 3 && volt_e_verekedes_kocsmaban == true)
+            {
+                Console.WriteLine("Ezt már csináltad és akkor sem lett jó vége");
+
+                Console.ReadKey();
+                Kocsma();
+            }
+
             else if (x == 3 && volt_e_verekedes_kocsmaban == false)
             {
                 if (jozansag <= 40)
@@ -104,15 +102,17 @@ namespace PVK_MAIN
 
             else
             {
-                //TODO utcára menés
+                elozo_helyszin = "Kocsma (Csévi Szilva)";
+                //Fout();
             }
         }
 
         static void KocsmaiVerekedes()
         {
+            Console.Clear();
+            IrjaKiAStatokat("A kocsmai verekedés már lecsengőben van, a harc mindjárt véget ér");
             Console.ReadKey();
-            Console.WriteLine("A kocsmai verekedés már lecsengőben van, a harc mindjárt véget ér");
-            Console.ReadKey();
+            Console.WriteLine();
             Console.WriteLine("Csinos Tomi, aki Zoli utolsó megoldásként májon akar ütni");
             Console.WriteLine();
 
@@ -126,18 +126,13 @@ namespace PVK_MAIN
             if (verszomj == 100) 
             {
                 Console.WriteLine("\t4. - Fogsz egy sörösüveget és megölöd vele Rostás Brájent - Rostás Amedeusz fiát [min. 100 vérszomj]");
-                do
-                {
-                    x = Convert.ToInt32(Console.ReadLine());
-                } while (x < 1 && x > 4);
+
+                x = BekerLehetosegek(4);
             }
 
             else
             {
-                do
-                {
-                    x = Convert.ToInt32(Console.ReadLine());
-                } while (x < 1 && x > 3);
+                x = BekerLehetosegek(3);
             }
 
             if (x == 1)
@@ -148,8 +143,9 @@ namespace PVK_MAIN
                 NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(penz);
 
                 Console.WriteLine("Nekiestél a falusi keménygyereknek, aki agyonvert, elvett némi pénzt és kidobott az utcára");
+
                 Console.ReadKey();
-                //TODO utcára menés
+                //Fout();
             }
 
             else if (x == 2)
@@ -161,7 +157,6 @@ namespace PVK_MAIN
                     Console.WriteLine("A verekedés véget ért, döntetlen lett");
 
                     Console.ReadKey();
-                    Console.Clear();
                     Kocsma();
                 }
 
@@ -196,7 +191,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Rostás Brájen holtan fekszik a padlón, te pedig repülsz a böribe");
 
                 Console.ReadKey();
-                //TODO börtön
+                //Borton();
             }
         }
     }
