@@ -32,7 +32,7 @@ namespace PVK_MAIN
             {
                 if (penz >= 5)
                 {
-                    eletkedv += 10;
+                    eletkedv += 5;
                     jozansag -= 10;
                     penz -= 5;
                     NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
@@ -68,6 +68,14 @@ namespace PVK_MAIN
                 {
                     Console.WriteLine("Nincs elég pénzed, idióta");
                 }
+
+                Console.ReadKey();
+                Kocsma();
+            }
+
+            else if (x == 3 && volt_e_verekedes_kocsmaban == true)
+            {
+                Console.WriteLine("Ezt már csináltad és akkor sem lett jó vége");
 
                 Console.ReadKey();
                 Kocsma();
@@ -118,6 +126,7 @@ namespace PVK_MAIN
             if (verszomj == 100) 
             {
                 Console.WriteLine("\t4. - Fogsz egy sörösüveget és megölöd vele Rostás Brájent - Rostás Amedeusz fiát [min. 100 vérszomj]");
+
                 x = BekerLehetosegek(4);
             }
 
@@ -134,6 +143,7 @@ namespace PVK_MAIN
                 NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(penz);
 
                 Console.WriteLine("Nekiestél a falusi keménygyereknek, aki agyonvert, elvett némi pénzt és kidobott az utcára");
+
                 Console.ReadKey();
                 //Fout();
             }
