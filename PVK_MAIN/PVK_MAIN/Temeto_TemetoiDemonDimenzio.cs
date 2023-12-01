@@ -84,7 +84,11 @@ namespace PVK_MAIN
 
             else
             {
+                elozo_helyszin = "Temető";
+                elozo_hely_uzenete = "Kimentél a temetőből";
 
+                Console.ReadKey();
+                Fout();
             }
         }
 
