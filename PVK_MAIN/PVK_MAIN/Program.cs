@@ -16,7 +16,7 @@ namespace PVK_MAIN
 
         public static int jozansag = 100;
 
-        public static int eletkedv = 50;
+        public static int eletkedv = 0;
 
         public static int verszomj = 50;
 

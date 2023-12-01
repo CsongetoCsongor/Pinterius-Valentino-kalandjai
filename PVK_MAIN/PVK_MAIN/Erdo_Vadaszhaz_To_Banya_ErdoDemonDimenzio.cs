@@ -14,6 +14,12 @@ namespace PVK_MAIN
             helyszin = "Sárguló Sörerdő";
             IrjaKiAStatokat("Az erdőbe érve gonosz démonok hívását hallod. Mintha a pokolból millió ember sikolya szólna hozzád...");
 
+            if (jozansag <= 30)
+            {
+                elozo_hely_uzenete = "Nagyon be voltál ittasodva, ezért a Démon Dimenzióba kerültél.";
+                ErdoDemonDimenzio();
+            }
+
             Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. Megeszel egy furcsa gombát");
@@ -82,6 +88,14 @@ namespace PVK_MAIN
                 elozo_helyszin = "Sárguló Sörerdő";
                 Fout();
             }
+        }
+
+        static void ErdoDemonDimenzio()
+        {
+            Console.Clear();
+            Console.WriteLine("DÉMON DIMENZIÓ");
+            Console.ReadKey();
+            Fout();
         }
     }
 }
