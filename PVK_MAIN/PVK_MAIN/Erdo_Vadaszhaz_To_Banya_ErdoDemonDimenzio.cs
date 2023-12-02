@@ -77,11 +77,22 @@ namespace PVK_MAIN
             }
             else if(input == 5)
             {
-                Console.WriteLine("Elindulsz a vadaszhaz felé...");
-                elozo_helyszin = "Sárguló Sörerdő";
-                Console.ReadKey();
-                elozo_hely_uzenete = "";
-                Vadaszhaz();
+                if (vadaszhaz_meglatogatva == true)
+                {
+                    Console.WriteLine("Már voltál a vadászházban, nincs ott számodra semmi.");
+                    Console.ReadKey();
+                    elozo_hely_uzenete = "";
+                    Erdo();
+                }
+                else
+                {
+                    Console.WriteLine("Elindulsz a vadaszhaz felé...");
+                    elozo_helyszin = "Sárguló Sörerdő";
+                    Console.ReadKey();
+                    elozo_hely_uzenete = "";
+                    Vadaszhaz();
+                }
+                
             }
             else if(input == 6)
             {
@@ -234,19 +245,40 @@ namespace PVK_MAIN
         static void Vadaszhaz()
         {
             Console.Clear();
+            vadaszhaz_meglatogatva = true;
             helyszin = "Gyulakolbász lakhely";
             IrjaKiAStatokat("Hívatlan vendég vagy, vigyázz nehogy észrevegyen a vadász");
 
             Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. Elbújsz a szekrényben, ha tiszta a terep elmész {találsz egy fura kulcsot}");
-            Console.WriteLine("\t2. Megmagyarázod a vadásznak, hogy eltévedtél, és elhagyod a területet");
+            Console.WriteLine("\t2. Elhiteted a vadásszal, hogy eltévedtél, és elhagyod a területet");
             int input = BekerLehetosegek(2);
 
             if (input == 1)
             {
+                
+                Console.WriteLine("Találtál egy fura kulcsot. Elraktad zsebre, majd mikor a vadász elment logikai függvényeket egyszerűsíteni kiosontál.");
+                fura_kulcs_birtoklasa = true;
+                elozo_helyszin = "Gyulakolbász lakhely";
+                Console.ReadKey();
+                
+                Erdo();
 
-               
+            }
+            else if(input == 2)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Vadász: Mit csinál maga az ingatlanomban?");
+                Console.WriteLine("Pinterius Valentino: Szíves elnézését kérem, de eltévedtem és azt hittem ez egy elhagyatott ház, mert rohadnak a falak.");
+                Console.WriteLine("Vadász: Rendben köszönöm! Tessék, itt egy térkép és egy matematikai inga, most pedig menjen útjára!");
+                Console.WriteLine("Pinterius Valentino: Tiszteletem, viszontlátásra! (Milyen tudatlan, elhitte - gondoltad magadban.)");
+
+                fura_kulcs_birtoklasa = true;
+                elozo_helyszin = "Gyulakolbász lakhely";
+                Console.ReadKey();
+
+                Erdo();
             }
         }
     }
