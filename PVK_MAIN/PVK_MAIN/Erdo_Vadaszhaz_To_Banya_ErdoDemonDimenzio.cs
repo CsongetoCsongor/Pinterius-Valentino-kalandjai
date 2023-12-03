@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -64,7 +65,7 @@ namespace PVK_MAIN
                 elozo_helyszin = "Sárguló Sörerdő";
                 Console.ReadKey();
                 elozo_hely_uzenete = "";
-                //Banya();
+                Banya();
             }
             else if (input == 4)
             {
@@ -251,14 +252,14 @@ namespace PVK_MAIN
 
             Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. Elbújsz a szekrényben, ha tiszta a terep elmész {találsz egy fura kulcsot}");
+            Console.WriteLine("\t1. Elbújsz a szekrényben, ha tiszta a terep elmész");
             Console.WriteLine("\t2. Elhiteted a vadásszal, hogy eltévedtél, és elhagyod a területet");
             int input = BekerLehetosegek(2);
 
             if (input == 1)
             {
                 
-                Console.WriteLine("Találtál egy fura kulcsot. Elraktad zsebre, majd mikor a vadász elment logikai függvényeket egyszerűsíteni kiosontál.");
+                Console.WriteLine("Találtál egy fura kulcsot. Elraktad zsebre, majd mikor a vadász elment logikai függvényeket egyszerűsíteni, kiosontál.");
                 fura_kulcs_birtoklasa = true;
                 elozo_helyszin = "Gyulakolbász lakhely";
                 Console.ReadKey();
@@ -278,6 +279,59 @@ namespace PVK_MAIN
                 elozo_helyszin = "Gyulakolbász lakhely";
                 Console.ReadKey();
 
+                Erdo();
+            }
+        }
+
+        static void Banya()
+        {
+            Console.Clear();
+            eletkedv -= 10;
+            eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            helyszin = "Gyémántcsákány bánya";
+            IrjaKiAStatokat("A bányában megcsapott a munka gondolata, melytől kicsit elment az életkedved.\nMeglátsz egy OMLÁSVESZÉLY táblát és egy furcsa fehért portált, felette PURGATÓRIUM felirattal.");
+
+            Console.WriteLine();
+            Console.WriteLine("Lehetőségek:");
+            Console.WriteLine("\t1. Rágyújtassz egy cigire");
+            Console.WriteLine("\t2. Odamész az OMLÁSVESZÉLY táblához");
+            Console.WriteLine("\t3. Elmész a Purgatóriumba");
+            Console.WriteLine("\t4. Visszamész az erdőbe");
+            int input = BekerLehetosegek(4);
+
+            if (input == 1)
+            {
+
+                Console.WriteLine("Előveszed a dobozt, kiveszel egy szálat, majd meggyújtod az öngyujtót...");
+                elozo_helyszin = "Gyémántcsákány bánya";
+                elozo_hely_uzenete = "Berobbant a metán-gáz, meghaltál.";
+                Console.ReadKey();
+
+                //Pokol();
+
+            }
+            else if(input == 2)
+            {
+                Console.WriteLine("Elindulsz az OMLÁSVESZÉLY tábla felé...");
+                elozo_helyszin = "Gyémántcsákány bánya";
+                elozo_hely_uzenete = "";
+                Console.ReadKey();
+                //Omlasveszely();
+            }
+            else if(input == 3)
+            {
+                Console.WriteLine("Elindulsz az PURGATÓRIUM tábla felé...");
+                elozo_helyszin = "Gyémántcsákány bánya";
+                elozo_hely_uzenete = "";
+                Console.ReadKey();
+                //Purgatorium();
+            }
+            else if(input == 4)
+            {
+                Console.WriteLine("Elindulsz az erdő felé");
+                elozo_helyszin = "Gyémántcsákány bánya";
+                elozo_hely_uzenete = "";
+                Console.ReadKey();
                 Erdo();
             }
         }
