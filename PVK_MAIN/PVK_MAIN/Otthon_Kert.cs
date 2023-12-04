@@ -10,6 +10,7 @@ namespace PVK_MAIN
     {
         static void Otthon()
         {
+            Console.Clear();
             helyszin = "Otthon";
             IrjaKiAStatokat("Felébredsz otthonodban, és rettentően másnapos vagy. Vérre szomjazol...");
 
@@ -121,7 +122,7 @@ namespace PVK_MAIN
                 if (buksza_birtoklasa == false)
                 {
                     penz += 30;
-                    Console.WriteLine("Megtaláltad a bukszádat. Volt benne 30 krajcár és egy hamisított személyi is, Gipsz jakab névvel.");
+                    Console.WriteLine("Megtaláltad a bukszádat. Volt benne 30 krajcár és egy hamisított személyi is, Gipsz Jakab névvel.");
                     buksza_birtoklasa = true;
                 }
                 else
