@@ -29,15 +29,28 @@ namespace PVK_MAIN
             int input = BekerLehetosegek(3);
             if (input == 1)
             {
-                penz -= 30;
-                eletkedv = 100;
+                if (penz >= 30)
+                {
+                    penz -= 30;
+                    eletkedv = 100;
+                    Console.WriteLine("Egy csodálatosat lakomáztál, amitől jobb lett a kedved");
+
+                    Console.ReadKey();
+
+                    Etterem();
+                }
+                else
+                {
+                    Console.WriteLine("A pincér rádkiáltott, mert nincs elég pénzed");
+
+                    Console.ReadKey();
+
+                    Etterem();
+                }               
 
                 elozo_helyszin = "Retek Taverna étterem";
                 elozo_hely_uzenete = "Nagyon ízlett a püfűthús, egyből jobb lett a kedved";
 
-                Console.ReadKey();
-
-                Etterem();
             }
             else if (input == 2)
             {
@@ -67,7 +80,7 @@ namespace PVK_MAIN
 
                 Console.ReadKey();
 
-                //Fout();
+                Fout();
             }
         }
     }

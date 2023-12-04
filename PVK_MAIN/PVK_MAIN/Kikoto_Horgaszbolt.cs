@@ -83,7 +83,7 @@ namespace PVK_MAIN
 
                 Console.ReadKey();
 
-                //Fout();
+                Fout();
             }
         }
 
@@ -106,16 +106,30 @@ namespace PVK_MAIN
             int input = BekerLehetosegek(3);
             if (input == 1)
             {
-                penz -= 20;
-                verszomj = 100;
+                if (penz >= 20)
+                {
+                    penz -= 20;
+                    verszomj = 100;
+                    Console.WriteLine("Vettél egy horgászbotot");
+
+                    Console.ReadKey();
+
+                    Horgaszbolt();
+                }
+                else
+                {
+                    Console.WriteLine("Lelehelt a büdös szájszagával, mert nincs elég pénzed");
+
+                    Console.ReadKey();
+
+                    Horgaszbolt();
+                }
 
                 elozo_helyszin = "Down-kóros Delfin horgászbolt";
                 elozo_hely_uzenete = "Vettél egy profi hirgászbotod, megjött a kedved horgászni menni";
 
-                Console.ReadKey();
-
-                Horgaszbolt();
             }
+
             else if (input == 2)
             {
                 if (tengeri_gyongy_birtoklasa == true)
