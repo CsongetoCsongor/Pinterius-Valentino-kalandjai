@@ -316,7 +316,7 @@ namespace PVK_MAIN
                 elozo_helyszin = "Gyémántcsákány bánya";
                 elozo_hely_uzenete = "";
                 Console.ReadKey();
-                //Omlasveszely();
+                Omlasveszely();
             }
             else if(input == 3)
             {
@@ -334,6 +334,77 @@ namespace PVK_MAIN
                 Console.ReadKey();
                 Erdo();
             }
+        }
+
+        static void Omlasveszely()
+        {
+            Console.Clear();
+            helyszin = "Gyémántcsákány bánya, OMLÁSVESZÉLY TÁBLA";
+            IrjaKiAStatokat("Az OMLÁSVESZÉLY táblánál azon töprengsz, hogy mit kellene tenned.");
+
+            int input;
+
+            if (tarto_oszlop_eltova == false)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Lehetőségek:");
+                Console.WriteLine("\t1. Megpróbálod eltolni a tartóoszlopot");
+                Console.WriteLine("\t2. Meggondolod magad");
+                input = BekerLehetosegek(2);
+                if(input == 1)
+                {
+                    if(jozansag <= 50)
+                    {
+                        Console.WriteLine("Sikerült eltolnod az oszlopot, mert az alkohol elég erőt adott.");
+                        tarto_oszlop_eltova = true;
+                        
+                        elozo_hely_uzenete = "A romos tartóoszlop mögött egy titkos alagutat találtál.";
+                        Console.ReadKey();
+                        Omlasveszely();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nem vagy elég erős, többet kell innod."); Console.ReadKey();
+                        
+                        elozo_hely_uzenete = "Próbálj meg alkoholhoz jutni, hogy erősebb legyél!";
+                        Omlasveszely();
+                    }
+                }
+                else if(input == 2)
+                {
+                    Console.WriteLine("Visszamész a bányába...");
+                    elozo_hely_uzenete = "";
+                    elozo_helyszin = "Gyémántcsákány bánya, OMLÁSVESZÉLY TÁBLA";
+                    Console.ReadKey();
+                    Banya();
+                }
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("Lehetőségek:");
+                Console.WriteLine("\t1. Átmész a titkos alagúton");
+                Console.WriteLine("\t2. Meggondolod magad");
+                input = BekerLehetosegek(2);
+                if (input == 1)
+                {
+                    Console.WriteLine("Az alugúton mész keresztül. Tele van csótányokkal és async függvényekkel.");
+                    elozo_hely_uzenete = "Az alagúton keresztül a vár kincseskamrájába jutottál.";
+                    elozo_helyszin = "Alagút";
+                    Console.ReadKey();
+                    //Kincseskamra();
+                }
+                else if(input == 2)
+                {
+                    Console.WriteLine("Visszamész a bányába...");
+                    elozo_hely_uzenete = "";
+                    elozo_helyszin = "Gyémántcsákány bánya, OMLÁSVESZÉLY TÁBLA";
+                    Console.ReadKey();
+                    Banya();
+                }
+            }
+
+            
         }
     }
 }
