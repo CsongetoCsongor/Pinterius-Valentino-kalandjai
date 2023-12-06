@@ -92,7 +92,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz a vár felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Var();
+                Var();
             }
             else if(input == 9)
             {

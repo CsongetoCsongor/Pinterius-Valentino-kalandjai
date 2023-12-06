@@ -29,7 +29,7 @@ namespace PVK_MAIN
                 Console.ReadKey();
                 Borospince();
             }
-            else if(input == 2)
+            else if (input == 2)
             {
                 Console.WriteLine("Bemész a börtönbe...");
                 elozo_hely_uzenete = "";
@@ -37,7 +37,7 @@ namespace PVK_MAIN
                 Console.ReadKey();
                 Borton();
             }
-            else if(input == 3)
+            else if (input == 3)
             {
                 Console.WriteLine("Kimész a főútra...");
                 elozo_hely_uzenete = "";
@@ -46,24 +46,25 @@ namespace PVK_MAIN
                 Fout();
             }
 
-        static void Borospince()
-        {
+            static void Borospince()
+            {
 
-        }
+            }
 
-        static void Kincseskamra()
-        {
+            static void Kincseskamra()
+            {
 
-        }
+            }
 
-        static void Borton()
-        {
+            static void Borton()
+            {
 
-        }
+            }
 
-        static void Kinzokamra()
-        {
+            static void Kinzokamra()
+            {
 
+            }
         }
     }
 }
