@@ -233,7 +233,7 @@ namespace PVK_MAIN
 
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. - Elüvöltöd magad, hogy \"VESSZEN TRIANON!\" [min 50 vérszomj]");
-            Console.WriteLine("\t2. - Elkezdessz legelni [max 40 józanság]");
+            Console.WriteLine("\t2. - Elkezdesz legelni [max 40 józanság]");
             Console.WriteLine("\t3. - Visszamész az ösvényre");
 
             int x = BekerLehetosegek(3);
@@ -248,7 +248,52 @@ namespace PVK_MAIN
 
                 Console.WriteLine("VESSZEN TRIANON!!!");
 
+                Console.ReadKey();
+                Volgy();
+            }
 
+            else if (x == 1 && verszomj < 50)
+            {
+                elozo_helyszin = "Nem Nem Soha! Völgy";
+                elozo_hely_uzenete = "Nem voltál elég ideges, ezért csak suttogtál";
+
+                Console.WriteLine("vesszen trianon");
+
+                Console.ReadKey();
+                Volgy();
+            }
+
+            else if (x == 2 && jozansag <= 40)
+            {
+                elozo_helyszin = "Nem Nem Soha! Völgy";
+                elozo_hely_uzenete = "Megettél egy bolondgombát";
+
+                Console.WriteLine("Furcsa ízt érzel a szádban");
+
+                Console.ReadKey();
+                Volgy();
+            }
+
+            else if (x == 2 && jozansag > 40)
+            {
+                elozo_helyszin = "Nem Nem Soha! Völgy";
+                elozo_hely_uzenete = "Nem legeltél";
+
+                Console.WriteLine("Meggondolod magad a higiéniai tényezők miatt");
+
+                Console.ReadKey();
+                Volgy();
+            }
+
+            else
+            {
+                elozo_helyszin = "Nem Nem Soha! Völgy";
+                elozo_hely_uzenete = "A túrád véget ért";
+
+                Console.WriteLine("Csodával határos módon visszatalálsz az ösvényre");
+
+                Console.ReadKey();
+                Osveny();
             }
         }
     }
