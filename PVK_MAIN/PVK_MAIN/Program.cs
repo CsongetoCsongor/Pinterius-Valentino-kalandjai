@@ -16,7 +16,7 @@ namespace PVK_MAIN
 
         public static int jozansag = 100;
 
-        public static int eletkedv = 0;
+        public static int eletkedv = 50;
 
         public static int verszomj = 50;
 
@@ -57,6 +57,10 @@ namespace PVK_MAIN
         public static bool temto_demon_atverve = false;
 
         public static bool koszoru_elfogyasztva = false;
+
+        public static bool borospince_meglatogatva = false;
+
+        public static bool otszaz_krajcar_elrakva = false;
 
         public static int BekerLehetosegek(int max_szam)
         {

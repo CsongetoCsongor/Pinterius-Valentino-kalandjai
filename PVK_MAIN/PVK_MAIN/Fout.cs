@@ -50,7 +50,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz a kovács felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Kovacs();
+                Kovacs();
             }
             else if(input == 3)
             {
@@ -64,7 +64,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz az étterem felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Etterem();
+                Etterem();
             }
             else if(input == 5)
             {
@@ -92,14 +92,14 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz a vár felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Var();
+                Var();
             }
             else if(input == 9)
             {
                 Console.WriteLine("Elindulsz a kikötő felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Kikoto();
+                Kikoto();
             }
         }
     }

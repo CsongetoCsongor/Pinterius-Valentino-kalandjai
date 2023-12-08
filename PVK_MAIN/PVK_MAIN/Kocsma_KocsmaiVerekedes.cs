@@ -15,7 +15,7 @@ namespace PVK_MAIN
             eletkedv -= 5;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
-            helyszin = "Kocsma (Csévi Szilva)";
+            helyszin = "Csévi Szilva Kocsma";
             IrjaKiAStatokat("Bemész a kocsmába és megünnepled, hogy nincs semmilyen ünnep, a szag szomorú gyerekkorodra emlékeztet");
             Console.WriteLine();
             
@@ -23,7 +23,7 @@ namespace PVK_MAIN
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. - Csapoltatsz magadnak egy sört 5 krajcárért és lehörpinted");
             Console.WriteLine("\t2. - Kéred a speciális italt, 30 krajcárba kerül");
-            Console.WriteLine("\t3. - Kocsmai verekedést indítasz [max]");
+            Console.WriteLine("\t3. - Kocsmai verekedést indítasz [max 40 józanság]");
             Console.WriteLine("\t4. - Kimész az utcára");
 
             int x = BekerLehetosegek(4);
@@ -111,6 +111,7 @@ namespace PVK_MAIN
         {
             Console.Clear();
             IrjaKiAStatokat("A kocsmai verekedés már lecsengőben van, a harc mindjárt véget ér");
+            Console.WriteLine("Verekedés folytatása...");
             Console.ReadKey();
             Console.WriteLine();
             Console.WriteLine("Csinos Tomi, aki Zoli utolsó megoldásként májon akar ütni");
