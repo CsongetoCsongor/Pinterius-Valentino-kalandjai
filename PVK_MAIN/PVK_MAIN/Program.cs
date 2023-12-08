@@ -60,6 +60,8 @@ namespace PVK_MAIN
 
         public static bool borospince_meglatogatva = false;
 
+        public static bool otszaz_krajcar_elrakva = false;
+
         public static int BekerLehetosegek(int max_szam)
         {
             int input;

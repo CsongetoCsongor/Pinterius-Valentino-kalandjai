@@ -392,7 +392,7 @@ namespace PVK_MAIN
                     elozo_hely_uzenete = "Az alagúton keresztül a vár kincseskamrájába jutottál.";
                     elozo_helyszin = "Alagút";
                     Console.ReadKey();
-                    //Kincseskamra();
+                    Kincseskamra();
                 }
                 else if(input == 2)
                 {
