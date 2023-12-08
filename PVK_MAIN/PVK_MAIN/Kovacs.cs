@@ -10,6 +10,8 @@ namespace PVK_MAIN
     {
         static void Kovacs()
         {
+            bool vasarooltalvalamit = false;
+
             Console.Clear();
 
             helyszin = "Varázslatos Kalapács Varázsló";

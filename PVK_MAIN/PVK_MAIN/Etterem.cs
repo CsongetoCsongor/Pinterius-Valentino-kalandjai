@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,8 +57,10 @@ namespace PVK_MAIN
             {
                 if (jozansag <= 50)
                 {
+                    Console.WriteLine("Az asztalra ürítetté, és elkaéptak a rendőrök");
+
                     elozo_helyszin = "Retek Taverna étterem";
-                    elozo_hely_uzenete = "Az asztalra ürítettél, és elkaptak a rendőrök";
+                    elozo_hely_uzenete = "Az asztalra ürítettél";
 
                     Console.ReadKey();
 
@@ -65,8 +68,11 @@ namespace PVK_MAIN
                 }
                 else
                 {
+                    Console.WriteLine("Túl józan vagy még ilyet csinálni");
+
+
                     elozo_helyszin = "Retek Taverna étterem";
-                    elozo_hely_uzenete = "Túl józan vagy még ilyet csinálni";
+                    elozo_hely_uzenete = "Inkább nem csináltad meg";
 
                     Console.ReadKey();
 
