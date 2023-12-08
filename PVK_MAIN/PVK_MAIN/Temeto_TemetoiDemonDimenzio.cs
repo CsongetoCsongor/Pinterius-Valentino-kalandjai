@@ -35,10 +35,10 @@ namespace PVK_MAIN
                     eletkedv += 10;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
-                    Console.WriteLine("A sírt meggyalázva nagyot röhögsz, de hátad mögött kék és piros villanásokat látsz");
-
                     elozo_helyszin = "Temető";
                     elozo_hely_uzenete = "Sírgyalázásért letartóztattak";
+
+                    Console.WriteLine("A sírt meggyalázva nagyot röhögsz, de hátad mögött kék és piros villanásokat látsz");
 
                     Console.ReadKey();
                     //Borton();
@@ -46,10 +46,10 @@ namespace PVK_MAIN
 
                 else
                 {
-                    Console.WriteLine("Ehhez még kéne inni, nemde barátom?");
-
                     elozo_helyszin = "Temető";
                     elozo_hely_uzenete = "Meggondoltad magad, valami mást akarsz választani";
+
+                    Console.WriteLine("Ehhez még kéne inni, nemde barátom?");
 
                     Console.ReadKey();
                     Temeto();
@@ -58,12 +58,12 @@ namespace PVK_MAIN
 
             else if (x == 2 && koszoru_elfogyasztva == false)
             {
-                Console.WriteLine("Megettél egy koszorút, az íze egy bizonyos teáéra emlékeztet");
-
                 koszoru_elfogyasztva = true;
 
                 elozo_helyszin = "Temető";
-                elozo_hely_uzenete = "";
+                elozo_hely_uzenete = "Éhen maradtál";
+
+                Console.WriteLine("Megettél egy koszorút, az íze egy bizonyos teáéra emlékeztet");
 
                 Console.ReadKey();
                 Temeto();
@@ -72,7 +72,7 @@ namespace PVK_MAIN
             else if (x == 2 && koszoru_elfogyasztva)
             {
                 elozo_helyszin = "Temető";
-                elozo_hely_uzenete = "MMM fincsi koszorú";
+                elozo_hely_uzenete = "Nem tudtál koszorút enni";
 
                 Console.WriteLine("Elfogytak a koszorúk, valami gyökér megette őket");
 
@@ -84,6 +84,8 @@ namespace PVK_MAIN
             {
                 elozo_helyszin = "Temető";
                 elozo_hely_uzenete = "Kimentél a temetőből";
+
+                Console.WriteLine("A kapun kimész a temetőből");
 
                 Console.ReadKey();
                 Fout();
