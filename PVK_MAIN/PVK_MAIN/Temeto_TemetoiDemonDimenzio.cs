@@ -60,8 +60,6 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Megettél egy koszorút, az íze egy bizonyos teáéra emlékeztet");
 
-                //acsíment
-
                 koszoru_elfogyasztva = true;
 
                 elozo_helyszin = "Temető";
@@ -73,10 +71,10 @@ namespace PVK_MAIN
 
             else if (x == 2 && koszoru_elfogyasztva)
             {
-                Console.WriteLine("Elfogytak a koszorúk, valami gyökér megette őket");
-
                 elozo_helyszin = "Temető";
-                elozo_hely_uzenete = "";
+                elozo_hely_uzenete = "MMM fincsi koszorú";
+
+                Console.WriteLine("Elfogytak a koszorúk, valami gyökér megette őket");
 
                 Console.ReadKey();
                 Temeto();
@@ -160,10 +158,10 @@ namespace PVK_MAIN
 
                     if (y == 1)
                     {
-                        Console.WriteLine("A kísértet impotenssé tett");
-
                         elozo_helyszin = "Temetői Démon Dimenzió";
                         elozo_hely_uzenete = "A hazugság bevált, a főúton ébredtél";
+
+                        Console.WriteLine("A kísértet impotenssé tett");
 
                         Console.ReadKey();
                         Fout();
@@ -171,10 +169,10 @@ namespace PVK_MAIN
 
                     else
                     {
-                        Console.WriteLine("Hát testvér, szarul hazudsz");
-
                         elozo_helyszin = "Temetői Démon Dimenzió";
                         elozo_hely_uzenete = "A hazugság nem vált be, meghaltál";
+
+                        Console.WriteLine("Hát testvér, szarul hazudsz");
 
                         Console.ReadKey();
                         //Pokol();

@@ -18,9 +18,10 @@ namespace PVK_MAIN
             Console.WriteLine("Lehetőségek:");
 
             Console.WriteLine("\t1. - Elmész a Kárpátokba");
-            Console.WriteLine("\t2. - Visszamész a főútra");
+            Console.WriteLine("\t2. - Leokádsz egy cserkészlányt [max 50 józanság]");
+            Console.WriteLine("\t3. - Visszamész a főútra");
 
-            int x = BekerLehetosegek(2);
+            int x = BekerLehetosegek(3);
 
             if (x == 1 && karpatok_meglatogatva == false)
             {
@@ -33,10 +34,35 @@ namespace PVK_MAIN
 
             else if (x == 1 && karpatok_meglatogatva == true)
             {
-                Console.WriteLine("Ezt az utat már egyszer megjártad");
-
                 elozo_helyszin = "Cserkészlány Csodaösvény";
                 elozo_hely_uzenete = "Lusta vagy, ezért inkább az ösvényen maradtál";
+
+                Console.WriteLine("Ezt az utat már egyszer megjártad");
+
+                Console.ReadKey();
+                Osveny();
+            }
+
+            else if (x == 2 && jozansag <= 50)
+            {
+                elozo_helyszin = "Cserkészlány Csodaösvény";
+                elozo_hely_uzenete = "Ez szerencsés rókázás volt, találtál egy jegygyűrűt";
+
+                Console.WriteLine("A cserkészlány sírva elfutott, hányásodban valami csillog");
+
+                Console.ReadKey();
+                Osveny();
+            }
+
+            else if (x == 2 && jozansag > 50)
+            {
+                elozo_helyszin = "Cserkészlány Csodaösvény";
+                elozo_hely_uzenete = "Piros lett a pofád";
+
+                eletkedv -= 20;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+
+                Console.WriteLine("Nem sikerült semmit felöklendezni, a cserkészlány felpofozott");
 
                 Console.ReadKey();
                 Osveny();
