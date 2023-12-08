@@ -4,8 +4,8 @@ namespace PVK_MAIN
 {
     internal partial class Program
     {
-        
 
+        #region MainVariables
         public static string helyszin = "";
         
         public static string elozo_helyszin = "";
@@ -62,6 +62,19 @@ namespace PVK_MAIN
 
         public static bool otszaz_krajcar_elrakva = false;
 
+        public static bool penz_szamlarol_leveve = false;
+
+        public static bool kincsek_meglatva = false;
+
+        public static bool sikolyok_meghallva = false;
+
+        public static bool ogrek_szidva = false;
+
+        public static bool ogrek_megolve = false;
+
+        public static bool ver_meglatva = false;
+
+        #endregion
         public static int BekerLehetosegek(int max_szam)
         {
             int input;

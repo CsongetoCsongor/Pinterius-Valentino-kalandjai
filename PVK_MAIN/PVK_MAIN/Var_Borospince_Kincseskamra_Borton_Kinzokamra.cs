@@ -115,8 +115,14 @@ namespace PVK_MAIN
         static void Kincseskamra()
         {
             Console.Clear();
-            eletkedv += 5;
-            eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            if (kincsek_meglatva == false)
+            {
+                eletkedv += 5;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                kincsek_meglatva = true;
+            }
+            
+            
 
 
             helyszin = "Világuralom Vár, Kincseskamara";
@@ -182,12 +188,139 @@ namespace PVK_MAIN
 
         static void Borton()
         {
+            Console.Clear();
+            if (!sikolyok_meghallva)
+            {
+                eletkedv += 10;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                sikolyok_meghallva = true;
+            }
+            
 
+
+            helyszin = "Világuralom Vár, Várbörtön";
+            IrjaKiAStatokat("Meghallottad az elveszett lelkek jajveszékelését. Zene volt füleidnek.");
+
+            Console.WriteLine();
+            Console.WriteLine("Lehetőségek:");
+            Console.WriteLine("\t1. Belerúgsz egy rabba [min. 60 vérszomj]");
+            Console.WriteLine("\t2. Bemész a kínzókamrába");
+            Console.WriteLine("\t3. Visszamész a várba");
+
+            int input = BekerLehetosegek(3);
+
+            if (input == 1)
+            {
+
+                if (rab_megrugva)
+                {
+                    Console.WriteLine("Már megrugtad a rabot és elment a rácstól...");
+                    elozo_hely_uzenete = "";
+                    Console.ReadKey();
+                    Borton();
+                }
+                else
+                {
+                    if (verszomj >= 60)
+                    {
+                        Console.WriteLine("Szadista vágyaidat enyhén kielégítette ezen cselekedet.");
+                        rab_megrugva = true;
+                        verszomj -= 40;
+                        verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+                        elozo_hely_uzenete = "";
+                        Console.ReadKey();
+                        Borton();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Jelen pillanatban nem érzed úgy, hogy erőszakosnak kellene lenned.");
+                        elozo_hely_uzenete = "";
+                        Console.ReadKey();
+                        Borton();
+                    }
+                    
+                }
+
+
+            }
+            else if(input == 2)
+            {
+                Console.WriteLine("Bemész a kinzókamrába...");
+                elozo_helyszin = "Világuralom Vár, Várbörtön";
+                elozo_hely_uzenete = "";
+                Console.ReadKey();
+                Kinzokamra();
+            }
+            else if(input == 3)
+            {
+                Console.WriteLine("Visszamész a várba...");
+                elozo_hely_uzenete = "";
+                elozo_helyszin = "Világuralom Vár, Várbörtön";
+                Console.ReadKey();
+                Var();
+            }
         }
 
         static void Kinzokamra()
         {
+            Console.Clear();
+            if (!ver_meglatva)
+            {
+                eletkedv += 10;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                ver_meglatva = true;
+            }
 
+
+
+            helyszin = "Világuralom Vár, Kínzókamra";
+            IrjaKiAStatokat("Minden tiszta vér, és levágott végtagok vannak elszórva mindenfele. Ez nagyon tetszik neked.");
+
+            Console.WriteLine();
+            Console.WriteLine("Lehetőségek:");
+            Console.WriteLine("\t1. Kihúzod egy rab fogát [min 80 vérszomj]");
+            Console.WriteLine("\t2. Visszamész a Börtönbe");
+
+            int input = BekerLehetosegek(2);
+
+            if (input == 1)
+            {
+                if (verszomj >= 80)
+                {
+                    Console.WriteLine("A fogászati művelet enyhített vérszomjadon...");
+                    rab_megrugva = true;
+                    verszomj -= 50;
+                    verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+                    elozo_hely_uzenete = "";
+                    Console.ReadKey();
+                    Kinzokamra();
+                }
+                else{
+                    Console.WriteLine("Jelen pillanatban nem érzed úgy, hogy erőszakosnak kellene lenned.");
+                    elozo_hely_uzenete = "";
+                    Console.ReadKey();
+                    Kinzokamra();
+                }
+                
+
+
+            }
+            else if (input == 2)
+            {
+                Console.WriteLine("Visszamész a várbörtönbe...");
+                elozo_helyszin = "Világuralom Vár, Kínzókamra";
+                elozo_hely_uzenete = "";
+                Console.ReadKey();
+                Borton();
+            }
+            else if (input == 3)
+            {
+                Console.WriteLine("Visszamész a várba...");
+                elozo_hely_uzenete = "";
+                elozo_helyszin = "Világuralom Vár, Várbörtön";
+                Console.ReadKey();
+                Var();
+            }
         }
     }
 }
