@@ -73,6 +73,8 @@ namespace PVK_MAIN
                 elozo_helyszin = "Cserkészlány Csodaösvény";
                 elozo_hely_uzenete = "Na ez aztán hasznos séta volt";
 
+                Console.WriteLine("Visszafordulsz");
+
                 Console.ReadKey();
                 Fout();
             }
@@ -180,6 +182,8 @@ namespace PVK_MAIN
                 elozo_helyszin = "Kárpátok";
                 elozo_hely_uzenete = "A Kárpátokban az üldözött honját lelte a hazában";
 
+                Console.WriteLine("A vízeséshez mész, szerinted le tudsz csúszni rajta");
+
                 Console.ReadKey();
                 Vizeses();
             }
@@ -206,7 +210,7 @@ namespace PVK_MAIN
                 elozo_helyszin = "Nedves Combok Vízesés";
                 elozo_hely_uzenete = "Pinterius Valentino meghalt, halál oka: fulladásos öngyilkosság";
 
-                Console.WriteLine("A víz alá szorítod méretes nyakad és nem jössz fel onnan");
+                Console.WriteLine("A víz alá szorítod méretes nyakad és nem jössz fel onnan...");
 
                 Console.ReadKey();
                 //Pokol();
@@ -219,7 +223,7 @@ namespace PVK_MAIN
                 elozo_helyszin = "Nedves Combok Vízesés";
                 elozo_hely_uzenete = "A tiszta víztől kijózanodtál";
 
-                Console.WriteLine("A tiszta víz minden kotnyeles kábultságot kiküszöböl keretrendszeredből");
+                Console.WriteLine("A tiszta víz minden kotnyeles kábultságot kiküszöböl keretrendszeredből...");
 
                 Console.ReadKey();
                 Vizeses();
@@ -230,7 +234,7 @@ namespace PVK_MAIN
                 elozo_helyszin = "Nedves Combok Vízesés";
                 elozo_hely_uzenete = "Sikeresen lecsúsztál a vízesésen";
 
-                Console.WriteLine("Szerencsére elég józan vagy és tuddod magad kormányozni a sodrásban");
+                Console.WriteLine("Szerencsére elég józan vagy és tuddod magad kormányozni a sodrásban...");
 
                 Console.ReadKey();
                 Volgy();
@@ -241,10 +245,10 @@ namespace PVK_MAIN
                 elozo_helyszin = "Nedves Combok Vízesés";
                 elozo_hely_uzenete = "Meghaltál és a purgatóriumba kerültél";
 
-                Console.WriteLine("A sok subidubi miatt bevered az értelmes fejedet egy sziklába a vízesésen");
+                Console.WriteLine("A sok subidubi miatt bevered az értelmes fejedet egy sziklába a vízesésen...");
 
                 Console.ReadKey();
-                //Purgatorium();
+                Purgatorium();
             }
         }
 
@@ -259,7 +263,7 @@ namespace PVK_MAIN
 
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. - Elüvöltöd magad, hogy \"VESSZEN TRIANON!\" [min 50 vérszomj]");
-            Console.WriteLine("\t2. - Elkezdesz legelni [max 40 józanság]");
+            Console.WriteLine("\t2. - Elkezdesz legelni [min 40 életkedv]");
             Console.WriteLine("\t3. - Visszamész az ösvényre");
 
             int x = BekerLehetosegek(3);
@@ -283,29 +287,29 @@ namespace PVK_MAIN
                 elozo_helyszin = "Nem Nem Soha! Völgy";
                 elozo_hely_uzenete = "Nem voltál elég ideges, ezért csak suttogtál";
 
-                Console.WriteLine("vesszen trianon");
+                Console.WriteLine("vesszen trianon :(");
 
                 Console.ReadKey();
                 Volgy();
             }
 
-            else if (x == 2 && jozansag <= 40)
+            else if (x == 2 && eletkedv >= 40)
             {
                 elozo_helyszin = "Nem Nem Soha! Völgy";
                 elozo_hely_uzenete = "Megettél egy bolondgombát";
 
-                Console.WriteLine("Furcsa ízt érzel a szádban");
+                Console.WriteLine("Furcsa ízt érzel a szádban...");
 
                 Console.ReadKey();
                 Volgy();
             }
 
-            else if (x == 2 && jozansag > 40)
+            else if (x == 2 && eletkedv < 40)
             {
                 elozo_helyszin = "Nem Nem Soha! Völgy";
                 elozo_hely_uzenete = "Nem legeltél";
 
-                Console.WriteLine("Meggondolod magad a higiéniai tényezők miatt");
+                Console.WriteLine("Szomorú vagy, nincs kedved legelni...");
 
                 Console.ReadKey();
                 Volgy();

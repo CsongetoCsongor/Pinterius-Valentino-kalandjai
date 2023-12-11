@@ -41,7 +41,7 @@ namespace PVK_MAIN
                     elozo_helyszin = "Kocsma";
                     elozo_hely_uzenete = "Ittál egy sört";
 
-                    Console.WriteLine("A sör finom volt, jó nagyot böfögtél");
+                    Console.WriteLine("A sör finom volt, jó nagyot böfögtél...");
                 }
 
                 else
@@ -49,7 +49,7 @@ namespace PVK_MAIN
                     elozo_helyszin = "Kocsma";
                     elozo_hely_uzenete = "Nem volt pénzed sörre";
 
-                    Console.WriteLine("Rettentő csóró vagy, még erre sincs pénzed");
+                    Console.WriteLine("Rettentő csóró vagy, még erre sincs pénzed...");
                 }
 
                 Console.ReadKey();
