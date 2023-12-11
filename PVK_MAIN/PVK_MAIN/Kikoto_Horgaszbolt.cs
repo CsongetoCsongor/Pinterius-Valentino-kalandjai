@@ -11,6 +11,12 @@ namespace PVK_MAIN
         static void Kikoto()
         {
             Console.Clear();
+            if (kikoto_meglatogatva == false)
+            {
+                eletkedv -= 5;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                kikoto_meglatogatva = true;
+            }
 
             helyszin = "Tenger hangja kikötő";
             IrjaKiAStatokat("Kimész a kikötőbe, megcsap a döglött halszag");
@@ -98,9 +104,12 @@ namespace PVK_MAIN
         static void Horgaszbolt()
         {
             Console.Clear();
-
-            eletkedv -= 10;
-            eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            if (horgaszbolt_meglatogatva == false)
+            {
+                eletkedv -= 10;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                horgaszbolt_meglatogatva = true;
+            }
 
             helyszin = "Down-kóros Delfin horgászbolt";
             IrjaKiAStatokat("Bemész a horgászboltba, ahol egy szakállas alkoholista üdvözöl; Szájszaga még a tiédnél is rosszabb");

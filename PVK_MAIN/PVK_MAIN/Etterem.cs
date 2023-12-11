@@ -12,11 +12,15 @@ namespace PVK_MAIN
         static void Etterem()
         {
             Console.Clear();
-
-            eletkedv += 10;
-            eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-            verszomj += 5;
-            verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+            if (etterem_meglatogatva == false)
+            {
+                eletkedv += 10;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                verszomj += 5;
+                verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+                etterem_meglatogatva = true;
+            }
+            
 
             helyszin = "Retek Taverna étterem";
             IrjaKiAStatokat("Megcsap a püfűthús és szalmakrumpli illata és megjön az étvágyad");
