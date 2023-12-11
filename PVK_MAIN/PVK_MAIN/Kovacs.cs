@@ -10,6 +10,7 @@ namespace PVK_MAIN
     {
         static void Kovacs()
         {
+
             Console.Clear();
 
             helyszin = "Varázslatos Kalapács Varázsló";
@@ -24,29 +25,57 @@ namespace PVK_MAIN
             int input = BekerLehetosegek(3);
             if (input == 1)
             {
-                penz -= 70;
-                verszomj += 40;
-                verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+
+                if (penz >= 70)
+                {
+                    penz -= 70;
+                    verszomj += 40;
+                    verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+                    Console.WriteLine("Vettél egy erős fegyvert");
+
+                    Console.ReadKey();
+
+                    Kovacs();
+                }
+                else
+                {
+                    Console.WriteLine("A kovács csúnyán nézett rád, mert nincs elég pénzed");
+
+                    Console.ReadKey();
+
+                    Kovacs();
+                }
 
                 elozo_helyszin = "Varázslatos Kalapács Varázsló";
                 elozo_hely_uzenete = "Nagyon pacek stukkert vettél, egyből megjött a kedved egy kis gyilkolászásra...";
-
-                Console.ReadKey();
-
-                Kovacs();
+                
             }
             else if (input == 2)
             {
-                penz -= 100;
-                eletkedv += 40;
-                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-                Console.WriteLine();
+
+                if (penz >= 100)
+                {
+                    penz -= 100;
+                    eletkedv += 40;
+                    eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    Console.WriteLine("Vettél egy nyíl álló mellényt");
+
+                    Console.ReadKey();
+
+                    Kovacs();
+                }
+                else
+                {
+                    Console.WriteLine("A kovács csúnyán nézett rád, mert nincs elég pénzed");
+
+                    Console.ReadKey();
+
+                    Kovacs();
+                }
+
                 elozo_helyszin = "Varázslatos Kalapács Varázsló";
                 elozo_hely_uzenete = "Az nyíl álló mellényed tökéletesen passzol";
 
-                Console.ReadKey();
-
-                Kovacs();
             }
             else if (input == 3)
             {
@@ -58,7 +87,7 @@ namespace PVK_MAIN
 
                 Console.ReadKey();
 
-                //Fout();
+                Fout();
             }
         }
     }
