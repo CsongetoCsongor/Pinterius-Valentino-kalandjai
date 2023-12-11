@@ -135,7 +135,6 @@ namespace PVK_MAIN
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
-
             Console.WriteLine("\t1. - Túszokat ejtesz");
             Console.WriteLine("\t2. - Megőlsz mindenkit");
 
