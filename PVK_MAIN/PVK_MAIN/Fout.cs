@@ -78,7 +78,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz az ösvény felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Osveny();
+                Osveny();
             }
             else if(input == 7)
             {
@@ -92,7 +92,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz a vár felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Var();
+                Var();
             }
             else if(input == 9)
             {
