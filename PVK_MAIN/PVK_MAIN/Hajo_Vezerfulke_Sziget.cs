@@ -174,7 +174,7 @@ namespace PVK_MAIN
         {
             Console.Clear();
 
-            helyszin = "Vezerfülke";
+            helyszin = "Bikini fenék";
             IrjaKiAStatokat("Kijutottál a szigetre");
 
             Console.WriteLine("");
