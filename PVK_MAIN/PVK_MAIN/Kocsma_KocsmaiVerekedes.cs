@@ -38,7 +38,7 @@ namespace PVK_MAIN
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
 
-                    elozo_helyszin = "Kocsma";
+                    elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Ittál egy sört";
 
                     Console.WriteLine("A sör finom volt, jó nagyot böfögtél...");
@@ -46,7 +46,7 @@ namespace PVK_MAIN
 
                 else
                 {
-                    elozo_helyszin = "Kocsma";
+                    elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Nem volt pénzed sörre";
 
                     Console.WriteLine("Rettentő csóró vagy, még erre sincs pénzed...");
@@ -66,7 +66,7 @@ namespace PVK_MAIN
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
 
-                    elozo_helyszin = "Kocsma";
+                    elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Ittál egy \"Börzsönyi Csattogóst\"";
 
 
@@ -75,10 +75,10 @@ namespace PVK_MAIN
 
                 else
                 {
-                    elozo_helyszin = "Kocsma";
+                    elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Sajna nem volt pénzed, na majd legközelebb";
 
-                    Console.WriteLine("Nincs elég pénzed, idióta");
+                    Console.WriteLine("Nincs elég pénzed, idióta...");
                 }
 
                 Console.ReadKey();
@@ -87,10 +87,10 @@ namespace PVK_MAIN
 
             else if (x == 3 && volt_e_verekedes_kocsmaban == true)
             {
-                elozo_helyszin = "Kocsma";
+                elozo_helyszin = "Csévi Szilva Kocsma";
                 elozo_hely_uzenete = "Verekedést akartál indítani, de egy külső erő (fejlesztők) megállított";
 
-                Console.WriteLine("Ezt már csináltad és akkor sem lett jó vége");
+                Console.WriteLine("Ezt már csináltad és akkor sem lett jó vége...");
 
                 Console.ReadKey();
                 Kocsma();
@@ -102,7 +102,7 @@ namespace PVK_MAIN
                 {
                     volt_e_verekedes_kocsmaban = true;
 
-                    elozo_helyszin = "Kocsma";
+                    elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Kocsmai verekedést indítottál";
 
                     Console.ReadKey();
@@ -111,10 +111,10 @@ namespace PVK_MAIN
 
                 else
                 {
-                    elozo_helyszin = "Kocsma";
+                    elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Kocsmai verekedést akartál indítani, de megijedtél a következményektől";
 
-                    Console.WriteLine("Meggondoltad magad, ehhez nem vagy elég részeg");
+                    Console.WriteLine("Meggondoltad magad, ehhez nem vagy elég részeg...");
                 }
 
                 Console.ReadKey();
@@ -123,9 +123,12 @@ namespace PVK_MAIN
 
             else
             {
-                elozo_helyszin = "Kocsma";
+                elozo_helyszin = "Csévi Szilva Kocsma";
                 elozo_hely_uzenete = "Kibotladoztál a kocsmából";
 
+                Console.WriteLine("Belerúgsz a küszöbbe...");
+
+                Console.ReadKey();
                 Fout();
             }
         }
@@ -133,6 +136,7 @@ namespace PVK_MAIN
         static void KocsmaiVerekedes()
         {
             Console.Clear();
+            helyszin = "Csévi Szilva Kocsma (verekedés)";
             IrjaKiAStatokat("A kocsmai verekedés már lecsengőben van, a harc mindjárt véget ér");
             Console.WriteLine("Verekedés folytatása...");
             Console.ReadKey();
@@ -165,11 +169,11 @@ namespace PVK_MAIN
                 eletkedv -= 40;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
-                elozo_helyszin = "Kocsma";
+                elozo_helyszin = "Csévi Szilva Kocsma (verekedés)";
                 elozo_hely_uzenete = "Nekiestél a falusi keménygyereknek, aki agyonvert, elvett némi pénzt és kidobott az utcára";
 
 
-                Console.WriteLine("Nekiesel Magony \"Bagó\" Bencének, aki ideges lesz");
+                Console.WriteLine("Nekiesel Magony \"Bagó\" Bencének, aki ideges lesz...");
 
                 Console.ReadKey();
                 Fout();
@@ -179,12 +183,14 @@ namespace PVK_MAIN
             {
                 if (verszomj >= 50)
                 {
-                    Console.WriteLine("3 kezet láttál, de valamennyire kitérült a keze");
+                    Console.WriteLine("3 kezet láttál, de valamennyire kitérült a keze...");
                     Console.ReadKey();
-                    Console.WriteLine("A verekedésnek vége");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Döntetlen");
+                    Console.ForegroundColor = ConsoleColor.Gray;
 
-                    elozo_helyszin = "Kocsma";
-                    elozo_hely_uzenete = "Verekedés eredmény: döntetlen";
+                    elozo_helyszin = "Csévi Szilva Kocsma (verekedés)";
+                    elozo_hely_uzenete = "A verekedés döntetlennel zárult";
 
                     Console.ReadKey();
                     Kocsma();
@@ -194,12 +200,14 @@ namespace PVK_MAIN
                 {
                     eletkedv -= 5;
 
-                    Console.WriteLine("Nincs benned annyi harci szellem, az ütés állcsúcson talált");
+                    Console.WriteLine("Nincs benned annyi harci szellem, az ütés állcsúcson talált...");
                     Console.ReadKey();
-                    Console.WriteLine("A verekedésnek vége");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Vereség");
+                    Console.ForegroundColor = ConsoleColor.Gray;
 
-                    elozo_helyszin = "Kocsma";
-                    elozo_hely_uzenete = "Verekedés eredménye: vereség";
+                    elozo_helyszin = "Csévi Szilva Kocsma (verekedés)";
+                    elozo_hely_uzenete = "Szépen ki lettél ütve a verekedésből";
 
                     Console.ReadKey();
                     Kocsma();
@@ -211,10 +219,14 @@ namespace PVK_MAIN
                 eletkedv -= 30;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
-                Console.WriteLine("Az erőszak igenis megoldás, földre kerülsz");
+                Console.WriteLine("Kiröhögött és agyonvert");
+                Console.ReadKey();
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Csúfos vereség");
+                Console.ForegroundColor = ConsoleColor.Gray;
 
-                elozo_helyszin = "Kocsma";
-                elozo_hely_uzenete = "Verekedés eredménye: csúfos vereség";
+                elozo_helyszin = "Csévi Szilva Kocsma (verekedés)";
+                elozo_hely_uzenete = "Az erőszak volt a megoldás";
 
                 Console.ReadKey();
                 Kocsma();
@@ -224,10 +236,10 @@ namespace PVK_MAIN
             {
                 eletkedv = 100;
 
-                Console.WriteLine("Rostás Brájen holtan fekszik a padlón, te pedig repülsz a böribe");
+                Console.WriteLine("Rostás Brájen holtan fekszik a padlón, te pedig repülsz a böribe...");
 
-                elozo_helyszin = "Kocsma";
-                elozo_hely_uzenete = "Verekedés eredménye: csalás miatt kizárva";
+                elozo_helyszin = "Csévi Szilva Kocsma (verekedés)";
+                elozo_hely_uzenete = "Gyilkosság miatt börtönbe zártak";
 
                 Console.ReadKey();
                 //Borton();

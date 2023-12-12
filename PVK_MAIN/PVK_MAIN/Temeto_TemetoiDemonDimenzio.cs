@@ -11,7 +11,7 @@ namespace PVK_MAIN
         static void Temeto()
         {
             Console.Clear();
-            helyszin = "Temető (Ingyen Protein Temető)";
+            helyszin = "Ingyen Protein Temető";
             IrjaKiAStatokat("Nekrofil hajlamaid a temetőbe vittek téged; A halottak hívását hallod");
             Console.WriteLine();
 
@@ -35,7 +35,7 @@ namespace PVK_MAIN
                     eletkedv += 10;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
-                    elozo_helyszin = "Temető";
+                    elozo_helyszin = "Ingyen Protein Temető";
                     elozo_hely_uzenete = "Sírgyalázásért letartóztattak";
 
                     Console.WriteLine("A sírt meggyalázva nagyot röhögsz, de hátad mögött kék és piros villanásokat látsz...");
@@ -46,7 +46,7 @@ namespace PVK_MAIN
 
                 else
                 {
-                    elozo_helyszin = "Temető";
+                    elozo_helyszin = "Ingyen Protein Temető";
                     elozo_hely_uzenete = "Meggondoltad magad, valami mást akarsz választani";
 
                     Console.WriteLine("Ehhez még kéne inni, nemde barátom?");
@@ -60,7 +60,7 @@ namespace PVK_MAIN
             {
                 koszoru_elfogyasztva = true;
 
-                elozo_helyszin = "Temető";
+                elozo_helyszin = "Ingyen Protein Temető";
                 elozo_hely_uzenete = "Éhen maradtál";
 
                 Console.WriteLine("Megettél egy koszorút, az íze egy bizonyos teáéra emlékeztet...");
@@ -71,7 +71,7 @@ namespace PVK_MAIN
 
             else if (x == 2 && koszoru_elfogyasztva)
             {
-                elozo_helyszin = "Temető";
+                elozo_helyszin = "Ingyen Protein Temető";
                 elozo_hely_uzenete = "Nem tudtál koszorút enni";
 
                 Console.WriteLine("Elfogytak a koszorúk, valami gyökér megette őket...");
@@ -82,7 +82,7 @@ namespace PVK_MAIN
 
             else
             {
-                elozo_helyszin = "Temető";
+                elozo_helyszin = "Ingyen Protein Temető";
                 elozo_hely_uzenete = "Kimentél a temetőből";
 
                 Console.WriteLine("A kapun kimész a temetőből...");
