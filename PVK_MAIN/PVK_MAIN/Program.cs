@@ -74,6 +74,10 @@ namespace PVK_MAIN
 
         public static bool ver_meglatva = false;
 
+
+
+
+
         #endregion
         public static int BekerLehetosegek(int max_szam)
         {
@@ -109,6 +113,10 @@ namespace PVK_MAIN
             }
         }
 
+
+
+
+
         public static void IrjaKiAStatokat(string szituacio)
         {
             Console.WriteLine("Pinterius Valentino kalandjai, avagy az örök alkoholizmus útja");
@@ -126,6 +134,15 @@ namespace PVK_MAIN
             Console.WriteLine();
             Console.WriteLine(szituacio);
         }
+
+        public static void DetoxbaKuldes()
+        {
+            if(jozansag <= 0)
+            {
+                Detox();
+            }
+        }
+
 
         static void Main(string[] args)
         {
