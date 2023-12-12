@@ -10,6 +10,7 @@ namespace PVK_MAIN
     {
         static void Otthon()
         {
+            DetoxbaKuldes();
             Console.Clear();
             helyszin = "Otthon";
             IrjaKiAStatokat("Felébredsz otthonodban, és rettentően másnapos vagy. Vérre szomjazol...");
