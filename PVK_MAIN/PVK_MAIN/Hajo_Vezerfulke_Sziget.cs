@@ -10,6 +10,7 @@ namespace PVK_MAIN
     {
         static void Hajo()
         {
+
             Console.Clear();
 
             helyszin = "Pipanic";
@@ -57,6 +58,7 @@ namespace PVK_MAIN
                 {
                     eletkedv -= 30;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    Ongyilkossag("Az utasok agyonvertek. A megalázkodás elvette a maradék életkedved.");
 
                     Console.WriteLine("Leokádtad az előkelő utasokat, akik jól agyonvertek utána");
 
@@ -120,36 +122,37 @@ namespace PVK_MAIN
 
         static void Vezerfulke()
         {
+
             Console.Clear();
 
             helyszin = "Vezerfülke";
-            IrjaKiAStatokat("Bementél a vezérfülkébe és a hajókormány előtt találod magadat a kulccsal a kezedben");
+            IrjaKiAStatokat("Bementél a vezérfülkébe és a hajókormány előtt találod magadat a kulccsal a kezedben.");
 
             Console.WriteLine("");
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. Elmegyek a szigetre");
-            Console.WriteLine("\t2. Nem megyek el a szigetre");
+            Console.WriteLine("\t1. Elkötöd a hajót");
+            Console.WriteLine("\t2. Kisétálsz a vezérfülkéből");
 
             int input = BekerLehetosegek(2);
             if (input == 1)
             {
                 if (jozansag <= 40)
                 {
-                    Console.WriteLine("Elsüllyedtél, elájultál, a Purgatóriumban találod magadat");
+                    Console.WriteLine("Elsüllyesztetted a hajót, mert túl részeg voltál.");
 
                     elozo_helyszin = "Pipanic";
-                    elozo_hely_uzenete = "Elsüllyesztetted a hajót, csak te élted túl";
+                    elozo_hely_uzenete = "Elsüllyesztetted a hajót, egy kinccsel teli sziget helyett a pokolban kötöttél ki.";
 
                     Console.ReadKey();
 
-                    //Purgatorium();
+                    Pokol();
                 }
                 else
                 {
-                    Console.WriteLine("Sikeresen elhajóztál a szigetig");
+                    Console.WriteLine("Sikeresen elkötötted a hajót. Többszáz kilóméter részeg hajóvezetés után egy szigetre lettél figyelmes a horizonton...");
 
                     elozo_helyszin = "Pipanic";
-                    elozo_hely_uzenete = "Szigetre értél";
+                    elozo_hely_uzenete = "";
 
                     Console.ReadKey();
 
@@ -172,6 +175,7 @@ namespace PVK_MAIN
 
         static void Sziget()
         {
+
             Console.Clear();
 
             helyszin = "Bikini fenék";

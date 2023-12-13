@@ -11,6 +11,7 @@ namespace PVK_MAIN
     {
         static void Erdo()
         {
+
             Console.Clear();
             helyszin = "Sárguló Sörerdő";
             IrjaKiAStatokat("Az erdőbe érve gonosz démonok hívását hallod. Mintha a pokolból millió ember sikolya szólna hozzád...");
@@ -38,6 +39,7 @@ namespace PVK_MAIN
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                 jozansag -= 5;
                 jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                DetoxbaKuldes();
                 verszomj += 10;
                 verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
 
@@ -52,7 +54,8 @@ namespace PVK_MAIN
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                 jozansag -= 10;
                 jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
-                
+                DetoxbaKuldes();
+
 
                 Console.WriteLine("A gyanta Rákóczi Sör volt. Nem véletlenül nevezik ezt a helyet SÖRerdőnek...");
                 Console.ReadKey();
@@ -163,6 +166,7 @@ namespace PVK_MAIN
 
         static void To()
         {
+
             Console.Clear();
             helyszin = "Tó(Falvi Zalán)";
             IrjaKiAStatokat("Egy békés kis erdei tóhoz érkeztél. Megláttál egy nagyon szexi tündérlányt, akit Szerencsés Edíníának hívnak");
@@ -245,6 +249,7 @@ namespace PVK_MAIN
 
         static void Vadaszhaz()
         {
+
             Console.Clear();
             vadaszhaz_meglatogatva = true;
             helyszin = "Gyulakolbász lakhely";
@@ -260,7 +265,7 @@ namespace PVK_MAIN
             {
                 
                 Console.WriteLine("Találtál egy fura kulcsot. Elraktad zsebre, majd mikor a vadász elment logikai függvényeket egyszerűsíteni, kiosontál.");
-                fura_kulcs_birtoklasa = true;
+                hajokulcs_birtoklasa = true;
                 elozo_helyszin = "Gyulakolbász lakhely";
                 Console.ReadKey();
                 
@@ -275,7 +280,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Vadász: Rendben köszönöm! Tessék, itt egy térkép és egy matematikai inga, most pedig menjen útjára!");
                 Console.WriteLine("Pinterius Valentino: Tiszteletem, viszontlátásra! (Milyen tudatlan, elhitte - gondoltad magadban.)");
 
-                fura_kulcs_birtoklasa = true;
+
                 elozo_helyszin = "Gyulakolbász lakhely";
                 Console.ReadKey();
 
@@ -285,9 +290,11 @@ namespace PVK_MAIN
 
         static void Banya()
         {
+
             Console.Clear();
             eletkedv -= 10;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            Ongyilkossag("A bányában a munka gondolata, ami elvette minden maradék életkedved.");
             helyszin = "Gyémántcsákány bánya";
             IrjaKiAStatokat("A bányában megcsapott a munka gondolata, melytől kicsit elment az életkedved.\nMeglátsz egy OMLÁSVESZÉLY táblát és egy furcsa fehért portált, felette PURGATÓRIUM felirattal.");
 
@@ -338,6 +345,7 @@ namespace PVK_MAIN
 
         static void Omlasveszely()
         {
+
             Console.Clear();
             helyszin = "Gyémántcsákány bánya, OMLÁSVESZÉLY TÁBLA";
             IrjaKiAStatokat("Az OMLÁSVESZÉLY táblánál azon töprengsz, hogy mit kellene tenned.");

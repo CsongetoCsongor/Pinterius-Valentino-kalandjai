@@ -10,7 +10,7 @@ namespace PVK_MAIN
     {
         static void Otthon()
         {
-            DetoxbaKuldes();
+
             Console.Clear();
             helyszin = "Otthon";
             IrjaKiAStatokat("Felébredsz otthonodban, és rettentően másnapos vagy. Vérre szomjazol...");
@@ -46,6 +46,7 @@ namespace PVK_MAIN
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                 jozansag -= 10;
                 jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                DetoxbaKuldes();
                 verszomj += 10;
                 verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
 
@@ -72,11 +73,13 @@ namespace PVK_MAIN
 
         static void Kert()
         {
+            DetoxbaKuldes();
             Console.Clear();
             if (kert_meglatogatva == false)
             {
                 eletkedv -= 20;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("Megcsípett egy méhe. Ez elvette a maradék életkedved.");
                 kert_meglatogatva = true;
             }
             

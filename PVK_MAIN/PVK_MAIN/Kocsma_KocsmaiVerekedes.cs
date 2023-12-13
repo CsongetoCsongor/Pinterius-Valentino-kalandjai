@@ -14,6 +14,7 @@ namespace PVK_MAIN
 
             eletkedv -= 5;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            Ongyilkossag("A kocsma szaga szomrú gyerekkorodra emlékeztetett. Ez elvette a maradék kevés életkedved is.");
 
             helyszin = "Csévi Szilva Kocsma";
             IrjaKiAStatokat("Bemész a kocsmába és megünnepled, hogy nincs semmilyen ünnep, a szag szomorú gyerekkorodra emlékeztet");
@@ -37,6 +38,7 @@ namespace PVK_MAIN
                     penz -= 5;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                    DetoxbaKuldes();
 
                     elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Ittál egy sört";
@@ -65,6 +67,7 @@ namespace PVK_MAIN
                     penz -= 30;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                    DetoxbaKuldes();
 
                     elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Ittál egy \"Börzsönyi Csattogóst\"";
@@ -168,6 +171,7 @@ namespace PVK_MAIN
                 penz -= 20;
                 eletkedv -= 40;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("Agyonvertek. Ez elvette az életkedved.");
 
                 elozo_helyszin = "Csévi Szilva Kocsma (verekedés)";
                 elozo_hely_uzenete = "Nekiestél a falusi keménygyereknek, aki agyonvert, elvett némi pénzt és kidobott az utcára";
@@ -199,6 +203,8 @@ namespace PVK_MAIN
                 else
                 {
                     eletkedv -= 5;
+                    eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    Ongyilkossag("Állon vágtak. Ez elvette a maradék életkedved.");
 
                     Console.WriteLine("Nincs benned annyi harci szellem, az ütés állcsúcson talált...");
                     Console.ReadKey();
@@ -218,6 +224,7 @@ namespace PVK_MAIN
             {
                 eletkedv -= 30;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("Agyonvertek. Ez elvette az életkedved.");
 
                 Console.WriteLine("Kiröhögött és agyonvert");
                 Console.ReadKey();
@@ -235,14 +242,14 @@ namespace PVK_MAIN
             else
             {
                 eletkedv = 100;
-
+                verszomj = 0;
                 Console.WriteLine("Rostás Brájen holtan fekszik a padlón, te pedig repülsz a böribe...");
 
                 elozo_helyszin = "Csévi Szilva Kocsma (verekedés)";
                 elozo_hely_uzenete = "Gyilkosság miatt börtönbe zártak";
 
                 Console.ReadKey();
-                //Borton();
+                Mech_Borton();
             }
         }
     }

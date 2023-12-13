@@ -11,6 +11,7 @@ namespace PVK_MAIN
     {
         static void Etterem()
         {
+
             Console.Clear();
             if (etterem_meglatogatva == false)
             {
@@ -68,7 +69,7 @@ namespace PVK_MAIN
 
                     Console.ReadKey();
 
-                    //Borton();
+                    Mech_Borton();
                 }
                 else
                 {

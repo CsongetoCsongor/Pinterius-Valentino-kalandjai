@@ -61,8 +61,9 @@ namespace PVK_MAIN
 
                 eletkedv -= 20;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("Nem sikerült semmit felöklendezni, a cserkészlány felpofozott. Ez a megalázó élmény elvette maradék életkedved.");
 
-                Console.WriteLine("Nem sikerült semmit felöklendezni, a cserkészlány felpofozott");
+                Console.WriteLine("Nem sikerült semmit felöklendezni, a cserkészlány felpofozott.");
 
                 Console.ReadKey();
                 Osveny();
@@ -258,6 +259,7 @@ namespace PVK_MAIN
             helyszin = "Nem Nem Soha! Völgy";
             eletkedv -= 5;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+            Ongyilkossag("Eszedbe jutott Trianon. Ez levitte a maradék életkedved.");
             IrjaKiAStatokat("Eszedbe jut Trianon");
             Console.WriteLine();
 

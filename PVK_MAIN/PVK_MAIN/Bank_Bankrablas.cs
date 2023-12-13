@@ -10,6 +10,7 @@ namespace PVK_MAIN
     {
         static void Bank()
         {
+
             Console.Clear();
             if (ogrek_megolve)
             {
@@ -30,7 +31,8 @@ namespace PVK_MAIN
             }
             eletkedv -= 10;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-            IrjaKiAStatokat("Bemész a bankba és megpillantassz egy csomó nagyorrú kalapos ogrét");
+            Ongyilkossag("A sok kalapos ogre elvette a maradék életkedvedet.");
+            IrjaKiAStatokat("Bemész a bankba és megpillantassz egy csomó nagyorrú kalapos ogrét.");
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");

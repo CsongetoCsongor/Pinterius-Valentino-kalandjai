@@ -41,7 +41,7 @@ namespace PVK_MAIN
                     Console.WriteLine("A sírt meggyalázva nagyot röhögsz, de hátad mögött kék és piros villanásokat látsz...");
 
                     Console.ReadKey();
-                    //Borton();
+                    Mech_Borton();
                 }
 
                 else
@@ -124,6 +124,7 @@ namespace PVK_MAIN
             {
                 eletkedv -= 50;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("A kísértet elvette a sörszagú páncélod. Ez elvette minden életkedved.");
 
                 elozo_helyszin = "Temetői Démon Dimenzió";
                 elozo_hely_uzenete = "A kísértet elvette a sörszagú páncélod és te szomorú lettél";

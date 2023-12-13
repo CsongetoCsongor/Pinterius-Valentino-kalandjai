@@ -78,8 +78,9 @@ namespace PVK_MAIN
                 Console.WriteLine("Kihúztál egy dugót egy hordóból, aláhajoltás és megállás nélkül folyt a szádba a bor.");
                 elozo_hely_uzenete = "Túl sok bort ittál, ezért a detoxban kötöttél ki";
                 elozo_helyszin = "Világuralom Vár, Borospince";
+                jozansag = 0;
                 Console.ReadKey();
-                //Detox();
+                DetoxbaKuldes();
             }
             else if (input == 2)
             {

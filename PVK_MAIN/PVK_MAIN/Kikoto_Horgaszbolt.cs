@@ -10,11 +10,13 @@ namespace PVK_MAIN
     {
         static void Kikoto()
         {
+
             Console.Clear();
             if (kikoto_meglatogatva == false)
             {
                 eletkedv -= 5;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("A kikötőben megcsapott a halszag, ez elvette a maradék életkedved.");
                 kikoto_meglatogatva = true;
             }
 
@@ -40,6 +42,7 @@ namespace PVK_MAIN
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     jozansag += 5;
                     jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                    DetoxbaKuldes();
 
                     Console.WriteLine("Vizelés közben elkaptak a rendőrök és bevittek a börtönbe");
 
@@ -48,7 +51,7 @@ namespace PVK_MAIN
 
                     Console.ReadKey();
 
-                    //Borton();
+                    Mech_Borton();
                 }
                 else
                 {
@@ -56,6 +59,7 @@ namespace PVK_MAIN
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     jozansag += 5;
                     jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                    DetoxbaKuldes();
 
                     Console.WriteLine("Megúsztad a vizelést, a rendőrök pont kávézgattak");
 
@@ -103,11 +107,13 @@ namespace PVK_MAIN
 
         static void Horgaszbolt()
         {
+            
             Console.Clear();
             if (horgaszbolt_meglatogatva == false)
             {
                 eletkedv -= 10;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("A boltban megérezted, az alkesz eladó szájszagát. Ez elvette maradék életkedved.");
                 horgaszbolt_meglatogatva = true;
             }
 
@@ -127,7 +133,7 @@ namespace PVK_MAIN
                 {
                     penz -= 20;
                     verszomj = 100;
-                    Console.WriteLine("Vettél egy horgászbotot");
+                    Console.WriteLine("Vettél egy horgászbotot.");
 
                     Console.ReadKey();
 
@@ -135,7 +141,7 @@ namespace PVK_MAIN
                 }
                 else
                 {
-                    Console.WriteLine("Lelehelt a büdös szájszagával, mert nincs elég pénzed");
+                    Console.WriteLine("Lelehelt a büdös szájszagával, mert nincs elég pénzed.");
 
                     Console.ReadKey();
 
@@ -143,7 +149,7 @@ namespace PVK_MAIN
                 }
 
                 elozo_helyszin = "Down-kóros Delfin horgászbolt";
-                elozo_hely_uzenete = "Vettél egy profi hirgászbotod, megjött a kedved horgászni menni";
+                elozo_hely_uzenete = "Vettél egy profi horgászbotod, megjött a kedved horgászni menni.";
 
             }
 
@@ -154,10 +160,10 @@ namespace PVK_MAIN
                     penz += 50;
                     tengeri_gyongy_birtoklasa = false;
 
-                    Console.WriteLine("Rettentően jó üzlet volt, kitömöttek lettek a zsebeid");
+                    Console.WriteLine("Rettentően jó üzlet volt, kitömöttek lettek a zsebeid.");
 
                     elozo_helyszin = "Down-kóros Delfin horgászbolt";
-                    elozo_hely_uzenete = "Eladtad a gyöngyöt, meggazdagodtál";
+                    elozo_hely_uzenete = "Eladtad a gyöngyöt, meggazdagodtál.";
 
                     Console.ReadKey();
 

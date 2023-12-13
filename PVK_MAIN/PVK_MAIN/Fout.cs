@@ -13,11 +13,16 @@ namespace PVK_MAIN
 
             Console.Clear();
             Random esely = new Random();
-            int eredmeny = esely.Next(1, 11);
-            if (eredmeny == 1 || eredmeny == 2)
+            int eredmeny = esely.Next(1, 101);
+            if (eredmeny < 21)
             {
+                
+                eletkedv -= 20;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("Meghallottad, ahogyan a goblinok hangosan zenét hallgatnak. A maradék életkedved is ellopták.");
                 Console.WriteLine("Meghallottad, ahogyan a goblinok hangosan zenét hallgatnak, ezért kicsit elment az életkedved. ");
-                Console.WriteLine();
+                Console.ReadKey();
+                Console.Clear();
             }
 
             helyszin = "Főút";
@@ -85,7 +90,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz a bank felé...");
                 elozo_helyszin = "Főút";
                 Console.ReadKey();
-                //Bank();
+                Bank();
             }
             else if(input == 8)
             {

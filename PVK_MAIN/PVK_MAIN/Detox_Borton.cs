@@ -226,7 +226,7 @@ namespace PVK_MAIN
                 Console.Clear();
 
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("JMEgbuktál a teszten. AKASZTÓFÁRA KERÜLTÉL!");
+                Console.WriteLine("MEgbuktál a teszten. AKASZTÓFÁRA KERÜLTÉL!");
                 Console.ForegroundColor = ConsoleColor.Gray;
 
                 jozansag = 50;

@@ -74,6 +74,12 @@ namespace PVK_MAIN
 
         public static bool ver_meglatva = false;
 
+        public static bool kikoto_meglatogatva = false;
+
+        public static bool horgaszbolt_meglatogatva = false;
+
+        public static bool etterem_meglatogatva = false;
+
 
 
 
@@ -140,6 +146,18 @@ namespace PVK_MAIN
             if(jozansag <= 0)
             {
                 Detox();
+            }
+        }
+
+        public static void Ongyilkossag(string reason)
+        {
+            if (eletkedv <= 0)
+            {
+
+                Console.Clear();
+                Console.WriteLine(reason);
+                elozo_hely_uzenete = "Túl kevés volt az életkedved, ezért megölted magad, az öngyilkosság pedig bűn.";
+                Pokol();
             }
         }
 
