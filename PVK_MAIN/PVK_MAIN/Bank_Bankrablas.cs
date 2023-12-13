@@ -101,6 +101,7 @@ namespace PVK_MAIN
                 elozo_hely_uzenete = "Találtál egy aranykulcsot";
 
                 Console.WriteLine("Sikeresen kizsebeled azt a fránya ogrét...");
+                aranykulcs_birtoklasa = true;
 
                 Console.ReadKey();
                 Bank();
@@ -109,7 +110,7 @@ namespace PVK_MAIN
             else if (x == 3 && aranykulcs_birtoklasa)
             {
                 elozo_helyszin = "Zsebtolvajok Világuralma Bank";
-                elozo_hely_uzenete = "Már semmit sem találtál";
+                elozo_hely_uzenete = "";
 
                 Console.WriteLine("Az ogre zsebe csodával határos módon üres...");
 
@@ -132,25 +133,25 @@ namespace PVK_MAIN
         static void Bankrablas()
         {
             Console.Clear();
-            helyszin = "Zsebtolvajok Világuralma Bank Rablása";
+            helyszin = "Bankrablás";
             IrjaKiAStatokat("Az alkoholtól kedved támad megdönteni az ismert világrendet és kárt tenni az ogrék vagyonában, szóval úgy döntessz, hogy kirabolod a bankot");
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Túszokat ejtesz");
+            Console.WriteLine("\t1. - Túszokat ejtessz");
             Console.WriteLine("\t2. - Megőlsz mindenkit");
 
             int x = BekerLehetosegek(2);
 
             if (x == 1)
             {
-                elozo_helyszin = "Zsebtolvajok Világuralma Bank Rablása";
+                elozo_helyszin = "Zsebtolvajok Világuralma Bank";
                 elozo_hely_uzenete = "Börtönbe kerültél bankrablásért";
 
                 Console.WriteLine("A túszokat nem kötözted le rendesen és agyonvertek...");
 
                 Console.ReadKey();
-                //Borton();
+                Mech_Borton();
             }
 
             else if (x == 2 && verszomj == 100)
@@ -161,7 +162,7 @@ namespace PVK_MAIN
                 eletkedv = 100;
                 penz += 300;
 
-                elozo_helyszin = "Zsebtolvajok Világuralma Bank Rablása";
+                elozo_helyszin = "Bankrablás";
                 elozo_hely_uzenete = "Egyik holttesten találtál egy aranykulcsot";
 
                 Console.WriteLine("Senki sem tudta megvédeni magát...");
@@ -172,13 +173,13 @@ namespace PVK_MAIN
 
             else
             {
-                elozo_helyszin = "BankZsebtolvajok Világuralma Bank Rablásarablás";
-                elozo_hely_uzenete = "A rendőrök lelőttek";
+                elozo_helyszin = "Bankrablás";
+                elozo_hely_uzenete = "A rendőrök lelőttek.";
 
                 Console.WriteLine("Az ogrék időben értesítik a hatóságokat...");
 
                 Console.ReadKey();
-                //Pokol();
+                Pokol();
             }
         }
     }

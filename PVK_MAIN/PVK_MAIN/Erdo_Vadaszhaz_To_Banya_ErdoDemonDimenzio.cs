@@ -111,8 +111,9 @@ namespace PVK_MAIN
             helyszin = "DÉMON DIMENZIÓ";
             IrjaKiAStatokat("A démonok hívásának nem tudtál ellen állni, egy alternatív valóságba estél és megtámadott egy démon.");
 
-            Console.WriteLine("BOGNÁR EXAEL VAGYOK, DÉMONOK URA, VILÁGOK PUSZTÍTÓJA ÉS C# PROGRAMOZÓ TANÁR!");
-            Console.WriteLine("MINDEM ÓRÁMAT MEGKESERÍTETTE, EZÉRT MOST BOSSZÚT ÁLLOK!");
+            Console.WriteLine();
+            Console.WriteLine("DÉMON: BOGNÁR EXAEL VAGYOK, DÉMONOK URA, VILÁGOK PUSZTÍTÓJA ÉS C# PROGRAMOZÓ TANÁR!");
+            Console.WriteLine("DÉMON: MINDEM ÓRÁMAT MEGKESERÍTETTE, EZÉRT MOST BOSSZÚT ÁLLOK!");
 
             Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
@@ -134,10 +135,11 @@ namespace PVK_MAIN
                 else
                 {
                     Console.WriteLine("Túl részeg voltál és megbotlottál egy igazságtáblában, a démon pedig kiszítta a lelkedet.");
+                    elozo_hely_uzenete = "A démon magávalrántott a pokolba.";
                     elozo_helyszin = "DÉMON DIMENZIÓ";
                     Console.ReadKey();
                     
-                    //Pokol();
+                    Pokol();
                 }
 
                 
@@ -157,9 +159,10 @@ namespace PVK_MAIN
                 {
                     Console.WriteLine("Nem voltál elég vérszomjas, hogy megöld a démont, ezért elégetett a pokol tüzével, és elkobozta lelkedet.");
                     elozo_helyszin = "DÉMON DIMENZIÓ";
+                    elozo_hely_uzenete = "A démon magávalrántott a pokolba.";
                     Console.ReadKey();
 
-                    //Pokol();
+                    Pokol();
                 }
             }
         }
@@ -294,7 +297,7 @@ namespace PVK_MAIN
             Console.Clear();
             eletkedv -= 10;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-            Ongyilkossag("A bányában a munka gondolata, ami elvette minden maradék életkedved.");
+            Ongyilkossag("A bányában megcsapott a munka gondolata, ami elvette minden maradék életkedved.");
             helyszin = "Gyémántcsákány bánya";
             IrjaKiAStatokat("A bányában megcsapott a munka gondolata, melytől kicsit elment az életkedved.\nMeglátsz egy OMLÁSVESZÉLY táblát és egy furcsa fehért portált, felette PURGATÓRIUM felirattal.");
 
@@ -314,7 +317,7 @@ namespace PVK_MAIN
                 elozo_hely_uzenete = "Berobbant a metán-gáz, meghaltál.";
                 Console.ReadKey();
 
-                //Pokol();
+                Pokol();
 
             }
             else if(input == 2)
@@ -331,7 +334,7 @@ namespace PVK_MAIN
                 elozo_helyszin = "Gyémántcsákány bánya";
                 elozo_hely_uzenete = "";
                 Console.ReadKey();
-                //Purgatorium();
+                Purgatorium();
             }
             else if(input == 4)
             {

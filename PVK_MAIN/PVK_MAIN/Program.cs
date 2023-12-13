@@ -125,20 +125,47 @@ namespace PVK_MAIN
 
         public static void IrjaKiAStatokat(string szituacio)
         {
-            Console.WriteLine("Pinterius Valentino kalandjai, avagy az örök alkoholizmus útja");
+            
 
             Console.WriteLine("---------------------------------------------------------------");
 
             Console.WriteLine($"Előző helyszín: {elozo_helyszin}");
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine($"Helyszín: {helyszin}");
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
-            Console.WriteLine($"Életkedv: {eletkedv}\t Józanság: {jozansag}\t Vérszomj: {verszomj}");
-            Console.WriteLine($"Személyes vagyon: {penz} krajcár");
+            //Console.WriteLine($"Életkedv: {eletkedv}\t Józanság: {jozansag}\t Vérszomj: {verszomj}");
+            Console.Write("Életkedv: ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(eletkedv + "%\t");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(" Józanság: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(jozansag+"%\t");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(" Vérszomj: ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(verszomj + "%");
+            Console.ForegroundColor = ConsoleColor.Gray;
+
+
+            //Console.WriteLine($"Személyes vagyon: {penz} krajcár");
+            Console.Write("Személyes vagyon: ");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write(penz);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine(" krajcár");
+
+
             Console.WriteLine("---------------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(elozo_hely_uzenete);
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine(szituacio);
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         public static void DetoxbaKuldes()
@@ -155,8 +182,11 @@ namespace PVK_MAIN
             {
 
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(reason);
+                Console.ForegroundColor = ConsoleColor.Gray;
                 elozo_hely_uzenete = "Túl kevés volt az életkedved, ezért megölted magad, az öngyilkosság pedig bűn.";
+                Console.ReadKey();
                 Pokol();
             }
         }
@@ -165,9 +195,13 @@ namespace PVK_MAIN
         static void Main(string[] args)
         {
 
-           
+
 
             Otthon();
+
+            //Pokol();
+
+            //Menyorszag();
 
 
 

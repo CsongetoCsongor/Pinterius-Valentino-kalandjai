@@ -93,7 +93,7 @@ namespace PVK_MAIN
                     }
 
                     Console.ReadKey();
-                    //Mennyorszag();
+                    Menyorszag();
                 }
 
                 else
@@ -102,7 +102,7 @@ namespace PVK_MAIN
                     Console.WriteLine("Az Úr rádförmed: \"Bűnös lélek vagy, örök szenvedést érdemelsz, mondjuk ha elhoztad volna a koronám... Na mindegy, takarodj a szemem elől\"");
 
                     Console.ReadKey();
-                    //Pokol();
+                    Pokol();
                 }
             }
         }

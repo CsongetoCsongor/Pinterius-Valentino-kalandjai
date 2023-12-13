@@ -81,7 +81,7 @@ namespace PVK_MAIN
             {
                 eletkedv -= 10;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-                Ongyilkossag("Az árak elvették a maradék életkedved.")
+                Ongyilkossag("Az árak elvették a maradék életkedved.");
 
                 elozo_helyszin = "Varázslatos Kalapács Varázsló";
                 elozo_hely_uzenete = "Kifutottál egészen az utcáig";

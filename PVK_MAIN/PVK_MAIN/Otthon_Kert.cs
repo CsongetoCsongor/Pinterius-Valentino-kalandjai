@@ -66,6 +66,7 @@ namespace PVK_MAIN
             {
                 Console.Clear();
                 elozo_helyszin = "Otthon";
+                elozo_hely_uzenete = "";
                 Fout();
             }
 
