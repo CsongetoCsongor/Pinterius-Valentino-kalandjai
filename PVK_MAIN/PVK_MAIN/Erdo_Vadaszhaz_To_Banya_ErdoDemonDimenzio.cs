@@ -13,6 +13,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Sárguló Sörerdő";
             IrjaKiAStatokat("Az erdőbe érve gonosz démonok hívását hallod. Mintha a pokolból millió ember sikolya szólna hozzád...");
 
@@ -108,6 +109,7 @@ namespace PVK_MAIN
         static void ErdoDemonDimenzio()
         {
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "DÉMON DIMENZIÓ";
             IrjaKiAStatokat("A démonok hívásának nem tudtál ellen állni, egy alternatív valóságba estél és megtámadott egy démon.");
 
@@ -171,6 +173,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Tó(Falvi Zalán)";
             IrjaKiAStatokat("Egy békés kis erdei tóhoz érkeztél. Megláttál egy nagyon szexi tündérlányt, akit Szerencsés Edíníának hívnak");
 
@@ -197,12 +200,22 @@ namespace PVK_MAIN
             {
                 if (jozansag <= 50 && tengeri_gyongy_birtoklasa == false)
                 {
+                    Console.Clear();
                     Console.WriteLine();
                     Console.WriteLine("Pinterius Valentino: Szépséged olyan fényesen csillan meg a tó vizén, mint a reggeli harmat a 2 literes Kőbányai flakonján. - szólt Pinterius.");
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Tündérlány: Wow! - mondta, mintha egy nyelvvizsgabiztos lett volna - milyen magas, sármos és jóképű legény vagy!");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.ReadKey();
                     Console.WriteLine("Pinterius Valentino: Igyekszem. Megkaphatom az Instádat? - mondta főhősünk, ragyogó magabiztossággal.");
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Tündérlány: I-IGEEN! - szólt a nőstény, izgatottan - szerencses.edina_6969");
-                    Console.WriteLine("Pinterius Valentino bejelölte és elolvasta a bioját...");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.ReadKey();
+                    Console.WriteLine("Pinterius Valentino bejelölte, és elolvasta a bioját...");
+                    Console.ReadKey();
                     Console.WriteLine();
                     Console.WriteLine("-----------------------");
                     Console.WriteLine("628 years, she/her");
@@ -210,9 +223,11 @@ namespace PVK_MAIN
                     Console.WriteLine("Manuel <3");
                     Console.WriteLine("-----------------------");
                     Console.WriteLine();
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Tündérlány: SZERELMES LETTEM BELÉD! Itt egy tengeri gyöngy, hogy emlékezz szerelmünkre!");
-                    Console.WriteLine();
-                    Console.WriteLine("Felszerelve: Tengeri Gyöngy");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+
                     tengeri_gyongy_birtoklasa = true;
                     eletkedv += 10;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
@@ -241,6 +256,7 @@ namespace PVK_MAIN
             }
             else if(input == 3)
             {
+                Console.WriteLine("Visszamész az erdőbe...");
                 elozo_helyszin = "Tó(Falvi Zalán)";
                 Console.ReadKey();
                 elozo_hely_uzenete = "";
@@ -254,6 +270,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             vadaszhaz_meglatogatva = true;
             helyszin = "Gyulakolbász lakhely";
             IrjaKiAStatokat("Hívatlan vendég vagy, vigyázz nehogy észrevegyen a vadász");
@@ -295,6 +312,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             eletkedv -= 10;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
             Ongyilkossag("A bányában megcsapott a munka gondolata, ami elvette minden maradék életkedved.");
@@ -350,6 +368,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Gyémántcsákány bánya, OMLÁSVESZÉLY TÁBLA";
             IrjaKiAStatokat("Az OMLÁSVESZÉLY táblánál azon töprengsz, hogy mit kellene tenned.");
 

@@ -12,7 +12,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
-
+            SzazasVerszomj();
             helyszin = "Varázslatos Kalapács Varázsló";
             IrjaKiAStatokat("A kovácsműhelyben találod magad, nagy a kínálat");
 

@@ -135,7 +135,7 @@ namespace PVK_MAIN
 
                 jozansag = 50;
 
-                elozo_hely_uzenete = "Azt mondták, hogy legközelebb igyak kevesebbet. Na persze! Majd haklgatni fogok ezekre a tökfejekre! - mondtad gúnyosan.";
+                elozo_hely_uzenete = "Azt mondták, hogy legközelebb igyak kevesebbet. Na persze! Majd hallgatni fogok ezekre a tökfejekre! - mondtad gúnyosan.";
                 elozo_helyszin = "Második Esély Klinika, Detoxikáló részleg";
                 Console.ReadKey();
                 Fout();
@@ -151,7 +151,7 @@ namespace PVK_MAIN
             elozo_helyszin = "Már nem emlékszel, összefolynak a napok";
             helyszin = "Várbörtön";
             Console.ForegroundColor = ConsoleColor.Red;
-            IrjaKiAStatokat("Börtönbe kerültél");
+            IrjaKiAStatokat("A börtön ablakába soha nem süt be a nap...");
 
             Console.WriteLine();
             Console.WriteLine("Ki kell töltened egy tesztet, hogy bebizonyítsd, hogy tisztában vagy a törvényekkel");
@@ -198,7 +198,7 @@ namespace PVK_MAIN
             #region kerdes_2
             Console.WriteLine("2. kérdés:");
             Console.WriteLine();
-            Console.WriteLine("Szabad-e sírt meggíyalázni?");
+            Console.WriteLine("Szabad-e sírt meggyalázni?");
             Console.WriteLine("1. - Igen");
             Console.WriteLine("2. - Nem");
             Console.WriteLine();
@@ -234,7 +234,7 @@ namespace PVK_MAIN
                 elozo_hely_uzenete = "Felakasztottak és a pokolra jutottál.";
                 elozo_helyszin = "Várbörtön";
                 Console.ReadKey();
-                //Pokol();
+                Pokol();
             }
 
             #endregion
@@ -272,7 +272,7 @@ namespace PVK_MAIN
                 Console.Clear();
 
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("JMEgbuktál a teszten. AKASZTÓFÁRA KERÜLTÉL!");
+                Console.WriteLine("Megbuktál a teszten. AKASZTÓFÁRA KERÜLTÉL!");
                 Console.ForegroundColor = ConsoleColor.Gray;
 
                 jozansag = 50;
@@ -280,7 +280,7 @@ namespace PVK_MAIN
                 elozo_hely_uzenete = "Felakasztottak és a pokolra jutottál.";
                 elozo_helyszin = "Várbörtön";
                 Console.ReadKey();
-                //Pokol();
+                Pokol();
             }
             #endregion
 

@@ -11,6 +11,7 @@ namespace PVK_MAIN
         static void Var()
         {
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Világuralom Vár";
             IrjaKiAStatokat("Engedély nélkül bementél a várba, de az őrök nem mertek szólni, mert úgy néztél ki, mint az Antikrisztus.");
 
@@ -54,6 +55,7 @@ namespace PVK_MAIN
         static void Borospince()
         {
             Console.Clear();
+            SzazasVerszomj();
             if (borospince_meglatogatva == false)
             {
                 eletkedv += 15;
@@ -116,6 +118,7 @@ namespace PVK_MAIN
         static void Kincseskamra()
         {
             Console.Clear();
+            SzazasVerszomj();
             if (kincsek_meglatva == false)
             {
                 eletkedv += 5;
@@ -190,6 +193,7 @@ namespace PVK_MAIN
         static void Borton()
         {
             Console.Clear();
+            SzazasVerszomj();
             if (!sikolyok_meghallva)
             {
                 eletkedv += 10;
@@ -265,6 +269,7 @@ namespace PVK_MAIN
         static void Kinzokamra()
         {
             Console.Clear();
+            SzazasVerszomj();
             if (!ver_meglatva)
             {
                 eletkedv += 10;

@@ -11,6 +11,7 @@ namespace PVK_MAIN
         static void Osveny()
         {
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Cserkészlány Csodaösvény";
             IrjaKiAStatokat("Kimész a természetbe - sokkolóan hat rád a tapasztalat");
             Console.WriteLine();
@@ -74,7 +75,7 @@ namespace PVK_MAIN
                 elozo_helyszin = "Cserkészlány Csodaösvény";
                 elozo_hely_uzenete = "Na ez aztán hasznos séta volt";
 
-                Console.WriteLine("Visszafordulsz");
+                Console.WriteLine("Elindulsz a főút felé");
 
                 Console.ReadKey();
                 Fout();
@@ -84,6 +85,7 @@ namespace PVK_MAIN
         static void Hegy()
         {
             Console.Clear();
+            SzazasVerszomj();
             eletkedv += 50;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
             helyszin = "Kárpátok";
@@ -193,6 +195,7 @@ namespace PVK_MAIN
         static void Vizeses()
         {
             Console.Clear();
+            SzazasVerszomj();
             jozansag += 5;
             jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
             helyszin = "Nedves Combok vízesés";
@@ -256,6 +259,7 @@ namespace PVK_MAIN
         static void Volgy()
         {
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Nem Nem Soha! Völgy";
             eletkedv -= 5;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);

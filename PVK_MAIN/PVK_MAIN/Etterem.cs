@@ -13,6 +13,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             if (etterem_meglatogatva == false)
             {
                 eletkedv += 10;

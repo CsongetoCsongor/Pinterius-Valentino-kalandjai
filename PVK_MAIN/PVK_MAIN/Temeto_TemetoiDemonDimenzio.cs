@@ -11,6 +11,7 @@ namespace PVK_MAIN
         static void Temeto()
         {
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Ingyen Protein Temető";
             IrjaKiAStatokat("Nekrofil hajlamaid a temetőbe vittek téged; A halottak hívását hallod");
             Console.WriteLine();

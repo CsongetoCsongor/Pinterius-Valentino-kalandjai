@@ -12,6 +12,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             Random esely = new Random();
             int eredmeny = esely.Next(1, 101);
             if (eredmeny < 21)
@@ -46,6 +47,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz a kocsma felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 
                 Kocsma();
@@ -54,6 +56,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz a kovács felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 Kovacs();
             }
@@ -61,6 +64,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz a temető felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 Temeto();
             }
@@ -68,6 +72,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz az étterem felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 Etterem();
             }
@@ -75,6 +80,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz az erdő felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 Erdo();
             }
@@ -82,6 +88,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz az ösvény felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 Osveny();
             }
@@ -89,6 +96,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz a bank felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 Bank();
             }
@@ -96,6 +104,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz a vár felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 Var();
             }
@@ -103,6 +112,7 @@ namespace PVK_MAIN
             {
                 Console.WriteLine("Elindulsz a kikötő felé...");
                 elozo_helyszin = "Főút";
+                elozo_hely_uzenete = "";
                 Console.ReadKey();
                 Kikoto();
             }

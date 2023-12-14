@@ -10,10 +10,21 @@ namespace PVK_MAIN
     {
         static void Otthon()
         {
-
+            
             Console.Clear();
+            SzazasVerszomj();
+
             helyszin = "Otthon";
-            IrjaKiAStatokat("Felébredsz otthonodban, és rettentően másnapos vagy. Vérre szomjazol...");
+            string uzenet;
+            if (!felebredve_start)
+            {
+                uzenet = "Felébredsz otthonodban, és rettentően másnapos vagy. Vérre szomjazol...";
+            }
+            else
+            {
+                uzenet = "Otthon vagy.";
+            }
+            IrjaKiAStatokat(uzenet);
 
             Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
@@ -25,7 +36,7 @@ namespace PVK_MAIN
 
             if (input == 1)
             {
-
+                felebredve_start = true;
                 if (wc_osszeokadva == false)
                 {
                     eletkedv += 10;
@@ -33,6 +44,7 @@ namespace PVK_MAIN
                     jozansag += 10;
                     jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
                     wc_osszeokadva = true;
+                    
                 }
 
                 Console.WriteLine("Kiadtad magadból, amit ki kellett...");
@@ -42,6 +54,7 @@ namespace PVK_MAIN
             }
             else if (input == 2)
             {
+                felebredve_start = true;
                 eletkedv += 10;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                 jozansag -= 10;
@@ -57,6 +70,7 @@ namespace PVK_MAIN
             }
             else if (input == 3)
             {
+                felebredve_start = true;
                 Console.Clear();
                 elozo_helyszin = "Otthon";
                 elozo_hely_uzenete = "Elhagytad a házat.";
@@ -64,6 +78,7 @@ namespace PVK_MAIN
             }
             else if (input == 4)
             {
+                felebredve_start = true;
                 Console.Clear();
                 elozo_helyszin = "Otthon";
                 elozo_hely_uzenete = "";
@@ -74,19 +89,27 @@ namespace PVK_MAIN
 
         static void Kert()
         {
-            DetoxbaKuldes();
+
+            SzazasVerszomj();
+
             Console.Clear();
+            string uzenet;
             if (kert_meglatogatva == false)
             {
                 eletkedv -= 20;
                 eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                 Ongyilkossag("Megcsípett egy méhe. Ez elvette a maradék életkedved.");
+                uzenet = "Kimentél a kertbe. Megcsípett egy méhe (véleményed szerint a nagyorrú kalapos ogrék miatt van).";
                 kert_meglatogatva = true;
+            }
+            else
+            {
+                uzenet = "A kertben vagy.";
             }
             
 
             helyszin = "Kert";
-            IrjaKiAStatokat("Kimentél a kertbe. Megcsípett egy méhe (véleményed szerint a nagyorrú kalapos ogrék miatt van).");
+            IrjaKiAStatokat(uzenet);
 
             Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
@@ -105,6 +128,7 @@ namespace PVK_MAIN
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
 
                     Console.WriteLine("Megölted azt a fránya méhet, ami megcsípett. Ez melegséggel tölt el...");
+                    verszomj = 0;
                     mehe_megolve = true;
                 }
                 else if(mehe_megolve == false && verszomj < 60)

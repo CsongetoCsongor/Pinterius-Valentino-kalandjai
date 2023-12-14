@@ -12,6 +12,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             if (ogrek_megolve)
             {
 
@@ -132,14 +133,16 @@ namespace PVK_MAIN
 
         static void Bankrablas()
         {
+            
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Bankrablás";
             IrjaKiAStatokat("Az alkoholtól kedved támad megdönteni az ismert világrendet és kárt tenni az ogrék vagyonában, szóval úgy döntessz, hogy kirabolod a bankot");
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. - Túszokat ejtessz");
-            Console.WriteLine("\t2. - Megőlsz mindenkit");
+            Console.WriteLine("\t2. - Megölsz mindenkit");
 
             int x = BekerLehetosegek(2);
 
@@ -154,7 +157,7 @@ namespace PVK_MAIN
                 Mech_Borton();
             }
 
-            else if (x == 2 && verszomj == 100)
+            else if (x == 2 && verszomj >= 70)
             {
                 ogrek_megolve = true;
                 aranykulcs_birtoklasa = true;
@@ -168,6 +171,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Senki sem tudta megvédeni magát...");
 
                 Console.ReadKey();
+                verszomj = 0;
                 Fout();
             }
 

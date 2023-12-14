@@ -7,7 +7,7 @@ namespace PVK_MAIN
 
         #region MainVariables
         public static string helyszin = "";
-        
+
         public static string elozo_helyszin = "";
 
         public static string elozo_hely_uzenete = "";
@@ -80,6 +80,8 @@ namespace PVK_MAIN
 
         public static bool etterem_meglatogatva = false;
 
+        public static bool felebredve_start = false;
+
 
 
 
@@ -99,19 +101,19 @@ namespace PVK_MAIN
                 }
                 while (!int.TryParse(Console.ReadLine(), out input));
             } while (input > max_szam || input < 1);
-            
+
             return input;
         }
 
         public static int NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(int szam)
         {
-            if (szam >= 0 && szam <= 100) 
+            if (szam >= 0 && szam <= 100)
             {
                 return szam;
             }
-            else if(szam < 0)
+            else if (szam < 0)
             {
-                return 0; 
+                return 0;
             }
             else
             {
@@ -120,14 +122,31 @@ namespace PVK_MAIN
         }
 
 
-
+        public static void SzazasVerszomj()
+        {
+            if (verszomj == 100)
+            {
+                eletkedv -= 5;
+                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                Ongyilkossag("A hatalmas vérszomjadat nem sikerült kielégítened más vérével, ezért a sajátoddal kellett...");
+            }
+        }
 
 
         public static void IrjaKiAStatokat(string szituacio)
         {
-            
 
+            Console.WriteLine("Pinterius Valentino kalandjai, avagy az örök alkoholizmus útja");
             Console.WriteLine("---------------------------------------------------------------");
+
+            if(verszomj == 100)
+            {
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("FIGYELEM!!! A vérszomjad túl magas. Minden választásnál csökken az életkedved!");
+                Console.ForegroundColor = ConsoleColor.Gray;
+
+            }
 
             Console.WriteLine($"Előző helyszín: {elozo_helyszin}");
             Console.WriteLine();

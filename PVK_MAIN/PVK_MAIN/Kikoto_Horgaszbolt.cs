@@ -12,6 +12,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
             if (kikoto_meglatogatva == false)
             {
                 eletkedv -= 5;
@@ -47,7 +48,7 @@ namespace PVK_MAIN
                     Console.WriteLine("Vizelés közben elkaptak a rendőrök és bevittek a börtönbe");
 
                     elozo_helyszin = "Tenger hangja kikötő";
-                    elozo_hely_uzenete = "Bajba kerültél";
+                    elozo_hely_uzenete = "Börtönbe zártak közszeméremsértés miatt.";
 
                     Console.ReadKey();
 
@@ -77,7 +78,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz a horgászbolt felé...");
 
                 elozo_helyszin = "Tenger hangja kikötő";
-                elozo_hely_uzenete = "Bementél a horgászboltba";
+                elozo_hely_uzenete = "";
 
                 Console.ReadKey();
 
@@ -88,7 +89,7 @@ namespace PVK_MAIN
                 Console.WriteLine("Elindulsz a hajó felé...");
 
                 elozo_helyszin = "Tenger hangja kikötő";
-                elozo_hely_uzenete = "Felszálltál a hajóra";
+                elozo_hely_uzenete = "";
 
                 Console.ReadKey();
 
@@ -97,7 +98,7 @@ namespace PVK_MAIN
             else if (input == 4)
             {
                 elozo_helyszin = "Tenger hangja kikötő";
-                elozo_hely_uzenete = "Visszamentél a főútra";
+                elozo_hely_uzenete = "";
 
                 Console.ReadKey();
 
@@ -109,6 +110,7 @@ namespace PVK_MAIN
         {
             
             Console.Clear();
+            SzazasVerszomj();
             if (horgaszbolt_meglatogatva == false)
             {
                 eletkedv -= 10;
@@ -184,6 +186,7 @@ namespace PVK_MAIN
             }
             else if (input == 3)
             {
+                Console.WriteLine("Visszamész a kikötőbe...");
                 elozo_helyszin = "Down-kóros Delfin horgászbolt";
                 elozo_hely_uzenete = "Köszönés nélkül kimentél a boltból, az eladó csúnyán nézett utánad";
 

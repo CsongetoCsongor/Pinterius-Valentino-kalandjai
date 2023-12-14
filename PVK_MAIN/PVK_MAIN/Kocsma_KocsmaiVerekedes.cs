@@ -11,7 +11,7 @@ namespace PVK_MAIN
         static void Kocsma()
         {
             Console.Clear();
-
+            SzazasVerszomj();
             eletkedv -= 5;
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
             Ongyilkossag("A kocsma szaga szomrú gyerekkorodra emlékeztetett. Ez elvette a maradék kevés életkedved is.");
@@ -107,7 +107,7 @@ namespace PVK_MAIN
 
                     elozo_helyszin = "Csévi Szilva Kocsma";
                     elozo_hely_uzenete = "Kocsmai verekedést indítottál";
-
+                    Console.WriteLine("Bedobtál egy széket a tömegbe...");
                     Console.ReadKey();
                     KocsmaiVerekedes();
                 }
@@ -139,8 +139,9 @@ namespace PVK_MAIN
         static void KocsmaiVerekedes()
         {
             Console.Clear();
+            SzazasVerszomj();
             helyszin = "Csévi Szilva Kocsma (verekedés)";
-            IrjaKiAStatokat("A kocsmai verekedés már lecsengőben van, a harc mindjárt véget ér");
+            IrjaKiAStatokat("A verekedés már lecsengőben van, a harc mindjárt véget ér");
             Console.WriteLine("Verekedés folytatása...");
             Console.ReadKey();
             Console.WriteLine();

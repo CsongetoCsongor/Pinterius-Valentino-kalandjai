@@ -12,7 +12,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
-
+            SzazasVerszomj();
             helyszin = "Pipanic";
             IrjaKiAStatokat("Felszálltál a hajóra teli előkelő utasokkal");
 
@@ -26,7 +26,7 @@ namespace PVK_MAIN
             int input = BekerLehetosegek(4);
             if (input == 1)
             {
-                if (verszomj >= 70 && jozansag <= 50)
+                if (verszomj >= 30 && jozansag <= 50)
                 {
                     eletkedv += 30;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
@@ -124,7 +124,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
-
+            SzazasVerszomj();
             helyszin = "Vezerfülke";
             IrjaKiAStatokat("Bementél a vezérfülkébe és a hajókormány előtt találod magadat a kulccsal a kezedben.");
 
@@ -177,6 +177,7 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
+            SzazasVerszomj();
 
             helyszin = "Bikini fenék";
             IrjaKiAStatokat("Kijutottál a szigetre");
