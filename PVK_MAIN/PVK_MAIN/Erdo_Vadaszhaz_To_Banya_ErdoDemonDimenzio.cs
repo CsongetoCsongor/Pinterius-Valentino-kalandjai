@@ -317,13 +317,13 @@ namespace PVK_MAIN
             eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
             Ongyilkossag("A bányában megcsapott a munka gondolata, ami elvette minden maradék életkedved.");
             helyszin = "Gyémántcsákány bánya";
-            IrjaKiAStatokat("A bányában megcsapott a munka gondolata, melytől kicsit elment az életkedved.\nMeglátsz egy OMLÁSVESZÉLY táblát és egy furcsa fehért portált, felette PURGATÓRIUM felirattal.");
+            IrjaKiAStatokat("A bányában megcsapott a munka gondolata, melytől kicsit elment az életkedved.\nMeglátsz egy OMLÁSVESZÉLY táblát és egy furcsa fehért portált.");
 
             Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. Rágyújtassz egy cigire");
             Console.WriteLine("\t2. Odamész az OMLÁSVESZÉLY táblához");
-            Console.WriteLine("\t3. Elmész a Purgatóriumba");
+            Console.WriteLine("\t3. Átsétálsz a portálon");
             Console.WriteLine("\t4. Visszamész az erdőbe");
             int input = BekerLehetosegek(4);
 
@@ -348,7 +348,10 @@ namespace PVK_MAIN
             }
             else if(input == 3)
             {
-                Console.WriteLine("Elindulsz az PURGATÓRIUM tábla felé...");
+                Console.WriteLine("Átsétáltál a portálon.");
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("Mint az kiderült ez egy spontán nyílódott portál volt a Purgatóriumba. Innen már nincs visszaút...");
                 elozo_helyszin = "Gyémántcsákány bánya";
                 elozo_hely_uzenete = "";
                 Console.ReadKey();

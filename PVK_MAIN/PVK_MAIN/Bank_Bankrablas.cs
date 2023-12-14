@@ -122,7 +122,7 @@ namespace PVK_MAIN
             else
             {
                 elozo_helyszin = "Zsebtolvajok Világuralma Bank";
-                elozo_hely_uzenete = "Elhagytad a bankot";
+                elozo_hely_uzenete = "";
 
                 Console.WriteLine("Az ajtón kifele menet még fingasz egy nagyot...");
 

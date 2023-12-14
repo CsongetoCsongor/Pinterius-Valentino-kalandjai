@@ -60,7 +60,7 @@ namespace PVK_MAIN
             else if (x == 3)
             {
                 elozo_helyszin = "Purgatórium";
-                elozo_hely_uzenete = "Harangozó Csongárd valami péntek estéről beszélt neked, vajon ez mit jelent?";
+                elozo_hely_uzenete = "Barthalón Bendegúz valami péntek estéről beszélt neked, vajon ez mit jelent?";
 
                 Console.WriteLine("\"Péntek estéjén másnaposan felébredsz\"");
                 Console.ReadKey();
@@ -74,36 +74,57 @@ namespace PVK_MAIN
                 Purgatorium();
             }
 
-            else
+            else if (x == 4)
             {
-                if (szent_korona_birtoklasa || (!bankrablas_megtortent && !rab_megrugva && !volt_e_verekedes_kocsmaban && !mehe_megolve && !ogrek_megolve))
-                {
-                    elozo_helyszin = "Purgatórium";
-                    if (szent_korona_birtoklasa && (bankrablas_megtortent || rab_megrugva || volt_e_verekedes_kocsmaban || mehe_megolve || ogrek_megolve))
-                    {
-                        Console.WriteLine("Az Úr megszólal: \"Visszahoztad a koronám, elnézem bűneidet és átengedlek Mennyország kapuin\"");
-                    }
-                    if (szent_korona_birtoklasa && !bankrablas_megtortent && !rab_megrugva && !volt_e_verekedes_kocsmaban && !mehe_megolve && !ogrek_megolve)
-                    {
-                        Console.WriteLine("Az Úr ítélete: \"Összességében jó ember voltál és el is hoztad a koronám, egyenes utat kapsz a Mennyországba\"");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Az Úr hozzád szól: \"Nagyjából jó életet éltél, egy kis szauna után mehetsz a Mennyországba\"");
-                    }
 
+
+                if (szent_korona_birtoklasa)
+                {
+                    Console.WriteLine("Isten: Te vagy az ember, ki megtalálta koronám, ezzel visszaadva dicsőségem!");
+                    Console.ReadKey();
+                    Console.WriteLine("Isten: Minden bűnödet elnézem és átengedlek a Menyország kapuin!");
+                    Console.ReadKey();
+                    Console.WriteLine("Pinterius Valentino: Ámen!");
                     Console.ReadKey();
                     Menyorszag();
                 }
-
                 else
                 {
-                    elozo_helyszin = "Purgatórium";
-                    Console.WriteLine("Az Úr rádförmed: \"Bűnös lélek vagy, örök szenvedést érdemelsz, mondjuk ha elhoztad volna a koronám... Na mindegy, takarodj a szemem elől\"");
-
+                    Console.WriteLine("Isten: Bűneid megbocsáthatatlanok! A pokolra küldelek!");
+                    Console.ReadKey();
+                    Console.WriteLine("Pinterius Valentino: Ezer ördög és pokol!");
                     Console.ReadKey();
                     Pokol();
                 }
+
+                //if (szent_korona_birtoklasa || (!bankrablas_megtortent && !rab_megrugva && !volt_e_verekedes_kocsmaban && !mehe_megolve && !ogrek_megolve))
+                //{
+                //    elozo_helyszin = "Purgatórium";
+                //    if (szent_korona_birtoklasa && (bankrablas_megtortent || rab_megrugva || volt_e_verekedes_kocsmaban || mehe_megolve || ogrek_megolve))
+                //    {
+                //        Console.WriteLine("Az Úr megszólal: \"Visszahoztad a koronám, elnézem bűneidet és átengedlek Mennyország kapuin\"");
+                //    }
+                //    if (szent_korona_birtoklasa && !bankrablas_megtortent && !rab_megrugva && !volt_e_verekedes_kocsmaban && !mehe_megolve && !ogrek_megolve)
+                //    {
+                //        Console.WriteLine("Az Úr ítélete: \"Összességében jó ember voltál és el is hoztad a koronám, egyenes utat kapsz a Mennyországba\"");
+                //    }
+                //    else
+                //    {
+                //        Console.WriteLine("Az Úr hozzád szól: \"Nagyjából jó életet éltél, egy kis szauna után mehetsz a Mennyországba\"");
+                //    }
+
+                //    Console.ReadKey();
+                //    Menyorszag();
+                //}
+
+                //else
+                //{
+                //    elozo_helyszin = "Purgatórium";
+                //    Console.WriteLine("Az Úr rádförmed: \"Bűnös lélek vagy, örök szenvedést érdemelsz, mondjuk ha elhoztad volna a koronám... Na mindegy, takarodj a szemem elől\"");
+
+                //    Console.ReadKey();
+                //    Pokol();
+                //}
             }
         }
     }

@@ -82,6 +82,10 @@ namespace PVK_MAIN
 
         public static bool felebredve_start = false;
 
+        public static bool fegyver_birtoklasa = false;
+
+        public static bool pancel_birtoklasa = false;
+
 
 
 

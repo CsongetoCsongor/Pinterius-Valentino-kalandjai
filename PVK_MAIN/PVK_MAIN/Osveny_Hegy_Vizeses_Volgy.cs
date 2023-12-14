@@ -48,7 +48,7 @@ namespace PVK_MAIN
             {
                 elozo_helyszin = "Cserkészlány Csodaösvény";
                 elozo_hely_uzenete = "Ez szerencsés rókázás volt, találtál egy jegygyűrűt";
-
+                jegygyuru_birtoklasa = true;
                 Console.WriteLine("A cserkészlány sírva elfutott, hányásodban valami csillog");
 
                 Console.ReadKey();

@@ -31,6 +31,7 @@ namespace PVK_MAIN
             Console.WriteLine();
             Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("JÓ BEFEJEZÉS".Length / 2)) + "}", "JÓ BEFEJEZÉS"));
             Console.ReadKey();
+            System.Environment.Exit(1);
         }
 
         static void Pokol()

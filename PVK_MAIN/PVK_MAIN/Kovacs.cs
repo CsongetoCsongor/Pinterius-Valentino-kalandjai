@@ -20,7 +20,7 @@ namespace PVK_MAIN
             Console.WriteLine("Lehetőségek:");
             Console.WriteLine("\t1. Veszel egy fegyvert, ami 70 krajcárba kerül");
             Console.WriteLine("\t2. Veszel egy páncéldarabot, ami 100 krajcárba kerül");
-            Console.WriteLine("\t3. Az árak láttán öklendezve kifutsz");
+            Console.WriteLine("\t3. Elhagyod az épületet");
 
             int input = BekerLehetosegek(3);
             if (input == 1)
@@ -32,6 +32,7 @@ namespace PVK_MAIN
                     verszomj += 40;
                     verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
                     Console.WriteLine("Vettél egy erős fegyvert");
+                    fegyver_birtoklasa = true;
 
                     Console.ReadKey();
 
@@ -59,6 +60,7 @@ namespace PVK_MAIN
                     eletkedv += 40;
                     eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
                     Console.WriteLine("Vettél egy nyíl álló mellényt");
+                    pancel_birtoklasa = true;
 
                     Console.ReadKey();
 
@@ -79,12 +81,11 @@ namespace PVK_MAIN
             }
             else if (input == 3)
             {
-                eletkedv -= 10;
-                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-                Ongyilkossag("Az árak elvették a maradék életkedved.");
+                
 
                 elozo_helyszin = "Varázslatos Kalapács Varázsló";
-                elozo_hely_uzenete = "Kifutottál egészen az utcáig";
+                elozo_hely_uzenete = "";
+                Console.WriteLine("Kimész az ajtón...");
 
                 Console.ReadKey();
 

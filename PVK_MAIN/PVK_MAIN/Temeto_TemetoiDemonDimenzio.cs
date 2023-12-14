@@ -16,7 +16,7 @@ namespace PVK_MAIN
             IrjaKiAStatokat("Nekrofil hajlamaid a temetőbe vittek téged; A halottak hívását hallod");
             Console.WriteLine();
 
-            if (jozansag <= 40 && eletkedv <= 50)
+            if (jozansag <= 40 && eletkedv <= 70)
             {
                 elozo_hely_uzenete = "Életkedved és józanságod alacsony volt, ezért egy más dimenzióba kerültél";
                 TemetoiDemonDimenzio();
@@ -100,22 +100,22 @@ namespace PVK_MAIN
             IrjaKiAStatokat("Egy francia-szobalányruhában lévő kísértet áll előtted, és azzal fenyeget, hogy elvesz mindent, ami fontos neked");
             Console.ReadKey();
             Console.WriteLine();
-            Console.WriteLine("Mi fontos neked?");
-
+            Console.WriteLine("Kísértet: Mi fontos neked?");
+            Console.WriteLine();
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - A bukszád");
-            Console.WriteLine("\t2. - A daliás páncélod");
-            Console.WriteLine("\t3. - Az enyhén kellemetlenül balra hajló kardod");
-            Console.WriteLine("\t4. - A család (hazudsz)");
+            Console.WriteLine("\t1. A bukszád");
+            Console.WriteLine("\t2. A daliás páncélod");
+            Console.WriteLine("\t3. Az enyhén kellemetlenül balra hajló kardod");
+            Console.WriteLine("\t4. A család (hazudsz)");
 
             int x = BekerLehetosegek(4);
 
             if (x == 1)
             {
                 penz = 0;
-
+                Console.WriteLine("A kísértet elvette minden pénzed!");
                 elozo_helyszin = "Temetői Démon Dimenzió";
-                elozo_hely_uzenete = "A kísértet megfosztott minden pénzedtől";
+                elozo_hely_uzenete = "";
 
                 Console.ReadKey();
                 Fout();
@@ -123,76 +123,113 @@ namespace PVK_MAIN
 
             else if (x == 2)
             {
-                eletkedv -= 50;
-                eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
-                Ongyilkossag("A kísértet elvette a sörszagú páncélod. Ez elvette minden életkedved.");
+                if (pancel_birtoklasa)
+                {
+                    eletkedv -= 50;
+                    eletkedv = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(eletkedv);
+                    Ongyilkossag("A kísértet elvette a sörszagú páncélod. Ez elvette minden életkedved.");
+                    pancel_birtoklasa = false;
+                    elozo_helyszin = "Temetői Démon Dimenzió";
+                    elozo_hely_uzenete = "Elvették a páncélom! Na sebaj, majd veszek mégegyet.";
+                    Console.WriteLine("A kísértet elvette a sörszagú páncélod és te szomorú lettél.");
 
-                elozo_helyszin = "Temetői Démon Dimenzió";
-                elozo_hely_uzenete = "A kísértet elvette a sörszagú páncélod és te szomorú lettél";
-
-                Console.ReadKey();
-                Fout();
+                    Console.ReadKey();
+                    Fout();
+                }
+                else
+                {
+                    Console.WriteLine("Kísértet: Nincs is páncélod te tökkelütött! Ezért most meghalsz!");
+                    elozo_hely_uzenete = "A kísértet megölt.";
+                    Console.ReadKey();
+                    Pokol();
+                }
+                
             }
 
             else if (x == 3)
             {
-                verszomj -= 50;
-                verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
-
-                elozo_helyszin = "Temetői Démon Dimenzió";
-                elozo_hely_uzenete = "A kísértet elvette a kardod és hirtelen nem vagy olyan vérszomjas";
-
-                Console.ReadKey();
-                Fout();
-            }
-
-            else
-            {
-                Console.WriteLine("A kísértet nem hisz neked, bizonyítékot kér");
-
-                if (jegygyuru_birtoklasa == true)
+                if (fegyver_birtoklasa)
                 {
-                    int y = BekerLehetosegek(2);
-
-                    Console.WriteLine("Lehetőségek:");
-                    Console.WriteLine("\t1. - Megmutatod neki a jeggyűrűt, amit találtál");
-                    Console.WriteLine("\t2. - Megesküszöl, hogy igazat mondasz");
-
-                    jegygyuru_birtoklasa = false;
-
-                    if (y == 1)
-                    {
-                        elozo_helyszin = "Temetői Démon Dimenzió";
-                        elozo_hely_uzenete = "A hazugság bevált, a főúton ébredtél";
-
-                        Console.WriteLine("A kísértet impotenssé tett...");
-
-                        Console.ReadKey();
-                        Fout();
-                    }
-
-                    else
-                    {
-                        elozo_helyszin = "Temetői Démon Dimenzió";
-                        elozo_hely_uzenete = "A hazugság nem vált be, meghaltál";
-
-                        Console.WriteLine("Hát testvér, szarul hazudsz...");
-
-                        Console.ReadKey();
-                        //Pokol();
-                    }
+                    verszomj -= 50;
+                    verszomj = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(verszomj);
+                    fegyver_birtoklasa = false;
+                    elozo_helyszin = "Temetői Démon Dimenzió";
+                    elozo_hely_uzenete = "Elvették a kardom! Na sebaj, majd veszek mégegyet.";
+                    Console.WriteLine("A kísértet elvette a kardod és hirtelen nem vagy olyan vérszomjas.");
+                    Console.ReadKey();
+                    Fout();
                 }
-
                 else
                 {
-                    Console.WriteLine("A szó nem elég...");
-
-                    elozo_helyszin = "Temetői Démon Dimenzió";
-                    elozo_hely_uzenete = "A hazugság nem vált be, meghaltál";
-
+                    Console.WriteLine("Kísértet: Nincs is kardod te tökkelütött! Ezért most meghalsz!");
+                    elozo_hely_uzenete = "A kísértet megölt.";
                     Console.ReadKey();
-                    //Pokol();
-                } 
+                    Pokol();
+                }
+                
+            }
+
+            else if (x == 4)
+            {
+                Console.WriteLine("A kísértet nem hisz neked, bizonyítékot kér, mondjuk egy jeggyűrűt...");
+                Console.ReadKey();
+                if (jegygyuru_birtoklasa)
+                {
+                    Console.WriteLine("Odaadtad neki a jeggyűrűt, amit a cserkészlánynál találtál.");
+                    elozo_hely_uzenete = "A gyűrű elhitette a démonnal, hogy a család számodra a legfontosabb. Az utcán ébredtél.";
+                    Console.ReadKey();
+                    Fout();
+                }
+                else
+                {
+                    Console.WriteLine("Nem volt nálad egy jegygyűrű sem. A kísértet elveszi életed...");
+                    elozo_hely_uzenete = "A kísértet megölt.";
+                    Pokol();
+                }
+
+                //if (jegygyuru_birtoklasa == true)
+                //{
+                //    int y = BekerLehetosegek(2);
+
+                //    Console.WriteLine("Lehetőségek:");
+                //    Console.WriteLine("\t1. - Megmutatod neki a jeggyűrűt, amit találtál");
+                //    Console.WriteLine("\t2. - Megesküszöl, hogy igazat mondasz");
+
+                //    jegygyuru_birtoklasa = false;
+
+                //    if (y == 1)
+                //    {
+                //        elozo_helyszin = "Temetői Démon Dimenzió";
+                //        elozo_hely_uzenete = "A hazugság bevált, a főúton ébredtél";
+
+                //        Console.WriteLine("A kísértet impotenssé tett...");
+
+                //        Console.ReadKey();
+                //        Fout();
+                //    }
+
+                //    else
+                //    {
+                //        elozo_helyszin = "Temetői Démon Dimenzió";
+                //        elozo_hely_uzenete = "A hazugság nem vált be, meghaltál";
+
+                //        Console.WriteLine("Hát testvér, szarul hazudsz...");
+
+                //        Console.ReadKey();
+                //        Pokol();
+                //    }
+                //}
+
+                //else
+                //{
+                //    Console.WriteLine("A szó nem elég...");
+
+                //    elozo_helyszin = "Temetői Démon Dimenzió";
+                //    elozo_hely_uzenete = "A hazugság nem vált be, meghaltál";
+
+                //    Console.ReadKey();
+                //    //Pokol();
+                //} 
             }
         }
     }

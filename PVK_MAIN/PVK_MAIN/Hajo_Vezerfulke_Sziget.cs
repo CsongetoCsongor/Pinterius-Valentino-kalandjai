@@ -177,13 +177,35 @@ namespace PVK_MAIN
         {
 
             Console.Clear();
-            SzazasVerszomj();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("Helyszín:");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (" _______  _______ _________ _______  _______ _________".Length / 2)) + "}", " _______  _______ _________ _______  _______ _________"));
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("(  ____ \\/ ___   )\\__   __/(  ____ \\(  ____ \\\\__   __/".Length / 2)) + "}", "(  ____ \\/ ___   )\\__   __/(  ____ \\(  ____ \\\\__   __/"));
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("| (    \\/\\/   )  |   ) (   | (    \\/| (    \\/   ) (   ".Length / 2)) + "}", "| (    \\/\\/   )  |   ) (   | (    \\/| (    \\/   ) (   "));
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("| (_____     /   )   | |   | |      | (__       | |   ".Length / 2)) + "}", "| (_____     /   )   | |   | |      | (__       | |   "));
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("(_____  )   /   /    | |   | | ____ |  __)      | |   ".Length / 2)) + "}", "(_____  )   /   /    | |   | | ____ |  __)      | |   "));
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("      ) |  /   /     | |   | | \\_  )| (         | |   ".Length / 2)) + "}", "      ) |  /   /     | |   | | \\_  )| (         | |   "));
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("/\\____) | /   (_/\\___) (___| (___) || (____/\\   | |   ".Length / 2)) + "}", "/\\____) | /   (_/\\___) (___| (___) || (____/\\   | |   "));
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("\\_______)(_______/\\_______/(_______)(_______/   )_(   ".Length / 2)) + "}", "\\_______)(_______/\\_______/(_______)(_______/   )_(   "));
 
-            helyszin = "Bikini fenék";
-            IrjaKiAStatokat("Kijutottál a szigetre");
 
-            Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("Partra szálltál a szigeten.".Length / 2)) + "}", "Partra szálltál a szigeten."));
+            Console.WriteLine();
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("A szigeten minden volt, mi szem-szájnak ingere, embernek viszont nyoma sem volt. Lényegében az Ígéret Földjének tűnt a hely.".Length / 2)) + "}", "A szigeten minden volt, mi szem-szájnak ingere, embernek viszont nyoma sincs. Lényegében az Ígéret Földje volt a hely."));
+            Console.WriteLine();
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("A hajó utasait elengeded: robotpilótára raktad a hajót és visszament magától a kikötőbe.".Length / 2)) + "}", "A hajó utasait elengeded: robotpilótára raktad a hajót és visszament magától a kikötőbe."));
+            Console.WriteLine();
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("Úgy döntöttél, hogy itt fogod leélni hátralévő életed, az alkoholról is leszoktál.".Length / 2)) + "}", "Úgy döntöttél, hogy itt fogod leélni hátralévő életed, az alkoholról is leszoktál."));
+            Console.WriteLine();
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + ("TITKOS BEFEJEZÉS".Length / 2)) + "}", "TITKOS BEFEJEZÉS"));
+
+            Console.ReadKey();
+            System.Environment.Exit(1);
         }
 
     }
