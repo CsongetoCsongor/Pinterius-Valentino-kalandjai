@@ -303,7 +303,9 @@ namespace PVK_MAIN
             {
                 elozo_helyszin = "Nem Nem Soha! Völgy";
                 elozo_hely_uzenete = "Megettél egy bolondgombát";
-
+                jozansag -= 10;
+                jozansag = NagyobbVagyEgyenloNullaKisebbVagyEgyenloSzaz(jozansag);
+                DetoxbaKuldes();
                 Console.WriteLine("Furcsa ízt érzel a szádban...");
 
                 Console.ReadKey();

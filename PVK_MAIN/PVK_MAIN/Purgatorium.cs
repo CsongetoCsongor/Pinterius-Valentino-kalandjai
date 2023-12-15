@@ -26,15 +26,15 @@ namespace PVK_MAIN
             if (x == 1)
             {
                 elozo_helyszin = "Purgatórium";
-                elozo_hely_uzenete = "Beszéltél Barthalón Bendegúzzal, aki rendesen beoltott";
+                elozo_hely_uzenete = "Beszéltél Harangozó Csongárddal, aki rendesen beoltott";
 
-                Console.WriteLine("\"Ki ez?\"");
+                Console.WriteLine("Harangozó Csongárd: Ki ez?");
                 Console.ReadKey();
-                Console.WriteLine("\"Egy iszákos senki\"");
+                Console.WriteLine("Harangozó Csongárd: Egy iszákos senki!");
                 Console.ReadKey();
-                Console.WriteLine("\"Hordd innen el magad\"");
+                Console.WriteLine("Harangozó Csongárd: Hordd innen el magad!");
                 Console.ReadKey();
-                Console.WriteLine("\"Rád csak a Pokol tüze vár\"");
+                Console.WriteLine("Harangozó Csongárd: Rád csak a Pokol tüze vár!");
 
                 Console.ReadKey();
                 Purgatorium();
@@ -45,13 +45,13 @@ namespace PVK_MAIN
                 elozo_helyszin = "Purgatórium";
                 elozo_hely_uzenete = "Megismerted Lezlitót, a pokol tüzének megivóját";
 
-                Console.WriteLine("\"Csak egy Hellt akarok...\"");
+                Console.WriteLine("Pogány Lezlitóval: Csak egy Hellt akarok...");
                 Console.ReadKey();
-                Console.WriteLine("\"csak egy Hellt akarok...\"");
+                Console.WriteLine("Pogány Lezlitóval: csak egy Hellt akarok...");
                 Console.ReadKey();
-                Console.WriteLine("\"csak... egy... Hellt... akarok...\"");
+                Console.WriteLine("Pogány Lezlitóval: csak... egy... Hellt... akarok...");
                 Console.ReadKey();
-                Console.WriteLine("\"C̴̖̻͕͐̓̈́̾͌̄s̵̡̘̲̫͌̃̈́̑̋á̷̗̤̤̇̅͊̈́̒͘͜k̷̨̢̖̦̺̱̍ ̶̟̪̩́͘ḙ̷̢͔̗̊͗g̵͇̦͉̭̟͌́̂̕ỹ̵̢̂ ̸͙̑̊͋̅̀͛̚͝ͅḢ̸̜͎͑̃̉̅̉͛͝e̵̹̼̥̽̈́̉͘ĺ̷͎̰͕̥͐l̶̢̢̩͖̲̪͕̃͜t̶͚̺̱͙̐͛̓̓ ̴͍̲͙̘͕͓̪̍̎̍́͠a̵̼̩͒͆̓̿̀̀̂k̴͖̥̙͓̫͚͑a̶̧͙̬̾̐̌̕͜͝r̸̯̹̈́́̕ǫ̴̧͕͑̉̇̿͘̚͠k̷̲̿̊́̈.̷̡̢̝̥̬̳͊́͜.̵̨̡̥̘̥̼̱͖̈́.̷̟̗͊\"");
+                Console.WriteLine("Pogány Lezlitóval: C̴̖̻͕͐̓̈́̾͌̄s̵̡̘̲̫͌̃̈́̑̋á̷̗̤̤̇̅͊̈́̒͘͜k̷̨̢̖̦̺̱̍ ̶̟̪̩́͘ḙ̷̢͔̗̊͗g̵͇̦͉̭̟͌́̂̕ỹ̵̢̂ ̸͙̑̊͋̅̀͛̚͝ͅḢ̸̜͎͑̃̉̅̉͛͝e̵̹̼̥̽̈́̉͘ĺ̷͎̰͕̥͐l̶̢̢̩͖̲̪͕̃͜t̶͚̺̱͙̐͛̓̓ ̴͍̲͙̘͕͓̪̍̎̍́͠a̵̼̩͒͆̓̿̀̀̂k̴͖̥̙͓̫͚͑a̶̧͙̬̾̐̌̕͜͝r̸̯̹̈́́̕ǫ̴̧͕͑̉̇̿͘̚͠k̷̲̿̊́̈.̷̡̢̝̥̬̳͊́͜.̵̨̡̥̘̥̼̱͖̈́.̷̟̗͊");
 
                 Console.ReadKey();
                 Purgatorium();
@@ -62,13 +62,13 @@ namespace PVK_MAIN
                 elozo_helyszin = "Purgatórium";
                 elozo_hely_uzenete = "Barthalón Bendegúz valami péntek estéről beszélt neked, vajon ez mit jelent?";
 
-                Console.WriteLine("\"Péntek estéjén másnaposan felébredsz\"");
+                Console.WriteLine("Barthalón Bendegúz: Péntek estéjén másnaposan felébredsz...");
                 Console.ReadKey();
-                Console.WriteLine("\"Meg fogod látogatni a dorozsmai faluközpontot\"");
+                Console.WriteLine("Barthalón Bendegúz: Meg fogod látogatni a dorozsmai faluközpontot...");
                 Console.ReadKey();
-                Console.WriteLine("\"Az éjféli misén meg fogod botránkoztatni a honfitársakat\"");
+                Console.WriteLine("Barthalón Bendegúz: Az éjféli misén meg fogod botránkoztatni a honfitársakat...");
                 Console.ReadKey();
-                Console.WriteLine("\"Süke Bíborka majd ápol téged\"");
+                Console.WriteLine("Barthalón Bendegúz: Süke Bíborka majd ápol téged...");
 
                 Console.ReadKey();
                 Purgatorium();
@@ -94,6 +94,7 @@ namespace PVK_MAIN
                     Console.ReadKey();
                     Console.WriteLine("Pinterius Valentino: Ezer ördög és pokol!");
                     Console.ReadKey();
+                    elozo_hely_uzenete = "Isten a pokolra küldött.";
                     Pokol();
                 }
 
