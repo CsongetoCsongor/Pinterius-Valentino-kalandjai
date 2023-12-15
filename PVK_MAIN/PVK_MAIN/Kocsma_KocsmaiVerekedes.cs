@@ -22,10 +22,10 @@ namespace PVK_MAIN
             
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Csapoltatsz magadnak egy sört 5 krajcárért és lehörpinted");
-            Console.WriteLine("\t2. - Kéred a speciális italt, 30 krajcárba kerül");
-            Console.WriteLine("\t3. - Kocsmai verekedést indítasz [max 40 józanság]");
-            Console.WriteLine("\t4. - Kimész az utcára");
+            Console.WriteLine("\t1. Csapoltatsz magadnak egy sört 5 krajcárért és lehörpinted");
+            Console.WriteLine("\t2. Kéred a speciális italt, 30 krajcárba kerül");
+            Console.WriteLine("\t3. Kocsmai verekedést indítasz [max 40 józanság]");
+            Console.WriteLine("\t4. Kimész az utcára");
 
             int x = BekerLehetosegek(4);
 
@@ -149,9 +149,9 @@ namespace PVK_MAIN
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Hátrébbugrasz");
-            Console.WriteLine("\t2. - Megpróbálod kivédeni az ütést [min. 50 vérszomj]");
-            Console.WriteLine("\t3. - Megmondod neki, hogy az erőszak nem megoldás");
+            Console.WriteLine("\t1. Hátrébbugrasz");
+            Console.WriteLine("\t2. Megpróbálod kivédeni az ütést [min. 50 vérszomj]");
+            Console.WriteLine("\t3. Megmondod neki, hogy az erőszak nem megoldás");
 
             int x;
 

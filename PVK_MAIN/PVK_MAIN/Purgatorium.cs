@@ -16,10 +16,10 @@ namespace PVK_MAIN
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Beszélsz Harangozó Csongárddal");
-            Console.WriteLine("\t2. - Beszélsz Pogány Lezlitóval");
-            Console.WriteLine("\t3. - Beszélsz Barthalón Bendegúzzal");
-            Console.WriteLine("\t4. - Beülsz az ítélőszékbe");
+            Console.WriteLine("\t1. Beszélsz Harangozó Csongárddal");
+            Console.WriteLine("\t2. Beszélsz Pogány Lezlitóval");
+            Console.WriteLine("\t3. Beszélsz Barthalón Bendegúzzal");
+            Console.WriteLine("\t4. Beülsz az ítélőszékbe");
 
             int x = BekerLehetosegek(4);
 

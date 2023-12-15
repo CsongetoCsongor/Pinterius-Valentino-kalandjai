@@ -18,9 +18,9 @@ namespace PVK_MAIN
 
             Console.WriteLine("Lehetőségek:");
 
-            Console.WriteLine("\t1. - Elmész a Kárpátokba");
-            Console.WriteLine("\t2. - Leokádsz egy cserkészlányt [max 50 józanság]");
-            Console.WriteLine("\t3. - Visszamész a főútra");
+            Console.WriteLine("\t1. Elmész a Kárpátokba");
+            Console.WriteLine("\t2. Leokádsz egy cserkészlányt [max 50 józanság]");
+            Console.WriteLine("\t3. Visszamész a főútra");
 
             int x = BekerLehetosegek(3);
 
@@ -93,8 +93,8 @@ namespace PVK_MAIN
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Elkezdesz Kárpátiát Dalolni (Pálinka) [max 60 józanság]");
-            Console.WriteLine("\t2. - Továbbmész a vízeséshez");
+            Console.WriteLine("\t1. Elkezdesz Kárpátiát Dalolni (Pálinka) [max 60 józanság]");
+            Console.WriteLine("\t2. Továbbmész a vízeséshez");
 
             int x = BekerLehetosegek(2);
 
@@ -203,9 +203,9 @@ namespace PVK_MAIN
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Belefojtod magad a vízbe");
-            Console.WriteLine("\t2. - Iszol a tiszta vízből");
-            Console.WriteLine("\t3. - Lecsúszol a vízesésen");
+            Console.WriteLine("\t1. Belefojtod magad a vízbe");
+            Console.WriteLine("\t2. Iszol a tiszta vízből");
+            Console.WriteLine("\t3. Lecsúszol a vízesésen");
 
             int x = BekerLehetosegek(3);
 
@@ -217,7 +217,7 @@ namespace PVK_MAIN
                 Console.WriteLine("A víz alá szorítod méretes nyakad és nem jössz fel onnan...");
 
                 Console.ReadKey();
-                //Pokol();
+                Pokol();
             }
 
             else if (x == 2)
@@ -268,9 +268,9 @@ namespace PVK_MAIN
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Elüvöltöd magad, hogy \"VESSZEN TRIANON!\" [min 50 vérszomj]");
-            Console.WriteLine("\t2. - Elkezdesz legelni [min 40 életkedv]");
-            Console.WriteLine("\t3. - Visszamész az ösvényre");
+            Console.WriteLine("\t1. Elüvöltöd magad, hogy \"VESSZEN TRIANON!\" [min 50 vérszomj]");
+            Console.WriteLine("\t2. Elkezdesz legelni [min 40 életkedv]");
+            Console.WriteLine("\t3. Visszamész az ösvényre");
 
             int x = BekerLehetosegek(3);
 

@@ -38,10 +38,10 @@ namespace PVK_MAIN
 
             Console.WriteLine("Lehetőségek:");
 
-            Console.WriteLine("\t1. - Leveszel a számládról pénzt");
-            Console.WriteLine("\t2. - Antiogreista megjegyzéseket teszel");
-            Console.WriteLine("\t3. - Kizsebelsz egy kapzsi ogrét");
-            Console.WriteLine("\t4. - Kimész a főútra");
+            Console.WriteLine("\t1. Leveszel a számládról pénzt");
+            Console.WriteLine("\t2. Antiogreista megjegyzéseket teszel");
+            Console.WriteLine("\t3. Kizsebelsz egy kapzsi ogrét");
+            Console.WriteLine("\t4. Kimész a főútra");
 
             int x = BekerLehetosegek(4);
 
@@ -141,8 +141,8 @@ namespace PVK_MAIN
             Console.WriteLine();
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Túszokat ejtessz");
-            Console.WriteLine("\t2. - Megölsz mindenkit");
+            Console.WriteLine("\t1. Túszokat ejtessz");
+            Console.WriteLine("\t2. Megölsz mindenkit");
 
             int x = BekerLehetosegek(2);
 

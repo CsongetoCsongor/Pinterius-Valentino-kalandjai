@@ -23,9 +23,9 @@ namespace PVK_MAIN
             }
 
             Console.WriteLine("Lehetőségek:");
-            Console.WriteLine("\t1. - Meggyalázol egy sírt");
-            Console.WriteLine("\t2. - Megeszel egy koszorút");
-            Console.WriteLine("\t3. - Visszamész a főútra");
+            Console.WriteLine("\t1. Meggyalázol egy sírt");
+            Console.WriteLine("\t2. Megeszel egy koszorút");
+            Console.WriteLine("\t3. Visszamész a főútra");
 
             int x = BekerLehetosegek(3);
 
@@ -112,13 +112,24 @@ namespace PVK_MAIN
 
             if (x == 1)
             {
-                penz = 0;
-                Console.WriteLine("A kísértet elvette minden pénzed!");
-                elozo_helyszin = "Temetői Démon Dimenzió";
-                elozo_hely_uzenete = "";
+                if (penz == 0)
+                {
+                    Console.WriteLine("Kísértet: Nincs is pénzed! Ezért meghalsz!");
+                    Console.ReadKey();
+                    elozo_hely_uzenete = "A kísértet megölt.";
+                    Pokol();
+                }
+                else
+                {
+                    penz = 0;
+                    Console.WriteLine("A kísértet elvette minden pénzed!");
+                    elozo_helyszin = "Temetői Démon Dimenzió";
+                    elozo_hely_uzenete = "";
 
-                Console.ReadKey();
-                Fout();
+                    Console.ReadKey();
+                    Fout();
+                }
+                
             }
 
             else if (x == 2)
